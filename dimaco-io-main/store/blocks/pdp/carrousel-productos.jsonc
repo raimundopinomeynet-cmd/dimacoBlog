@@ -1,0 +1,56 @@
+{
+    "flex-layout.row#productos__similares": {
+        "title": "productos semana",
+        "children": [ "flex-layout.col#productos__similares"],
+        "props": {
+            "blockClass": ["productos__semana","productos__similares__pdp"]
+        }
+    },
+    "flex-layout.col#productos__similares": {
+        "title": "productos semana",
+        "children": [
+             "rich-text#title__productos__similares",
+             "rich-text#text__productos__semana",
+             "flex-layout.col#productos__similares__2",
+             "rich-text#ver__mas__productos__similares"
+        ],
+        "props": {
+            "blockClass": "productos__semana"
+        }
+    },
+    "rich-text#ver__mas__productos__similares": {
+        "title": "Ver todos los productos",
+        "props": {
+            "text": "[Ver todos los productos](/)",
+            "blockClass": "ver__mas__productos"
+        }
+    },
+    "rich-text#title__productos__similares": {
+        "title": "title productos semana",
+        "props": {
+            "text": "# Productos similares",
+            "blockClass": "head__categorias__destacadas"
+        }
+    },
+    "flex-layout.col#productos__similares__2": {
+		"title": "Productos semanales",
+		"children": [
+			"list-context.product-list#productos__similares"
+		],
+		"props": {
+			"width": "100%",
+            "blockClass": "productos__semanales"
+		}
+	},
+	"list-context.product-list#productos__similares": {
+		"blocks": [
+            "product-summary.shelf#products__home__v2"
+		],
+		"children": [
+			"slider-layout#productos__semanales"
+		],
+		"props": {
+            "blockClass": "productos__semanales"   
+		}
+	}
+}

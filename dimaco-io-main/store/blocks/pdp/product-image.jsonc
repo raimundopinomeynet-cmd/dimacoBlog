@@ -1,0 +1,30 @@
+{
+    "flex-layout.row#product__image": {
+        "children": [
+            "flex-layout.col#product__image"
+        ],
+        "props": {
+            "blockClass": "product__image"
+        }
+    },
+    "flex-layout.col#product__image": {
+        "title": "titulo",
+        "children": [
+            /*  */
+            "flex-layout.row#collection__PDP",
+            /*  */
+            "product-images"
+        ],
+        "props": {
+            "blockClass": "product__image__pdp"
+        }
+    },
+    "product-images": {
+        "props": {
+            "displayThumbnailsArrows": true,
+            "thumbnailsOrientation": "horizontal",
+            "blockClass": "product__image__",
+            "zoomMode": "disabled"
+        }
+    }
+}

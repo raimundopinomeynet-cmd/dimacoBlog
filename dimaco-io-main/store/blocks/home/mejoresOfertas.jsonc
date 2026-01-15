@@ -1,0 +1,116 @@
+{
+    "flex-layout.row#mejores__ofertas": {
+        "title": "mejores ofertas",
+        "children": [
+            "flex-layout.col#mejores__ofertas"
+        ],
+        "props": {
+            "blockClass": "mejores__ofertas"
+        }
+    },
+    "flex-layout.col#mejores__ofertas": {
+        "title": "mejores ofertas",
+        "children": [
+            "rich-text#title__mejores__ofertas",
+            "rich-text#text__mejores__ofertas",
+            "flex-layout.row#imagenes__promos3",
+            "flex-layout.row#imagenes__promos4"
+        ],
+        "props": {
+            "blockClass": "mejores__ofertas"
+        }
+    },
+    "rich-text#title__mejores__ofertas": {
+        "title": "titulos mejores ofertas",
+        "props": {
+            "text": "# En Dimaco ofrecemos las mejores ofertas",
+            "blockClass": "title__mejores__ofertas"
+        }
+    },
+    "rich-text#text__mejores__ofertas": {
+        "title": "texto mejores ofertas",
+        "props": {
+            "text": "## Todo lo que necesitas en herramientas, pinturas y accesorios para mejorar tu hogar o lugar de trabajo.",
+            "blockClass": "text__mejores__ofertas"
+        }
+    },
+    "flex-layout.row#imagenes__promos3": {
+        "title": "imagenes__promos3",
+        "children": [
+            "image#promosde3__home1",
+            "image#promosde3__home2",
+            "image#promosde3__home3"
+        ],
+        "props": {
+            "blockClass": "imagenes__promos3"
+        }
+    },
+    "image#promosde3__home1": {
+        "title": "promode3__1",
+        "props": {
+            "src": "/arquivos/promode3__1.jpg",
+            "blockClass": "promosde3__home"   
+        }
+    },
+    "image#promosde3__home2": {
+        "title": "promode3__2",
+        "props": {
+            "src": "/arquivos/promode3__2.jpg",
+            "blockClass": "promosde3__home"   
+        }
+    },
+    "image#promosde3__home3": {
+        "title": "promode3__3",
+        "props": {
+            "src": "/arquivos/promode3__3.jpg",
+            "blockClass": "promosde3__home"
+        }
+    },
+    "flex-layout.row#imagenes__promos4": {
+        "title": "imagenes promos 4",
+        "children": ["flex-layout.col#imagenes__promos4"],
+        "props": {
+            "blockClass": "imagenes__promos4"
+        }
+    },
+    "flex-layout.col#imagenes__promos4": {
+        "title": "imagenes promos 4",
+        "props": {
+            "blockClass": "imagenes__promos4"
+        },
+        "children": [
+            "image#imagen__promos4__1",
+            "image#imagen__promos4__2",
+            "image#imagen__promos4__3",
+            "image#imagen__promos4__4"
+        ]
+    },
+    "image#imagen__promos4__1": {
+        "title": "imagen promos4-1",
+        "props": {
+            "src": "/arquivos/promode4__1.jpg",
+            "blockClass": "imagen__promos4"
+        }
+    },
+    "image#imagen__promos4__2": {
+        "title": "imagen promos4-2",
+        "props": {
+            "src": "/arquivos/promode4__2.jpg",
+            "blockClass": "imagen__promos4"
+        }
+    },
+    "image#imagen__promos4__3": {
+        "title": "imagen promos4-3",
+        "props": {
+            "src": "/arquivos/promode4__3.jpg",
+            "blockClass": "imagen__promos4"
+        }
+    },
+    "image#imagen__promos4__4": {
+        "title": "imagen promos4-4",
+        "props": {
+            "src": "/arquivos/promode4__4.jpg",
+            "blockClass": "imagen__promos4"
+        }
+    }
+}

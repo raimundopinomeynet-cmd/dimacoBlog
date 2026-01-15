@@ -1,0 +1,308 @@
+@import "../variables";
+
+.triggerButtonIcon {
+    width: 20px;
+    height: 20px;
+    color: $greenDark;
+}
+
+.triggerContainer {
+    width: 100px;
+    height: 40px;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $greenDark;
+
+    &::after {
+        content: "Categorías";
+        font-family: $c-tipografia;
+        color: $greenDark;
+        text-align: center;
+        margin-left: 10px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16.8px;
+    }
+}
+
+.menuContainerNav {
+    left: 0px;
+    right: 0px;
+    top: 45px;
+    width: auto !important;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: 9;
+    background: #F5F5F5;
+    box-shadow: 0px 4px 12px 0px rgba(219, 219, 219, 0.70);
+    border-radius: 4px;
+    padding: 20px;
+
+    .menuContainer {
+        width: 270px;
+        background: transparent;
+        /* display: flex; */
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 275px;
+        padding: 0;
+        min-width: 270px;
+       /*  min-height: 425px !important; */
+        max-height: 425px;
+        border-radius: 4px;
+        overflow: auto;
+        .menuItem {
+            background: transparent;
+
+            .styledLinkText {
+                color: #090F05;
+                font-family: "Gotham";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 16.8px; /* 16.8px */
+            }
+
+            .styledLinkContainer {
+                margin: 0;
+                padding: 8px 12px;
+            }
+
+            .caretIcon{
+                color: #090F05;
+                width: 13px !important;
+                height: 13px !important;
+            }
+        }
+
+        .menuActiveItemCategory{
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            background: #E9E9E9;
+            .caretIcon,
+            .styledLinkText {
+                color: $primary;
+            }
+        }
+
+        .menuItem::hover {
+            background: transparent;
+
+            .styledLinkText {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .submenuContainer {
+        overflow: auto;
+        max-height: none;
+        padding: 0 20px;
+        min-width: 250px;
+        max-height: 425px;
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #ccc;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #471344;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .submenuContainerTitle {
+            display: none;
+        }
+
+        .submenuList {
+            display: grid !important;
+            gap: 1rem !important;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            .submenuItem.submenuItem--isClosed {
+                flex-wrap: wrap;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .submenuItem {
+                max-width: none;
+                margin: 0;
+                width: 100%
+            }
+
+            .styledLinkContainer {
+                width: 100%;
+                /* margin: 0;
+                padding: 8px 12px; */
+            }
+
+            .styledLink {
+                .styledLinkContent{
+                    padding: 8px 12px;
+                }
+
+                .styledLinkText {
+                    color: #090F05;
+                    font-family: "Gotham";
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16.8px; /* 16.8px */
+                    transition: all 0.25s ease-in-out;
+                    &:hover {
+                        color: $primary;
+                        font-size: 12.75px;
+                    }
+                }
+            }
+
+            .is__Title{
+                .styledLinkContent{
+                    padding-left: 0;
+                    .styledLinkText{
+                        color: #090F05;
+                        font-family: "Montserrat";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 16.8px; /* 16.8px */
+                    }
+                }
+            }
+
+            .seeAllLinkContainer {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+.menuContainerNavVertical {
+    .departmentsContainer {
+        .departmentsTitle {
+            font-size: 0;
+            &::before{
+                content: "Menú";
+                color: #090F05;
+                font-family: "Anton";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28.8px; /* 28.8px */
+            }
+        }
+    }
+
+    .submenuListVertical {
+        .submenuItemVertical {
+            position: relative;
+            :global(.vtex__icon-caret-down){
+                color: #090F05 !important;
+            }
+            .seeAllLinkContainer {
+                display: none;
+                .seeAllLink {
+                    text-decoration: none;
+                    float: right;
+                    line-height: 44px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.menuContainerNavVertical{
+    .menuContainerVertical{
+        padding: 1rem 0;
+        margin: 0;
+        border-bottom: 1px solid #DBDBDB;
+        border-top: 1px solid #DBDBDB;
+        /* box-shadow: 0px 4px 12px 0px rgba(219, 219, 219, 0.261); */
+        .menuItemVertical{
+            border-color: transparent !important;
+            .styledLinkContainer{
+                margin-left: 1.5rem !important;
+                margin-right: 1.75rem !important;
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+                .styledLinkText{
+                    color: #090F05 !important;
+                    /* Paragraph/Regular/14 */
+                    font-family: "Gotham" !important;
+                    font-size: 14px !important;
+                    font-style: normal;
+                    font-weight: 600 !important;
+                    line-height: 16.8px; /* 16.8px */
+                }
+    
+                .accordionIconContainer{
+                    .caretIcon{
+                        color: #090F05 !important;
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.goBackContainer{
+    .goBackButtonText{
+        font-family: "Gotham" !important;
+        color: #090F05 !important;
+    }
+}
+
+.menuContainerNavVertical{
+    .submenuContainerVertical{
+        .submenuContainerTitle{
+            font-family: "Gotham" !important;
+            color: #090F05 !important;
+        }
+
+        .collapsibleHeaderText{
+            color: #090F05!important;
+            font-family: "Gotham"!important;
+            font-size: 14px!important;
+            font-style: normal;
+            font-weight: 600!important;
+            line-height: 16.8px;
+        }
+
+        .collapsibleContent{
+            padding-bottom: 12px;
+            .styledLinkContainer{
+                .styledLink{
+                    .styledLinkText{
+                        color: #090F05 !important;
+                        font-family: "Gotham" !important;
+                        font-size: 12px !important;
+                        font-style: normal;
+                        font-weight: 600 !important;
+                        line-height: 16.8px;
+                    }
+                }
+            }
+        }
+    }
+}

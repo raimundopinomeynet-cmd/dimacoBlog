@@ -1,0 +1,113 @@
+{
+    "store.custom#cambios-devoluciones": {
+        "blocks": [
+            "responsive-layout.desktop#cambios-devoluciones",
+             "responsive-layout.mobile#cambios-devoluciones"
+        ]
+    },
+     "responsive-layout.desktop#cambios-devoluciones": {
+        "children": [ 
+            "image#image__banner",
+            "flex-layout.row#main__landing__cambios"
+        ]
+    },
+      
+    "flex-layout.row#main__landing__cambios": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#main__landing__cambios"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#main__landing__cambios": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#menu__landing__cambios",
+            "flex-layout.col#contenido__landing__cambios"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#menu__landing__cambios": {
+        "title": "Contenedor Menu",
+        "children": [
+            "rich-text#titulo__menu__landing",
+            "rich-text#texto__menu__landing",
+            "link#terminos__link",
+            "link#cambios__link__active",
+            "link#pagos__link",
+            "link#politicas__link",
+            "link#historia__link"
+        ],
+        "props": {
+            "blockClass": "menu__landing"
+        }
+    },
+    "link#terminos__link": {
+        "title": "Link Terminos",
+        "props": {
+            "label": "Términos y condiciones",
+            "href": "/terminos-y-condiciones",
+            "blockClass": [
+                "menu__item__link__landing"
+            ]
+        }
+    },
+    "link#cambios__link__active": {
+        "title": "Link Cambios y devolucion",
+        "props": {
+            "label": "Cambios y devoluciones",
+            "href": "/cambios-y-devoluciones",
+            "blockClass": [
+                "menu__item__link__landing",
+                "menu__item__link__active"
+            ]
+        }
+    },
+    "flex-layout.col#contenido__landing__cambios": {
+        "title": "Contenedor contenido__landing",
+        "children": [
+            "rich-text#parrafo__1__landing__cambios",
+            "rich-text#parrafo__2__landing__cambios",
+            "rich-text#parrafo__3__landing__cambios" ,
+            "rich-text#parrafo__4__landing__cambios",
+            "rich-text#parrafo__5__landing__cambios"
+        ],
+        "props": {
+            "blockClass": "contenido__landing"
+        }
+    },
+    "rich-text#parrafo__1__landing__cambios": {
+        "props": {
+            "text": "**Políticas de cambios y devoluciones** **Ley sobre Protección de los Derechos de los Consumidores** **1. Garantía Mínima Legal**",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__2__landing__cambios": {
+        "props": {
+            "text": "Si el producto presenta defectos de fabricación, piezas faltantes o alguna otra falla cubierta por la ley del consumidor, será derivado al Servicio Técnico para su evaluación y verificación dentro de un plazo máximo de 15 días hábiles. \n\n Si, tras la evaluación, se determina que el defecto no es causado por un uso incorrecto o manipulación indebida por parte del consumidor, este podrá optar entre la <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'> devolución, el cambio o la reparación del producto.</span> En estos casos, el costo del traslado no será cobrado. \n\n Si decides reparar el producto y el defecto persiste, tendrás la opción de elegir entre la <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>devolución</span> o el <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>cambio </span> de este. \n\n Puedes <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>llevar el producto directamente a cualquiera de nuestras tiendas </span> o comunicarte al +56 9 8700 7691 para obtener información sobre el <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Servicio Técnico autorizado </span>, o también puedes coordinar la evaluación directamente con ellos. \n\nPara hacer efectiva la garantía, deberás presentar un documento que acredite la compra, como una boleta o factura.",
+            "blockClass": "parrafo__landing"
+        }
+    },/* <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'></span> */
+    "rich-text#parrafo__3__landing__cambios": {
+        "props": {
+        "text": "**2. Derecho de Retracto para Compras Online (Dimaco.cl)** Si realizas una compra a través de nuestra página web  <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>(Dimaco.cl)</span> y deseas arrepentirte, tienes <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>10 días hábiles </span> desde que recibes el producto para ejercer tu derecho a retracto.\n\n **Excepciones al derecho de retracto:** De acuerdo con la Ley 19.496 sobre Protección de los Derechos de los Consumidores, no aplica el derecho de retracto en los siguientes casos: \n -  <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Bienes que se deterioran con rapidez: </span> Productos como pinturas, baterías, productos electrónicos, alimentos para mascotas, productos de higiene, productos para plagas, entre otros, que tienen una vida útil limitada o se deterioran rápidamente. \n - <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Sellos de seguridad rotos: </span> Si el producto ha sido desprecintado o se ha roto el sello de seguridad (como en cosméticos, herramientas, antiparras, guantes, cascos, entre otros), el derecho de retracto no será aplicable. \n - <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Productos fabricados según especificaciones del consumidor: </span> Si el producto ha sido hecho a medida o de acuerdo a las especificaciones proporcionadas por el consumidor (por ejemplo, muebles, mallas o productos personalizados), no se puede ejercer el derecho de retracto. \n\nPara acreditar la compra, puedes presentar la boleta o factura. Si no tienes estos documentos, puedes solicitar un duplicado en tienda utilizando solo tu número de <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>RUT.</span> \n\nSi deseas ejercer tu derecho a retracto, puedes llamar a nuestro número de teléfono o escribir al WhatsApp +56 9 8700 7691. \n\n **Devolución de dinero:** \n\n El reembolso se realizará al mismo medio de pago utilizado para la compra, una vez que hayas devuelto el producto. En el caso de compras con despacho a domicilio, no se reembolsará el costo del despacho, solo el valor del producto. \n\nSi el producto es de gran tamaño y difícil de trasladar, puedes <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>coordinar el retiro </span> desde la dirección de entrega original llamando a nuestro número de teléfono o escribir al WhatsApp +56 9 8700 7691.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__4__landing__cambios": {
+        "props": {
+            "text": "**3. Derecho de Retracto para Compras en Tienda** Si compras un producto <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>presencialmente </span> en una tienda y no tuviste acceso directo al producto (por ejemplo, si lo elegiste a través de un catálogo o lo pediste a pedido), podrás ejercer tu derecho de retracto <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>dentro de los 10 días siguientes </span> a la recepción del producto.\n\n Recuerda que el producto debe estar en <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>buen estado </span>, sin uso y con todos los elementos originales de embalaje (etiquetas, manuales, cajas, etc.). Además, no debe haberse deteriorado por causas imputables al cliente. \n\n Para acreditar la compra, puedes presentar la boleta o factura. Si no tienes estos documentos, puedes solicitar un duplicado en tienda utilizando tu <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>RUT</span>. \n\nPara ejercer tu derecho a retracto, simplemente contacta a nuestro número de teléfono o escribir al WhatsApp +56 9 8700 7691. \n\n**Devolución de dinero:** \n\nEl reembolso se realizará al mismo medio de pago utilizado para la compra. En compras con despacho a domicilio, <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>no se reembolsará el costo del despacho </span>, solo el valor pagado por el producto.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__5__landing__cambios": {
+        "props": {
+            "text": "**4. Garantía de Satisfacción** Si compraste un producto nuevo, sin uso, y no estás conforme con él, podrás solicitar un <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>cambio o devolución </span> dentro de los <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>30 días corridos </span>desde que lo retiraste en tienda o lo recibiste en tu domicilio. \n\n En caso de solicitar la devolución, el monto pagado se reembolsará al mismo medio de pago utilizado para la compra. <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>El costo del despacho no será reembolsado</span>, solo el valor del producto. \n\n **Condiciones para hacer efectiva la garantía de satisfacción:** \n\n - Contar con la  <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>boleta o factura</span> de compra. Si no tienes estos documentos, puedes solicitar un duplicado en tienda utilizando solo tu  <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>RUT</span>. \n - El producto debe estar en <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>perfecto estado</span> (sin rayas, manchas, abolladuras, etc.), sin uso y con su <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>embalaje original.</span> \n - El producto debe incluir <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>etiquetas, manuales, accesorios, complementos y pólizas de garantía.</span> \n\n**Excepciones a la Garantía de Satisfacción:**\n\n - Productos <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>refaccionados, descontinuados o de segunda mano</span> (con detalles visibles). \n - Productos <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>a pedido</span> (fabricados a medida o en colores especiales según las especificaciones del cliente). \n - Productos <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>instalados, dimensionado</span>s o destinados a <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>venta en volumen.</span>",
+            "blockClass": "parrafo__landing"
+        }
+    }
+}

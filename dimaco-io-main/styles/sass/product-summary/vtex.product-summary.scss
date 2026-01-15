@@ -1,0 +1,255 @@
+@import "../variables";
+.container {
+  background: transparent;    
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  &:hover {
+    box-shadow: 0 0 10px 0 hsla(0, 0%, 45.9%, .2);
+  }  
+  .clearLink {
+    text-decoration: inherit;
+    color: inherit;
+  
+    .element {
+      padding: 0px;
+      :global(.vtex-flex-layout-0-x-flexRow--contentProduct) {
+        :global(.vtex-flex-layout-0-x-flexRowContent--contentProduct) {
+          flex-direction: column;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+   /*  :global(.vtex-flex-layout-0-x-flexCol--imageProd) {
+      margin-bottom: 15px;
+
+      :global(.vtex-store-components-3-x-discountContainer) {
+        width: 100%;
+        .imageContainer {
+          width: 100%;
+          .image {
+            max-height: none !important;
+            border-radius: 0;
+          }
+        }
+        :global(.vtex-store-components-3-x-discountInsideContainer) {
+          background: #FAA923;
+          color: $c-blanco;
+          border: 0;
+          font-weight: 700;
+          font-size: 18px;
+          width: 65px;
+          height: 35px;
+          line-height: 35px;
+          padding: 0;
+          left: 0;
+        }
+      }
+
+      .item {
+        background: $c-secundario;
+        font-weight: 700;
+        font-size: 18px;
+        width: auto;
+        height: 35px;
+        line-height: 35px;
+        padding: 0px 10px;
+        z-index: 2;
+        color: $c-blanco;
+      }
+    }   */    
+
+    //bloque de precio//
+   /*  :global(.vtex-flex-layout-0-x-flexCol--infoProd) {    
+      .productBrandContainer {
+        .productBrandName {
+          font-family: $c-tipografia;
+          color: $c-principal;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          text-align: center;
+          width: 100%;
+          float: left;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+      }        
+      :global(.vtex-flex-layout-0-x-flexColChild--infoProd) {
+        .nameContainer--product-name {
+            width: 100%;
+            padding: 0;
+            display: flex;        
+            text-align: center;
+            justify-content: center;  
+            margin-bottom: 10px;      
+            .brandName {
+              font-family: $c-tipografia;
+              color: $c-principal;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;              
+              line-height: 20px;
+              max-height: 40px;
+              min-height: 40px;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+        }
+
+        :global(.vtex-flex-layout-0-x-flexRow--summary) {
+          :global(.vtex-flex-layout-0-x-flexRowContent--summary) {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 15px;
+            min-height: 26px;
+            :global(.vtex-product-price-1-x-sellingPrice),
+            :global(.vtex-product-price-1-x-sellingPriceValue--summary) {
+              color: $c-secundario;
+              font-family: $c-tipografia;
+              font-size: 28px;   
+              font-weight: 700;           
+            }
+            :global(.vtex-product-price-1-x-listPrice--summary) {
+              color: #878787;
+              font-size: 16px;
+              margin-bottom: 0;               
+            }
+          }
+        }
+      }  
+    } */
+      
+
+/*     :global(.vtex-flex-layout-0-x-flexRow--quantityBuyButton) {
+      :global(.vtex-flex-layout-0-x-flexRowContent--quantityBuyButton){
+        display: flex;
+        flex-direction: column;
+      }
+
+      :global(.vtex-flex-layout-0-x-flexCol--quantityBuyButton) {      
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        :global(.vtex-flex-layout-0-x-flexColChild--quantityBuyButton) {
+          width:100%;
+        }
+
+        :global(.vtex-button__label) {
+          padding: 0 10px !important;
+          @media screen and (max-width: 767px) {
+            padding: 0 10px;
+          }
+        }        
+
+        :global(.vtex-button) {        
+          background: $c-button-background;
+          border: 1px solid $c-principal;
+          line-height: 40px;
+          border-radius: 0;
+          color: $c-blanco;
+          text-transform: none;
+          transition: all 0.3s;   
+          font-weight: 400;
+          font-size: 12px;
+          text-transform: uppercase;
+          transition: all 0.5s;
+          &:hover {
+            background: $c-button-background-hover;
+          }                  
+        }
+      } 
+
+      :global(.vtex-flex-layout-0-x-flexCol--cartBuyButton) {      
+        :global(.vtex-button__label) {
+          padding: 0 10px !important;
+          @media screen and (max-width: 767px) {
+            padding: 0 10px;
+          }
+        }        
+
+        :global(.vtex-button) {        
+          background: $c-blanco;            
+          color: $c-principal;
+          border: 1px solid $c-principal;
+          line-height: 40px;
+          border-radius: 12px;
+          text-transform: none;
+          transition: all 0.3s;   
+          font-weight: 600;
+          font-size: 14px;
+          transition: all 0.5s;
+          &:hover {
+            background: $c-button-background-hover;
+            color: $c-blanco;
+          }                  
+        }
+      }
+    }
+ */
+
+    /*PRODUCT NOT AVAILABILITY*/  
+   /*  :global(.vtex-flex-layout-0-x-flexRow--message-availability) {
+      margin: 52px 0 0px 0;
+      :global(.vtex-store-components-3-x-title) {
+        font-size: 0;
+        background: #DADADA;                
+        border-radius: 12px;
+        color: $c-negro;
+        transition: all 0.3s;                                   
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
+        float: left;
+        padding: 0 20px;
+        margin: 0;
+        &::before {
+          content: "Producto agotado";
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 40px;
+          float: left;
+          width: 100%;
+        }
+      }
+      :global(.vtex-store-components-3-x-subscribeLabel),
+      :global(.vtex-store-components-3-x-form) {
+        display: none;
+      }
+
+
+      :global(.vtex-rich-text-0-x-wrapper--message-availability) {
+        width: 100%;
+        float: left;
+
+        :global(.vtex-rich-text-0-x-paragraph--message-availability) {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 40px;
+          float: left;
+          width: 100%;
+          background: #DADADA;                
+          border-radius: 12px;
+          color: $c-negro;
+          transition: all 0.3s;                                   
+          font-weight: 700;
+          text-align: center;        
+          padding: 0 20px;   
+          margin: 0;     
+        }
+      }
+    }    */
+  }
+}
+
+:global(.vtex-search-result-3-x-gallery) {
+  .container {
+    max-width: none !important;    
+  }   
+}

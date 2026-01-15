@@ -1,0 +1,36 @@
+{
+    // Highlight PLP
+    "flex-layout.row#promotions__plp": {
+        "props": {
+            "blockClass": [
+                "promotions__pdp"
+            ]
+        },
+        "children": [
+            "vtex.product-highlights@2.x:product-highlights#promotion__test"
+        ]
+    },
+    "vtex.product-highlights@2.x:product-highlights#promotion__test": {
+        "props": {
+            "blockClass": "promotion",
+            "type": "promotion"/* ,
+             "filter": {
+                "type": "show",
+                "highlightNames": [
+                    "PROMOPRUEBA"
+                ]
+            } */
+        },
+        "children": [
+            "product-highlight-wrapper#test"
+        ]
+    },
+    "product-highlight-wrapper#test": {
+        "props": {
+            "blockClass": "promotion"
+        },
+        "children": [
+            "product-highlight-text"
+        ]
+    }
+}

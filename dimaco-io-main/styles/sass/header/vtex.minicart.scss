@@ -1,0 +1,255 @@
+@import "../variables";
+
+.minicartWrapperContainer--minicartdrawer {
+    display: flex;
+    align-items: center;
+}
+
+.drawer--minicartdrawer {
+    height: 100%;
+    min-width: 355px !important;
+    .drawerContent--minicartdrawer {
+        height: 100%;
+        .childrenContainer--minicartdrawer {
+            height: 100%;
+            .minicartSideBarContentWrapper--minicartdrawer {
+                height: 100% !important;
+            }
+        }
+    }   
+}
+
+.closeIconContainer--minicartdrawer {
+    right: 0;
+    position: absolute;
+    .closeIcon--minicartdrawer {
+        color: #000;
+        height: 16px;
+        width: 16px;
+    }
+}
+.minicartTitle--productlist {
+    font-family: "Anton";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px; /* 28.8px */
+    color: #090F05;
+    margin-top: 3rem;
+}
+.cartIcon--minicartdrawer {
+    height: 20px;
+    width: 25px;
+    color: $c-principal;
+}
+.openIconContainer {
+    padding: 0!important;
+    @media screen and (max-width: 1025px) {
+
+    }
+}
+.minicartQuantityBadgeDefault {
+    top: -10px;
+    right: -10px;
+    background: $primary;
+    border: 0;
+    border-radius: 100%;
+    font-family: $font;
+}
+
+.minicartContainer {
+    .minicartIconContainer{
+        display: flex;
+        align-items: center;
+    }
+}
+.drawer {
+    background: #FFF;
+    .childrenContainer {
+        .minicartContentContainer {
+            .minicartProductListContainer {
+
+            }
+        }
+    }
+    .minicartSummary {
+        :global(.vtex-checkout-summary-0-x-summaryItemContainer) {
+            color: $c-negro;
+            font-family: $c-tipografia;
+        }
+    }
+}
+.minicartProductListContainer--minicart-product-list {
+    padding: 0 10px;
+    border-top: 1px solid var(--Gray-3, #DBDBDB);
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 97.5%;
+    :global(.vtex-flex-layout-0-x-flexRow--product-list-content) {
+        border-bottom: 1px solid #e2e2e2;
+        &:last-child {
+            border: 0;
+        }
+    }
+}
+:global(.vtex-store-icons-0-x-cartIcon--minicart-empty-state){
+    width: 80px;
+}
+.openIconContainer :global(.vtex-button__label) {
+    padding: 0;
+}
+
+:global(.vtex-minicart-2-x-minicartProductListContainer)
+:global(.vtex-product-list-0-x-productImageContainer) {
+    border-radius: 4px;
+}
+:global(.vtex-minicart-2-x-minicartProductListContainer)
+:global(.vtex-product-list-0-x-productBrandName) {
+    display: none;
+}
+:global(.vtex-minicart-2-x-minicartProductListContainer)
+:global(.vtex-product-list-0-x-productName) {
+    font-family: $font;
+    color: $greenDark;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.2px;
+}
+:global(.vtex-product-list-0-x-quantitySelectorContainer)
+:global(.vtex-styleguide-9-x-container) {
+    background: #fff;
+    :global(.vtex-dropdown__button) {
+        color: $c-principal;
+    }
+}
+  /*:global(.vtex-minicart-2-x-minicartProductListContainer)
+:global(.vtex-product-list-0-x-price) {
+   font-weight: 400;
+    font-family: $c-tipografia;
+    font-size: 16px;
+    line-height: 20px;
+    color: $c-negro; 
+}
+*/
+:global(.vtex-flex-layout-0-x-flexRow--minicart-footer) {
+    box-shadow: unset !important;
+    .minicartCheckoutButton {
+        padding: 0;
+        margin: 0 12px 14px;
+        :global(.vtex-button) {
+            height: 40px;
+            border-radius: 4px;
+            background: #007934;
+            border: 0;
+            color: $c-blanco;
+            font-weight: 400;
+            font-size: 20px;
+            font-family: $c-tipografia;
+            text-transform: none;
+            line-height: 50px;
+            &:hover{
+                background: #015827;
+            }
+            :global(.vtex-button__label){
+                font-size: 0;
+                &::before{
+                    content: "Ir a pagar";
+                    color: #F5F5F5;
+                    font-family: "Montserrat";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 19.2px; /* 19.2px */
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    
+}
+
+.minicartProductListContainer 
+:global(.vtex-product-list-0-x-quantitySelectorContainer) 
+:global(.vtex-product-list-0-x-quantityInputContainer) 
+:global(.vtex-styleguide-9-x-input) {
+    padding: 0 10px;
+    width: 60px;
+    text-align: center;
+} 
+
+.minicartProductListContainer {
+    :global(.vtex-product-list-0-x-productListUnavailableItemsMessage) {
+        :global(.vtex-product-list-0-x-productListUnavailableItemsMessage) {
+            font-size: 16px;
+            color: #000;
+            padding: 10px 0;
+        }
+        :global(.vtex-product-list-0-x-availabilityMessageText) {
+            font-size: 12px;
+            font-family: $c-tipografia;
+            font-weight: 400;
+        }
+    }
+}
+
+
+.closeIconButton--minicartdrawer{
+    position: relative !important;
+    top: 2rem !important;
+}
+
+.minicartSummary--product-list-content{
+    padding: 0 !important;
+    margin: 0 10px;
+    border-top: 1px solid #DBDBDB;
+    :global(.vtex-checkout-summary-0-x-summaryItemContainer--tituloTotal){
+        margin-top: 12px;
+        :global(.vtex-checkout-summary-0-x-price--tituloTotal),
+        :global(.vtex-checkout-summary-0-x-summaryItemLabel--tituloTotal){
+            color: #090F05;
+            font-family: "Montserrat";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19.6px; /* 19.6px */
+        }
+    }
+
+    :global(.vtex-checkout-summary-0-x-summaryItemContainer--tituloTotal):last-child{
+        padding-bottom: 0 !important;
+        :global(.vtex-checkout-summary-0-x-price--tituloTotal),
+        :global(.vtex-checkout-summary-0-x-summaryItemLabel--tituloTotal){
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    :global(.vtex-checkout-summary-0-x-summarySmallDisclaimer){
+        color: #090F05;
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16.8px;
+        margin: 12px 0;
+    }
+}
+
+
+:global(.vtex-store-link-0-x-link--link__comprando){
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    margin-bottom: 16px;
+    :global(.vtex-store-link-0-x-label--link__comprando){
+        color: #0C2C44;
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19.2px;
+    }
+}

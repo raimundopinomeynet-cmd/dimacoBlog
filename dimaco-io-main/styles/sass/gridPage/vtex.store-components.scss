@@ -1,0 +1,22 @@
+@import "../variables";
+.imageElement--full-banner {
+	width: 100%;
+	height: auto;
+}
+
+@media only screen and (max-width: 990px) {
+  .hideDesktop {
+    display: block;
+  }
+  .hideMobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .hideDesktop {
+    display: none;
+  }
+  .hideMobile {
+    display: block;
+  }
+}

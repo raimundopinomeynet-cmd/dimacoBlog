@@ -1,0 +1,28 @@
+@import "../variables";
+.stackContainer--bannerTop-image {
+	margin-bottom: 70px;
+	@media (max-width: 990px) {
+		margin-bottom: 40px;
+	}
+}
+.stackItem--bannerTop-title {
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	height: 100%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	:global(.vtex-rich-text-0-x-heading--bannerTop-title) {
+		font-family: $c-tipografia;
+		color: $c-blanco;
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 700;
+		margin: 0;
+		text-transform: uppercase;
+		@media (max-width: 990px) {
+			font-size: 24px;
+		}
+	}
+} 

@@ -1,0 +1,32 @@
+{
+    "store.custom#descuentos": {
+        "blocks": [
+            "image#landing",
+            "search-result-layout.customQuery"
+        ]
+    },
+    "image#landing": {
+        "title": "Imagen Landing",
+        "props": {
+            "minWidth": "100%",
+			"blockClass": "banner__landing__custom",
+            "src": "/arquivos/temp__dimaco.png"
+        }
+    },
+    "search-result-layout.customQuery": {
+        "props": {
+            "querySchema": {
+                "orderByField": "OrderByBestDiscountDESC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 12,
+                "queryField": "142",
+                "mapField": "productClusterIds"
+            }
+        },
+        "blocks": [
+            "search-result-layout.desktop",
+            "search-result-layout.mobile",
+            "search-not-found-layout"
+        ]
+    }
+}

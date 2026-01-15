@@ -1,0 +1,15 @@
+{
+  "name": "checkout-ui-settings",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "node build.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "fs-extra": "^11.3.0",
+    "sass": "^1.84.0"
+  }
+}

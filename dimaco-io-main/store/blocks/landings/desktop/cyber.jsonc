@@ -1,0 +1,558 @@
+{
+  "store.custom#cyber": {
+    "blocks": [
+      "flex-layout.row#cyberR1",
+      "flex-layout.row#categorias__destacadas__cyber",
+      "flex-layout.row#destacados__cyber",
+      "flex-layout.row#preguntas__frecuentes"
+    ]
+  },
+  // Banner Principal
+  "flex-layout.row#cyberR1": {
+    "title": "banner Principal",
+    "props": {
+      "blockClass": "home-bannerComplejoPrincipal",
+      "verticalAlign": "center",
+      "horizontalAlign": "center",
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#principal__cyber"]
+  },
+  "flex-layout.col#principal__cyber": {
+    "props": {
+      "blockClass": "columna-derecha",
+      "verticalAlign": "middle",
+      "width": "100%"
+    },
+    "children": ["list-context.image-list#sliderTop__cyber"]
+  },
+  "list-context.image-list#sliderTop__cyber": {
+    "children": ["slider-layout#sliderTop-images__cyber"],
+    "title": "sliderTop",
+    "props": {
+      "height": 720,
+      "images": [
+        {
+          "image": "/arquivos/Banner__home.jpg",
+          "mobileImage": "/arquivos/banner__princial__mobile.jpg",
+          "link": {
+            "url": ""
+          }
+        },
+        {
+          "image": "/arquivos/Banner__home.jpg",
+          "mobileImage": "/arquivos/banner__princial__mobile.jpg",
+          "link": {
+            "url": ""
+          }
+        }
+      ]
+    }
+  },
+  "slider-layout#sliderTop-images__cyber": {
+    "props": {
+      "fullWidth": true,
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 6000,
+        "stopOnHover": false
+      },
+      "infinite": true,
+      "showNavigationArrows": "always",
+      "showPaginationDots": "always",
+      "blockClass": ["carousel", "sliderTop__images"]
+    }
+  },
+  // Categorias Destacadas
+  "flex-layout.row#categorias__destacadas__cyber": {
+    "title": "categorias destacadas",
+    "props": {
+      "blockClass": "categorias__destacadas"
+    },
+    "children": ["flex-layout.col#categorias__destacadas__cyber"]
+  },
+  "flex-layout.col#categorias__destacadas__cyber": {
+    "title": "categorias destacadas",
+    "props": {
+      "blockClass": "categorias__destacadas"
+    },
+    "children": [
+      "rich-text#head__categorias__destacadas__cyber",
+      "rich-text#subHead__categorias__destacadas__cyber",
+      "flex-layout.row#images__destacadas__cyber"
+    ]
+  },
+  "rich-text#head__categorias__destacadas__cyber": {
+    "title": "destacadas title",
+    "props": {
+      "text": "# Categorías Destacadas",
+      "blockClass": "head__categorias__destacadas"
+    }
+  },
+  "rich-text#subHead__categorias__destacadas__cyber": {
+    "title": "destacadas text",
+    "props": {
+      "text": "## Tenemos los mejores productos de alta calidad",
+      "blockClass": "subHead__categorias__destacadas"
+    }
+  },
+  "flex-layout.row#images__destacadas__cyber": {
+    "title": "contenedor images",
+    "children": ["flex-layout.col#images__destacadas__cyber"],
+    "props": {
+      "blockClass": ["container__images__destacadas", "images__cyber__rounded"]
+    }
+  },
+  "flex-layout.col#images__destacadas__cyber": {
+    "children": [
+      "flex-layout.col#image__card__3",
+      "flex-layout.col#image__card__8",
+      "flex-layout.col#image__card__1",
+      "flex-layout.col#image__card__4",
+      "flex-layout.col#image__card__7",
+      "flex-layout.col#image__card__2"
+    ],
+    "props": {
+      "blockClass": "images__destacadas"
+    }
+  },
+  // Destacados cyber
+  "flex-layout.row#destacados__cyber": {
+    "title": "imagenes cyber",
+    "children": ["flex-layout.col#imagenes__cyber"],
+    "props": {
+      "blockClass": "imagenes____cyber"
+    }
+  },
+  "flex-layout.col#imagenes__cyber": {
+    "title": "imagenes cyber",
+    "props": {
+      "blockClass": "imagenes__cyber"
+    },
+    "children": [
+      "rich-text#head__cyber__destacadas",
+      "rich-text#subHead__cyber__destacadas",
+      "flex-layout.row#imagenes__cyber"
+    ]
+  },
+  "rich-text#head__cyber__destacadas": {
+    "title": "destacadas title",
+    "props": {
+      "text": "# Destacados Cyber 2025",
+      "blockClass": "head__categorias__destacadas"
+    }
+  },
+  "rich-text#subHead__cyber__destacadas": {
+    "title": "destacadas text",
+    "props": {
+      "text": "## Productos exclusivos seleccionados para ti",
+      "blockClass": "subHead__categorias__destacadas"
+    }
+  },
+  "flex-layout.row#imagenes__cyber": {
+    "title": "imagenes cyber",
+    "children": ["flex-layout.col#imagenes__cyber_col"],
+    "props": {
+      "blockClass": "imagenes__promos4"
+    }
+  },
+  "flex-layout.col#imagenes__cyber_col": {
+    "title": "imagenes cyber",
+    "props": {
+      "blockClass": "imagenes__promos4"
+    },
+    "children": [
+      "image#imagen__cyber__1",
+      "image#imagen__cyber__2",
+      "image#imagen__cyber__3",
+      "image#imagen__cyber__4"
+    ]
+  },
+  "image#imagen__cyber__1": {
+    "title": "imagen cyber-1",
+    "props": {
+      "src": "/arquivos/promode4__1.jpg",
+      "blockClass": "imagen__promos4"
+    }
+  },
+  "image#imagen__cyber__2": {
+    "title": "imagen cyber-2",
+    "props": {
+      "src": "/arquivos/promode4__2.jpg",
+      "blockClass": "imagen__promos4"
+    }
+  },
+  "image#imagen__cyber__3": {
+    "title": "imagen cyber-3",
+    "props": {
+      "src": "/arquivos/promode4__3.jpg",
+      "blockClass": "imagen__promos4"
+    }
+  },
+  "image#imagen__cyber__4": {
+    "title": "imagen cyber-4",
+    "props": {
+      "src": "/arquivos/promode4__4.jpg",
+      "blockClass": "imagen__promos4"
+    }
+  },
+  // Preguntas Frecuentes
+  "flex-layout.row#preguntas__frecuentes": {
+    "title": "Preguntas Frecuentes",
+    "children": ["flex-layout.col#preguntas__frecuentes"],
+    "props": {
+      "blockClass": "preguntas__frecuentes"
+    }
+  },
+  "flex-layout.col#preguntas__frecuentes": {
+    "title": "Preguntas Frecuentes",
+    "props": {
+      "blockClass": "preguntas__frecuentes"
+    },
+    "children": [
+      "rich-text#head__cyber__preguntas__frecuentes",
+      "rich-text#subHead__cyber__preguntas__frecuentes",
+      "flex-layout.row#preguntas__frecuentes_row"
+    ]
+  },
+  "rich-text#head__cyber__preguntas__frecuentes": {
+    "title": "destacadas title",
+    "props": {
+      "text": "# Preguntas frecuentes sobre el Dimaco Cyber",
+      "blockClass": "head__categorias__destacadas"
+    }
+  },
+  "rich-text#subHead__cyber__preguntas__frecuentes": {
+    "title": "destacadas text",
+    "props": {
+      "text": "## Esas son las marcas de confiabilidad a la hora de decidire por un producto en Dimaco",
+      "blockClass": "subHead__categorias__destacadas"
+    }
+  },
+  "flex-layout.row#preguntas__frecuentes_row": {
+    "title": "Preguntas Frecuentes",
+    "children": ["flex-layout.col#preguntas__frecuentes_col"],
+    "props": {
+      "blockClass": "preguntas__frecuentes_row"
+    }
+  },
+  "flex-layout.col#preguntas__frecuentes_col": {
+    "title": "Preguntas Frecuentes",
+    "props": {
+      "blockClass": "preguntas__frecuentes_col"
+    },
+    "children": ["disclosure-layout-group#group__cyber"]
+  },
+  "disclosure-layout-group#group__cyber": {
+    "children": [
+      "disclosure-layout#cyber__first",
+      "disclosure-layout#cyber__second",
+      "disclosure-layout#cyber__third",
+      "disclosure-layout#cyber__fourth",
+      "disclosure-layout#cyber__fifth",
+      "disclosure-layout#cyber__sixth",
+      "disclosure-layout#cyber__seventh",
+      "disclosure-layout#cyber__eighth"
+    ]
+  },
+  "disclosure-state-indicator": {
+    "props": {
+      "Show": "icon-caret#down",
+      "Hide": "icon-caret#up"
+    }
+  },
+  "icon-caret#down": {
+    "props": {
+      "orientation": "down"
+    }
+  },
+  "icon-caret#up": {
+    "props": {
+      "orientation": "up"
+    }
+  },
+  // Primera Pregunta
+  "disclosure-layout#cyber__first": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#cyber__first",
+      "disclosure-content#cyber__first"
+    ]
+  },
+  "disclosure-trigger#cyber__first": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question1"]
+  },
+  "disclosure-content#cyber__first": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer1"]
+  },
+  "rich-text#question1": {
+    "props": {
+      "text": "¿En qué consiste el Dimaco Cyber?",
+      "blockClass": "question-cyber"
+    }
+  },
+  "rich-text#answer1": {
+    "props": {
+      "text": "Es un evento especial de descuentos donde podrás encontrar cientos de productos en promoción por tiempo limitado. Ideal para aprovechar ofertas exclusivas en herramientas, materiales de construcción, hogar y más.",
+      "blockClass": "answer-cyber"
+    }
+  },
+  // Segunda Pregunta
+  "disclosure-layout#cyber__second": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#cyber__second",
+      "disclosure-content#cyber__second"
+    ]
+  },
+  "disclosure-trigger#cyber__second": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question2"]
+  },
+  "disclosure-content#cyber__second": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer2"]
+  },
+  "rich-text#question2": {
+    "props": {
+      "text": "¿Cuándo empieza el Dimaco Cyber?",
+      "blockClass": "question-cyber"
+    }
+  },
+  "rich-text#answer2": {
+    "props": {
+      "text": "El Dimaco Cyber comienza este 3 de octubre y estará activo por 10 días o hasta agotar stock. ¡Revisa nuestro sitio para no perderte ninguna oferta!",
+      "blockClass": "answer-cyber"
+    }
+  },
+  // Tercera Pregunta
+  "disclosure-layout#cyber__third": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#cyber__third",
+      "disclosure-content#cyber__third"
+    ]
+  },
+  "disclosure-trigger#cyber__third": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question3"]
+  },
+  "disclosure-content#cyber__third": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer3"]
+  },
+  "rich-text#question3": {
+    "props": {
+      "text": "¿Qué descuentos y productos habrá en el Dimaco Cyber?",
+      "blockClass": "question-cyber"
+    }
+  },
+  "rich-text#answer3": {
+    "props": {
+      "text": "Durante el Dimaco Cyber encontrarás descuentos especiales en categorías como herramientas, ferretería, construcción, electricidad, baño, cocina y más. Las ofertas aplican a productos seleccionados y están disponibles solo por tiempo limitado.",
+      "blockClass": "answer-cyber"
+    }
+  },
+  // Cuarta Pregunta
+  "disclosure-layout#cyber__fourth": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#cyber__fourth",
+      "disclosure-content#cyber__fourth"
+    ]
+  },
+  "disclosure-trigger#cyber__fourth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question4"]
+  },
+  "disclosure-content#cyber__fourth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer4"]
+  },
+  "rich-text#question4": {
+    "props": {
+      "text": "¿Se puede comprar online y retirar en tienda durante el Dimaco Cyber?",
+      "blockClass": "question-cyber"
+    }
+  },
+  "rich-text#answer4": {
+    "props": {
+      "text": "Sí, puedes comprar en nuestra tienda online y seleccionar la opción *'Retiro en tienda'*. Te avisaremos por correo o WhatsApp cuando tu pedido esté listo para ser retirado.",
+      "blockClass": "answer-cyber"
+    }
+  },
+  // Quinta Pregunta
+  "disclosure-layout#cyber__fifth": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#cyber__fifth",
+      "disclosure-content#cyber__fifth"
+    ]
+  },
+  "disclosure-trigger#cyber__fifth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question5"]
+  },
+  "disclosure-content#cyber__fifth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer5"]
+  },
+  "rich-text#question5": {
+    "props": {
+      "text": "¿Hay envío gratis durante el Dimaco Cyber y cuánto tardan los envíos?",
+      "blockClass": "question-cyber"
+    }
+  },
+  "rich-text#answer5": {
+    "props": {
+      "text": "Sí, contamos con envío gratis solo en la región del Maule, pero realizamos envíos por todo chile. Los plazos de entrega varían según la ubicación, pero en general van de 3 a 6 días hábiles.",
+      "blockClass": "answer-cyber"
+    }
+  },
+  // Sexta Pregunta
+  "disclosure-layout#cyber__sixth": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#cyber__sixth",
+      "disclosure-content#cyber__sixth"
+    ]
+  },
+  "disclosure-trigger#cyber__sixth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question6"]
+  },
+  "disclosure-content#cyber__sixth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer6"]
+  },
+  "rich-text#question6": {
+    "props": {
+      "text": "¿Qué opciones de pago hay en el Dimaco Cyber?",
+      "blockClass": "question-cyber"
+    }
+  },
+  "rich-text#answer6": {
+    "props": {
+      "text": "Aceptamos pagos con tarjetas de débito, crédito y transferencias bancarias; contamos con sistemas de pago en línea como Webpay y Khipu. También puedes pagar en cuotas según las condiciones de tu banco, y hasta 3 cuotas sin interés a través de Webpay.",
+      "blockClass": "answer-cyber"
+    }
+  },
+  // Séptima Pregunta
+  "disclosure-layout#cyber__seventh": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#cyber__seventh",
+      "disclosure-content#cyber__seventh"
+    ]
+  },
+  "disclosure-trigger#cyber__seventh": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question7"]
+  },
+  "disclosure-content#cyber__seventh": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer7"]
+  },
+  "rich-text#question7": {
+    "props": {
+      "text": "¿Cuál es el límite de compra por producto en el Dimaco Cyber?",
+      "blockClass": "question-cyber"
+    }
+  },
+  "rich-text#answer7": {
+    "props": {
+      "text": "No hay límite de unidades por cliente.",
+      "blockClass": "answer-cyber"
+    }
+  },
+  // Octava Pregunta
+  "disclosure-layout#cyber__eighth": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#cyber__eighth",
+      "disclosure-content#cyber__eighth"
+    ]
+  },
+  "disclosure-trigger#cyber__eighth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question8"]
+  },
+  "disclosure-content#cyber__eighth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer8"]
+  },
+  "rich-text#question8": {
+    "props": {
+      "text": "¿Se reponen los productos si se agotan durante el Dimaco Cyber?",
+      "blockClass": "question-cyber"
+    }
+  },
+  "rich-text#answer8": {
+    "props": {
+      "text": "Las ofertas son por stock limitado, por lo tanto, si un producto se agota, no podemos garantizar su reposición durante el evento. Recomendamos comprar lo antes posible para asegurar tu producto.",
+      "blockClass": "answer-cyber"
+    }
+  }
+}

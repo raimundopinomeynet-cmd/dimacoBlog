@@ -1,0 +1,149 @@
+{
+    "store.custom#blog-herramientas": {
+        "blocks": [
+            "responsive-layout.desktop#blog-herramientas",
+            "responsive-layout.mobile#blog-herramientas"
+        ]
+    },
+    "responsive-layout.desktop#blog-herramientas": {
+        "children": [
+            "flex-layout.row#article__header__herramientas",
+            "flex-layout.row#article__content__herramientas"
+        ]
+    },
+    "flex-layout.row#article__header__herramientas": {
+        "title": "Article Header",
+        "children": [
+            "flex-layout.col#article__header__herramientas"
+        ],
+        "props": {
+            "blockClass": "article__header"
+        }
+    },
+    "flex-layout.col#article__header__herramientas": {
+        "children": [
+            "link#back__to__blog",
+            "rich-text#article__title__herramientas",
+            "rich-text#article__meta__herramientas",
+            "image#article__featured__herramientas"
+        ],
+        "props": {
+            "blockClass": "article__header__content"
+        }
+    },
+    "link#back__to__blog": {
+        "props": {
+            "href": "/blog",
+            "label": "← Volver al Blog",
+            "blockClass": "back__to__blog"
+        }
+    },
+    "rich-text#article__title__herramientas": {
+        "props": {
+            "text": "# Cómo elegir las herramientas correctas para tu proyecto",
+            "blockClass": "article__title"
+        }
+    },
+    "rich-text#article__meta__herramientas": {
+        "props": {
+            "text": "**Publicado el:** 15 de Enero, 2026 | **Categoría:** Herramientas",
+            "blockClass": "article__meta"
+        }
+    },
+    "image#article__featured__herramientas": {
+        "props": {
+            "src": "https://via.placeholder.com/1200x600/4CAF50/ffffff?text=Herramientas",
+            "alt": "Herramientas de construcción",
+            "blockClass": "article__featured__image"
+        }
+    },
+    "flex-layout.row#article__content__herramientas": {
+        "title": "Article Content",
+        "children": [
+            "flex-layout.col#article__main__herramientas"
+        ],
+        "props": {
+            "blockClass": "article__content"
+        }
+    },
+    "flex-layout.col#article__main__herramientas": {
+        "children": [
+            "rich-text#article__intro__herramientas",
+            "rich-text#article__section1__herramientas",
+            "rich-text#article__section2__herramientas",
+            "rich-text#article__section3__herramientas",
+            "rich-text#article__section4__herramientas",
+            "rich-text#article__conclusion__herramientas",
+            "flex-layout.row#article__cta__herramientas"
+        ],
+        "props": {
+            "blockClass": "article__main"
+        }
+    },
+    "rich-text#article__intro__herramientas": {
+        "props": {
+            "text": "Elegir las herramientas adecuadas es fundamental para el éxito de cualquier proyecto de construcción o remodelación. En este artículo, te ayudaremos a tomar las mejores decisiones según tus necesidades.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__section1__herramientas": {
+        "props": {
+            "text": "## 1. Define el tipo de proyecto\n\nAntes de comprar cualquier herramienta, es esencial identificar claramente qué tipo de trabajo vas a realizar:\n\n- **Trabajos de carpintería:** Necesitarás sierras, taladros, lijadoras y herramientas de medición precisas.\n- **Construcción general:** Martillos, niveles, llanas y herramientas de albañilería.\n- **Plomería:** Llaves, cortadores de tubo, soplete para soldadura.\n- **Electricidad:** Destornilladores aislados, pelacables, multímetro.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__section2__herramientas": {
+        "props": {
+            "text": "## 2. Considera la frecuencia de uso\n\n**Uso ocasional:** Si vas a usar la herramienta pocas veces al año, puedes optar por opciones más económicas o considerar el alquiler.\n\n**Uso profesional:** Si eres profesional o planeas usar las herramientas regularmente, invierte en equipos de mayor calidad y durabilidad. Las marcas profesionales suelen ofrecer mejor rendimiento y garantías más largas.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__section3__herramientas": {
+        "props": {
+            "text": "## 3. Calidad vs. Precio\n\nNo siempre la opción más cara es la mejor, ni la más barata la más conveniente:\n\n- **Herramientas de calidad media:** Perfectas para usuarios domésticos que realizan proyectos ocasionales.\n- **Herramientas profesionales:** Mayor durabilidad, mejor rendimiento y garantías extendidas.\n- **Herramientas especializadas:** Para trabajos muy específicos, considera modelos especializados.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__section4__herramientas": {
+        "props": {
+            "text": "## 4. Características importantes a evaluar\n\n- **Potencia:** Asegúrate de que la herramienta tenga la potencia necesaria para el trabajo.\n- **Ergonomía:** Herramientas cómodas reducen la fatiga y mejoran la precisión.\n- **Peso:** Considera si necesitarás usar la herramienta por períodos prolongados.\n- **Accesorios incluidos:** Algunos kits incluyen baterías, estuches y accesorios adicionales.\n- **Garantía:** Una buena garantía es señal de confianza del fabricante.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__conclusion__herramientas": {
+        "props": {
+            "text": "## Conclusión\n\nElegir las herramientas correctas requiere analizar tus necesidades específicas, la frecuencia de uso y tu presupuesto. En Dimaco, contamos con expertos que pueden asesorarte para encontrar exactamente lo que necesitas para tu proyecto.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "flex-layout.row#article__cta__herramientas": {
+        "children": [
+            "flex-layout.col#article__cta__herramientas"
+        ],
+        "props": {
+            "blockClass": "article__cta"
+        }
+    },
+    "flex-layout.col#article__cta__herramientas": {
+        "children": [
+            "rich-text#article__cta__title",
+            "link#article__cta__button"
+        ],
+        "props": {
+            "blockClass": "article__cta__content"
+        }
+    },
+    "rich-text#article__cta__title": {
+        "props": {
+            "text": "### ¿Necesitas asesoría para tu proyecto?",
+            "blockClass": "article__cta__title"
+        }
+    },
+    "link#article__cta__button": {
+        "props": {
+            "href": "/contacto",
+            "label": "Contacta con nuestros expertos",
+            "blockClass": "article__cta__button"
+        }
+    }
+}

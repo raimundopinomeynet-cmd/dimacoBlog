@@ -1,0 +1,130 @@
+.inputs__name__servicio{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.group__input__servicio{
+    width: 49%;
+}
+
+.inputs__colum__servicio{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 1.5rem; 
+}
+
+.form__servicio{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 850px;
+}
+
+.input__servicio__tecnico{
+    padding: 15px;
+    border: unset;
+    border: 0;
+    border-radius: 4px;
+    background: var(--Gray-2,#f5f5f5);
+    height: 40px;
+}
+
+
+.input__servicio__tecnico:focus-visible{
+    border: unset !important;
+}
+.input__servicio__tecnico:focus{
+    border: unset !important;
+}
+
+
+.input__servicio__error{
+    color: red;
+    font-size: 14px;
+}
+
+
+.textarea__servicio__tecnico{
+    max-width: 592px;
+    min-width: 592px;
+    max-height: 150px;
+    min-height: 150px;
+}
+
+.btn__submit__servicio{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 35px;
+    color: var(--Primary-Morado, #ffffff);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19.2px;
+    height: 40px;
+    box-shadow: 4px 4px 4px 0px rgba(231,137,255,0.2) inset,2px 4px 4px 0px rgba(39,15,43,0.12);
+    cursor: pointer;
+    width: auto;
+    border-radius: 4px;
+    background: var(--Primary-Blue,#007934);
+    border: 0;
+}
+
+.groups__dir{
+    display: flex;
+    gap: 20px;
+}
+
+.groups__dir .inputs__colum__servicio{
+    width: calc(50% - 10px);
+}
+
+.terminos{
+    color: var(--Secondary-Green-Dark,#090f05);
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px;
+    margin-left: 4px;
+}
+
+.btn__disabled{
+    background: var(--Primary-Blue,#00793485);
+    cursor: unset;
+}
+
+
+@media (width < 950px) {
+    .form__servicio{
+        max-width: unset !important;
+        width: 90%;
+    }
+
+    .textarea__servicio__tecnico{
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (width < 540px) {
+    .group__input__servicio{
+        width: 100%;
+    }
+
+    .inputs__name__servicio{
+        flex-wrap: wrap;
+    }
+
+    .groups__dir{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    
+    .groups__dir .inputs__colum__servicio{
+        width: 100%;
+    }
+}
+
+

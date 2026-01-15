@@ -1,0 +1,23 @@
+
+
+.container--product__availability__pdp{
+    margin-bottom: 12px;
+    .showAvailableText--product__availability__pdp{
+        border-radius: 12px;
+        background: rgba(57, 181, 74, 0.12);
+        display: flex;
+        padding: 6px 8px;
+        align-items: center;
+        justify-content: center;
+
+        color: var(--Primary-Green, #007934);
+        font-family: "Gotham";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16.8px;
+    }
+    .showAvailableTextHighlight--product__availability__pdp{
+        display: none;
+    }
+}

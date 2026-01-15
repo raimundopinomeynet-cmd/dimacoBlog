@@ -1,0 +1,123 @@
+@import "../variables";
+
+
+.wrapper--subHead__categorias__destacadas,
+.wrapper--head__categorias__destacadas{
+    width: 100%;
+    .headingLevel1--head__categorias__destacadas{
+        margin: 0;
+        text-align: center;
+        color: $black0;
+        text-align: center;
+        font-family: $font;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 33.6px; 
+        @include mobile__640{
+            font-size: 24px;
+        }
+    }
+}
+
+.headingLevel2--subHead__categorias__destacadas{ 
+    color: $black0;
+    margin: 0.5rem 0;
+    text-align: center;
+    font-family: $font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px ; /* 19.2px */
+}
+
+.wrapper--card__text__destacada{
+    width: 100%;
+    .paragraph--card__text__destacada{
+        margin: 0.35rem auto;
+        text-align: center;
+        color: $greenDark;
+        font-family: $font;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height:16.8px; 
+        width: 110px;
+    }
+}
+
+.wrapper--title__mejores__ofertas{
+    width: 100%;
+    .headingLevel1--title__mejores__ofertas{
+        margin: 0;
+        color: $black0;
+        text-align: center;
+        font-family: $font;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 33.6px;
+        @include mobile__640{
+            font-size: 24px;
+        }
+    }
+}
+
+.wrapper--text__mejores__ofertas{
+    width: 100%;
+    .headingLevel2--text__mejores__ofertas{
+        margin: 0;
+        color: #000;
+        text-align: center;
+        font-family: $font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.2px;
+        @include mobile__460{
+            width: 90%;
+            margin: auto;
+            margin-top: 0.35rem;
+        }
+    }
+}
+
+.wrapper--selecionados__home__texto{
+    .headingLevel2--selecionados__home__texto{
+        @include mobile__460{
+            width: 75% !important;
+        }
+    }
+}
+
+.headingLevel2--text__productos__semana{
+    margin: 1rem auto !important;
+    margin-bottom: 1.5rem !important;
+    @include mobile__460{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.container--ver__mas__productos{
+    justify-content: center;
+    .paragraph--ver__mas__productos{
+        margin-top: 2.25rem;
+        text-align: center;
+        .link--ver__mas__productos{
+            display: block;
+            width: 240px; 
+            border-radius: 4px;
+            background: $primary;
+            padding: 8px 20px;
+
+            text-decoration: none;
+            color: #FAFAFA;
+            font-family: $font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 19.2px; 
+        }
+    }
+}

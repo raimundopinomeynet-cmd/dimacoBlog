@@ -1,0 +1,499 @@
+{
+    "store.custom#nuestra-historia": {
+        "blocks": [
+            "responsive-layout.desktop#nuestra-historia",
+            "responsive-layout.mobile#nuestra-historia"
+        ]
+    },
+    "responsive-layout.desktop#nuestra-historia": {
+        "children": [
+            "image#image__banner",
+            "flex-layout.row#main__landing__historia"
+        ]
+    },
+    "flex-layout.row#main__landing__historia": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#main__landing__historia"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#main__landing__historia": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#menu__landing__historia",
+            "flex-layout.col#contenido__landing__historia"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#menu__landing__historia": {
+        "title": "Contenedor Menu",
+        "children": [
+            "rich-text#titulo__menu__landing",
+            "rich-text#texto__menu__landing",
+            "link#terminos__link",
+            "link#cambios__link",
+            "link#pagos__link",
+            "link#politicas__link",
+            "link#historia__link__active"
+        ],
+        "props": {
+            "blockClass": "menu__landing"
+        }
+    },
+    "flex-layout.col#contenido__landing__historia": {
+        "title": "Contenedor contenido__landing",
+        "children": [
+            "rich-text#parrafo__1__landing__historia",
+            "flex-layout.col#dato__1__historia",
+            "flex-layout.col#dato__2__historia",
+            "flex-layout.col#dato__3__historia",
+            "flex-layout.col#dato__4__historia",
+            "flex-layout.col#dato__5__historia",
+            "flex-layout.col#dato__6__historia",
+            "flex-layout.col#dato__7__historia",
+            "flex-layout.col#dato__8__historia",
+            "flex-layout.col#dato__9__historia",
+            "flex-layout.col#dato__10__historia",
+            "flex-layout.col#dato__11__historia",
+            "flex-layout.col#dato__12__historia",
+            "flex-layout.col#dato__13__historia",
+            "rich-text#parrafo__2__landing__historia",
+            "flex-layout.col#dato__14__historia",
+            "flex-layout.col#dato__15__historia",
+            "flex-layout.col#dato__16__historia"
+        ],
+        "props": {
+            "blockClass": "contenido__landing"
+        }
+    },
+    "flex-layout.col#dato__1__historia": {
+        "title": "dato 1",
+        "children": [
+            "rich-text#fecha__1__historia",
+            "rich-text#texto__1__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__1__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "1977",
+            "blockClass": "fecha___historia"
+        }
+    },
+    "rich-text#texto__1__historia": {
+        "title": "info",
+        "props": {
+            "text": "Nace Dimaco a partir de la cooperativa Sodimac en Constitución, fundada por Don Enrique Espinoza Peña y dos socios.",
+            "blockClass": "texto___historia"
+        }
+    },
+
+    "flex-layout.col#dato__2__historia": {
+        "title": "dato 2",
+        "children": [
+            "rich-text#fecha__2__historia",
+            "rich-text#texto__2__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__2__historia": {
+        "title": "fecha",
+
+        "props": {
+            "text": "1983",
+            "blockClass": ["fecha___historia","fecha___historia__alterno"]
+        }
+    },
+    "rich-text#texto__2__historia": {
+        "title": "info",
+        "props": {
+            "text": "Mario y Enrique Espinoza se integran formalmente al negocio, participando activamente en la venta, despacho, compras y abastecimiento desde Talca, Concepción y Santiago. Esto implicaba maratónicos viajes en los cuales había que hacer permanentes paradas para mojar y enfriar los neumáticos de la camioneta que venía con un gran sobrepeso.",
+            "blockClass": "texto___historia"
+        }
+    },
+
+    "flex-layout.col#dato__3__historia": {
+        "title": "dato 3",
+        "children": [
+            "rich-text#fecha__3__historia",
+            "rich-text#texto__3__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__3__historia": {
+        "title": "fecha",
+
+        "props": {
+            "text": "1988",
+            "blockClass": ["fecha___historia"/* ,"fecha___historia__alterno" */]
+        }
+    },
+    "rich-text#texto__3__historia": {
+        "title": "info",
+        "props": {
+            "text": "Don Enrique enferma y Mario asume la dirección de la ferretería. Enrique comienza a llevar a su padre a Santiago a recuperar su salud.",
+            "blockClass": "texto___historia"
+        }
+    },
+
+    "flex-layout.col#dato__4__historia": {
+        "title": "dato 4",
+        "children": [
+            "rich-text#fecha__4__historia",
+            "rich-text#texto__4__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__4__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "1998",
+            "blockClass": ["fecha___historia","fecha___historia__alterno"]
+        }
+    },
+    "rich-text#texto__4__historia": {
+        "title": "info",
+        "props": {
+            "text": "Fallece Don Enrique Espinoza Peña, fundador de Dimaco.",
+            "blockClass": "texto___historia"
+        }
+    },
+
+    "flex-layout.col#dato__5__historia": {
+
+        "title": "dato 5",
+        "children": [
+            "rich-text#fecha__5__historia",
+            "rich-text#texto__5__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__5__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "1999",
+            "blockClass": ["fecha___historia"/* ,"fecha___historia__alterno" */]
+        }
+    },
+    "rich-text#texto__5__historia": {
+        "title": "info",
+        "props": {
+            "text": " Se inicia la construcción de una nueva sala de ventas para la casa matriz.",
+            "blockClass": "texto___historia"
+        }
+    },
+
+    "flex-layout.col#dato__6__historia": {
+        "title": "dato 6",
+        "children": [
+            "rich-text#fecha__6__historia",
+            "rich-text#texto__6__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__6__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "2003",
+            "blockClass": ["fecha___historia","fecha___historia__alterno"]
+        }
+    },
+    "rich-text#texto__6__historia": {
+        "title": "info",
+        "props": {
+            "text": "Dimaco se integra a la cadena de Ferreterías Chilemat.",
+            "blockClass": "texto___historia"
+        }
+    },
+
+
+    "flex-layout.col#dato__7__historia": {
+        "title": "dato 7",
+        "children": [
+            "rich-text#fecha__7__historia",
+            "rich-text#texto__7__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__7__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "2004",
+            "blockClass": ["fecha___historia"/* ,"fecha___historia__alterno" */]
+        }
+    },
+    "rich-text#texto__7__historia": {
+        "title": "info",
+        "props": {
+            "text": "Se concreta una alianza con Masisa S.A. y se construye el Placacentro Dimaco.",
+            "blockClass": "texto___historia"
+        }
+    },
+    
+
+    "flex-layout.col#dato__8__historia": {
+        "title": "dato 8",
+        "children": [
+            "rich-text#fecha__8__historia",
+            "rich-text#texto__8__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__8__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "2007",
+            "blockClass": ["fecha___historia","fecha___historia__alterno"]
+        }
+    },
+    "rich-text#texto__8__historia": {
+        "title": "info",
+        "props": {
+            "text": "Se crea la nueva sucursal Barraca de Fierro.",
+            "blockClass": "texto___historia"
+        }
+    },
+    
+
+    "flex-layout.col#dato__9__historia": {
+        "title": "dato 9",
+        "children": [
+            "rich-text#fecha__9__historia",
+            "rich-text#texto__9__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__9__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "2010",
+            "blockClass": ["fecha___historia"/* ,"fecha___historia__alterno" */]
+        }
+    },
+    "rich-text#texto__9__historia": {
+        "title": "info",
+        "props": {
+            "text": "Un terremoto y tsunami afectan las bodegas de la casa matriz, lo que lleva a la creación de un nuevo centro de distribución.",
+            "blockClass": "texto___historia"
+        }
+    },
+    
+
+    "flex-layout.col#dato__10__historia": {
+        "title": "dato 10",
+        "children": [
+            "rich-text#fecha__10__historia",
+            "rich-text#texto__10__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__10__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "2016",
+            "blockClass": ["fecha___historia","fecha___historia__alterno"]
+        }
+    },
+    "rich-text#texto__10__historia": {
+        "title": "info",
+        "props": {
+            "text": "Se incorpora Mario Espinoza Faundez, iniciando la tercera generación en la empresa.",
+            "blockClass": "texto___historia"
+        }
+    },
+    
+
+    "flex-layout.col#dato__11__historia": {
+        "title": "dato 11",
+        "children": [
+            "rich-text#fecha__11__historia",
+            "rich-text#texto__11__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__11__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "2021",
+            "blockClass": ["fecha___historia"/* ,"fecha___historia__alterno" */]
+        }
+    },
+    "rich-text#texto__11__historia": {
+        "title": "info",
+        "props": {
+            "text": "Se incorpora Matías Espinoza Villagra, continuando con el cambio generacional.",
+            "blockClass": "texto___historia"
+        }
+    },
+    
+
+    "flex-layout.col#dato__12__historia": {
+        "title": "dato 12",
+        "children": [
+            "rich-text#fecha__12__historia",
+            "rich-text#texto__12__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__12__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "2022",
+            "blockClass": ["fecha___historia","fecha___historia__alterno"]
+        }
+    },
+    "rich-text#texto__12__historia": {
+        "title": "info",
+        "props": {
+            "text": "Se construye un segundo centro de distribución.",
+            "blockClass": "texto___historia"
+        }
+    },
+    
+
+    "flex-layout.col#dato__13__historia": {
+        "title": "dato 3",
+        "children": [
+            "rich-text#fecha__13__historia",
+            "rich-text#texto__13__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__13__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "2023",
+            "blockClass": ["fecha___historia"/* ,"fecha___historia__alterno" */]
+        }
+    },
+    "rich-text#texto__13__historia": {
+        "title": "info",
+        "props": {
+            "text": "Se inaugura la primera sucursal fuera de Constitución, Dimaco Cauquenes.",
+            "blockClass": "texto___historia"
+        }
+    },
+    "rich-text#parrafo__1__landing__historia": {
+        "props": {
+            "text": "**Resumen de la historia de Dimaco**",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__2__landing__historia": {
+        "props": {
+            "text": "**Dimaco ha pasado de ser una pequeña ferretería local a una empresa con una fuerte presencia en la región del Maule, gracias a la dedicación y el trabajo duro de la familia Espinoza.**",
+            "blockClass": "parrafo__landing"
+        }
+    },
+
+
+    "flex-layout.col#dato__14__historia": {
+        "title": "dato 3",
+        "children": [
+            "rich-text#fecha__14__historia",
+            "rich-text#texto__14__historia"
+        ],
+        "props": {
+            "blockClass":["dato__historia","mision__vision__card"]
+        }
+    },
+    "rich-text#fecha__14__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "Nuestra Misión",
+            "blockClass": ["fecha___historia","mision__vision__card"]
+        }
+    },
+    "rich-text#texto__14__historia": {
+        "title": "info",
+        "props": {
+            "text": "Ofrecer productos y servicios de la mejor calidad a un precio competitivo, contamos con un equipo permanentemente capacitado y motivado para entregar apoyo y soluciones confiables y adecuadas a cada necesidad del cliente, manejamos un variado y completo stock en nuestro centro de distribución y alianzas con nuestros proveedores que nos permiten una entrega oportuna en su domicilio o nuestras tiendas, agregando valor a sus proyectos y construyendo relaciones de largo plazo.",
+            "blockClass": "texto___historia"
+        }
+    }
+    ,
+
+
+    "flex-layout.col#dato__15__historia": {
+        "title": "dato 3",
+        "children": [
+            "rich-text#fecha__15__historia",
+            "rich-text#texto__15__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__15__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "Nuestra Visión",
+            "blockClass": ["fecha___historia","mision__vision__card"]
+        }
+    },
+    "rich-text#texto__15__historia": {
+        "title": "info",
+        "props": {
+            "text": "Ser una plataforma de negocios con nuestros clientes y proveedores entregando la mejor experiencia de compra a personas y empresas.",
+            "blockClass": "texto___historia"
+        }
+    },
+
+
+    "flex-layout.col#dato__16__historia": {
+        "title": "dato 3",
+        "children": [
+            "rich-text#fecha__16__historia",
+            "rich-text#texto__16__historia"
+        ],
+        "props": {
+            "blockClass": "dato__historia"
+        }
+    },
+    "rich-text#fecha__16__historia": {
+        "title": "fecha",
+        "props": {
+            "text": "Valores",
+            "blockClass": ["fecha___historia","mision__vision__card"]
+        }
+    },
+    "rich-text#texto__16__historia": {
+        "title": "info",
+        "props": {
+            "text": "- Empatía: Sabemos apreciar y respetar los sentimientos y puntos de vista del cliente. \n- Confianza: Somos consecuentes con lo que ofrecemos y entregamos. \n- Puntualidad: Cumplir nuestros compromisos en los tiempos acordados. \n- Flexibilidad: Ofrecemos diferentes alternativas buscando la más apta para cada situación.",
+            "blockClass": "texto___historia"
+        }
+    }
+}

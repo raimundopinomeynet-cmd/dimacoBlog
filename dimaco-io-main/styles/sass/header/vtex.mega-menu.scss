@@ -1,0 +1,164 @@
+@import "../variables";
+.triggerButtonIcon {
+  width: 20px;
+  height: 20px;
+  color:  $greenDark; 
+}
+
+.triggerContainer {
+  width: 100px;
+  height: 40px;  
+  border: 0;
+  border-radius:4px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  border: 1px solid  $greenDark;
+  &::after {
+    content: "Categorías";
+    font-family: $c-tipografia;
+    color: $greenDark;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16.8px;
+  }
+}
+
+.menuContainerNav {
+  left: 0px;
+  right: 0px;
+  top: 45px;
+  max-width: fit-content;
+  width: auto !important;
+  border: 0;
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, .12);
+  display: flex;
+  flex-direction: row;
+  background: #f5f5f5;
+  z-index: 9;
+  .menuContainer {    
+    width: 250px;
+    background: $c-blanco;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 250px;
+    padding: 0 0 30px 0;
+    min-width: 250px;  
+    max-height: none;
+    .menuItem {      
+      background: transparent;
+      .styledLinkText {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 400;
+      }
+      .accordionIconContainer {
+        color: $c-principal;
+      }
+    }
+    .menuItem::hover {      
+      background: transparent;
+      .styledLinkText {
+        font-weight: 700;
+      }      
+    }        
+  }
+
+  .submenuContainer {   
+    overflow: auto;
+    max-height: none;
+    padding: 30px;
+    min-width: 250px;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #ccc;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #471344;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    .submenuContainerTitle {
+      display: none;
+    } 
+
+    .submenuList {     
+      display: block; 
+
+      .submenuItem.submenuItem--isClosed {        
+        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .submenuItem {
+        max-width: none;    
+        margin: 0; 
+        width: 33%   
+      }
+
+      .styledLinkContainer {
+        width: 100%;
+      }
+
+      .styledLink {              
+        &:hover {
+          color: $c-principal;
+        }
+        .styledLinkText {
+            text-transform: capitalize;
+            font-size: 14px;       
+            line-height: 30px;   
+        }
+      }
+      .seeAllLinkContainer {        
+        .seeAllLink {
+          font-size: 12px;
+          text-decoration: none;
+          padding: 7px;
+          background: $c-secundario;
+          border-radius: 30px;
+          color: $c-principal;
+        }
+
+      } 
+    }    
+  }
+}
+.menuContainerNavVertical {
+  .departmentsContainer {
+    .departmentsTitle {
+      //display: none;
+    }
+  }
+
+  .submenuListVertical {    
+    .submenuItemVertical {
+      position: relative;      
+      .seeAllLinkContainer {
+        .seeAllLink {
+          text-decoration: none;
+          float: right;
+          line-height: 44px;
+          width: 100%;
+        }
+      }
+    }
+  }  
+}

@@ -1,0 +1,281 @@
+{
+    "store.custom#blog": {
+        "blocks": [
+            "responsive-layout.desktop#blog",
+            "responsive-layout.mobile#blog"
+        ]
+    },
+    "responsive-layout.desktop#blog": {
+        "children": [
+            "flex-layout.row#blog__banner",
+            "flex-layout.row#main__blog"
+        ]
+    },
+    "flex-layout.row#blog__banner": {
+        "title": "Banner Blog",
+        "children": [
+            "flex-layout.col#blog__banner__content"
+        ],
+        "props": {
+            "blockClass": "blog__banner"
+        }
+    },
+    "flex-layout.col#blog__banner__content": {
+        "children": [
+            "rich-text#blog__title",
+            "rich-text#blog__subtitle"
+        ],
+        "props": {
+            "blockClass": "blog__banner__content"
+        }
+    },
+    "rich-text#blog__title": {
+        "props": {
+            "text": "# Blog Dimaco",
+            "blockClass": "blog__title"
+        }
+    },
+    "rich-text#blog__subtitle": {
+        "props": {
+            "text": "Consejos, novedades y todo sobre construcción y ferretería",
+            "blockClass": "blog__subtitle"
+        }
+    },
+    "flex-layout.row#main__blog": {
+        "title": "Main Blog Container",
+        "children": [
+            "flex-layout.col#main__blog"
+        ],
+        "props": {
+            "blockClass": "main__blog"
+        }
+    },
+    "flex-layout.col#main__blog": {
+        "children": [
+            "flex-layout.col#blog__categories",
+            "flex-layout.col#blog__articles"
+        ],
+        "props": {
+            "blockClass": "main__blog__content"
+        }
+    },
+    "flex-layout.col#blog__categories": {
+        "title": "Categorías del Blog",
+        "children": [
+            "rich-text#blog__categories__title",
+            "flex-layout.row#blog__categories__list"
+        ],
+        "props": {
+            "blockClass": "blog__categories"
+        }
+    },
+    "rich-text#blog__categories__title": {
+        "props": {
+            "text": "## Categorías",
+            "blockClass": "blog__categories__title"
+        }
+    },
+    "flex-layout.row#blog__categories__list": {
+        "children": [
+            "link#blog__cat__construccion",
+            "link#blog__cat__herramientas",
+            "link#blog__cat__consejos",
+            "link#blog__cat__novedades"
+        ],
+        "props": {
+            "blockClass": "blog__categories__list"
+        }
+    },
+    "link#blog__cat__construccion": {
+        "props": {
+            "href": "/blog/categoria/construccion",
+            "label": "Construcción",
+            "blockClass": "blog__category__link"
+        }
+    },
+    "link#blog__cat__herramientas": {
+        "props": {
+            "href": "/blog/categoria/herramientas",
+            "label": "Herramientas",
+            "blockClass": "blog__category__link"
+        }
+    },
+    "link#blog__cat__consejos": {
+        "props": {
+            "href": "/blog/categoria/consejos",
+            "label": "Consejos",
+            "blockClass": "blog__category__link"
+        }
+    },
+    "link#blog__cat__novedades": {
+        "props": {
+            "href": "/blog/categoria/novedades",
+            "label": "Novedades",
+            "blockClass": "blog__category__link"
+        }
+    },
+    "flex-layout.col#blog__articles": {
+        "title": "Artículos del Blog",
+        "children": [
+            "rich-text#blog__articles__title",
+            "flex-layout.row#blog__articles__grid"
+        ],
+        "props": {
+            "blockClass": "blog__articles"
+        }
+    },
+    "rich-text#blog__articles__title": {
+        "props": {
+            "text": "## Últimos Artículos",
+            "blockClass": "blog__articles__title"
+        }
+    },
+    "flex-layout.row#blog__articles__grid": {
+        "children": [
+            "flex-layout.col#article__1",
+            "flex-layout.col#article__2",
+            "flex-layout.col#article__3"
+        ],
+        "props": {
+            "blockClass": "blog__articles__grid"
+        }
+    },
+    "flex-layout.col#article__1": {
+        "title": "Artículo 1",
+        "children": [
+            "link#article__1__link"
+        ],
+        "props": {
+            "blockClass": "blog__article__card"
+        }
+    },
+    "link#article__1__link": {
+        "props": {
+            "href": "/blog/articulo/como-elegir-herramientas",
+            "blockClass": "blog__article__link"
+        },
+        "children": [
+            "image#article__1__image",
+            "rich-text#article__1__title",
+            "rich-text#article__1__excerpt",
+            "rich-text#article__1__date"
+        ]
+    },
+    "image#article__1__image": {
+        "props": {
+            "src": "https://via.placeholder.com/400x250/4CAF50/ffffff?text=Herramientas",
+            "alt": "Cómo elegir las herramientas correctas",
+            "blockClass": "blog__article__image"
+        }
+    },
+    "rich-text#article__1__title": {
+        "props": {
+            "text": "### Cómo elegir las herramientas correctas para tu proyecto",
+            "blockClass": "blog__article__title"
+        }
+    },
+    "rich-text#article__1__excerpt": {
+        "props": {
+            "text": "Descubre los factores clave para seleccionar las herramientas adecuadas según el tipo de trabajo que vayas a realizar.",
+            "blockClass": "blog__article__excerpt"
+        }
+    },
+    "rich-text#article__1__date": {
+        "props": {
+            "text": "15 de Enero, 2026",
+            "blockClass": "blog__article__date"
+        }
+    },
+    "flex-layout.col#article__2": {
+        "title": "Artículo 2",
+        "children": [
+            "link#article__2__link"
+        ],
+        "props": {
+            "blockClass": "blog__article__card"
+        }
+    },
+    "link#article__2__link": {
+        "props": {
+            "href": "/blog/articulo/consejos-construccion-hogar",
+            "blockClass": "blog__article__link"
+        },
+        "children": [
+            "image#article__2__image",
+            "rich-text#article__2__title",
+            "rich-text#article__2__excerpt",
+            "rich-text#article__2__date"
+        ]
+    },
+    "image#article__2__image": {
+        "props": {
+            "src": "https://via.placeholder.com/400x250/2196F3/ffffff?text=Construccion",
+            "alt": "Consejos de construcción para el hogar",
+            "blockClass": "blog__article__image"
+        }
+    },
+    "rich-text#article__2__title": {
+        "props": {
+            "text": "### 10 consejos esenciales para construcción en el hogar",
+            "blockClass": "blog__article__title"
+        }
+    },
+    "rich-text#article__2__excerpt": {
+        "props": {
+            "text": "Aprende los mejores tips para llevar a cabo proyectos de construcción y remodelación en tu casa de forma segura y eficiente.",
+            "blockClass": "blog__article__excerpt"
+        }
+    },
+    "rich-text#article__2__date": {
+        "props": {
+            "text": "10 de Enero, 2026",
+            "blockClass": "blog__article__date"
+        }
+    },
+    "flex-layout.col#article__3": {
+        "title": "Artículo 3",
+        "children": [
+            "link#article__3__link"
+        ],
+        "props": {
+            "blockClass": "blog__article__card"
+        }
+    },
+    "link#article__3__link": {
+        "props": {
+            "href": "/blog/articulo/tendencias-2026",
+            "blockClass": "blog__article__link"
+        },
+        "children": [
+            "image#article__3__image",
+            "rich-text#article__3__title",
+            "rich-text#article__3__excerpt",
+            "rich-text#article__3__date"
+        ]
+    },
+    "image#article__3__image": {
+        "props": {
+            "src": "https://via.placeholder.com/400x250/FF9800/ffffff?text=Tendencias+2026",
+            "alt": "Tendencias en construcción 2026",
+            "blockClass": "blog__article__image"
+        }
+    },
+    "rich-text#article__3__title": {
+        "props": {
+            "text": "### Tendencias en construcción y ferretería para 2026",
+            "blockClass": "blog__article__title"
+        }
+    },
+    "rich-text#article__3__excerpt": {
+        "props": {
+            "text": "Conoce las últimas tendencias y tecnologías que están revolucionando el mundo de la construcción este año.",
+            "blockClass": "blog__article__excerpt"
+        }
+    },
+    "rich-text#article__3__date": {
+        "props": {
+            "text": "5 de Enero, 2026",
+            "blockClass": "blog__article__date"
+        }
+    }
+}

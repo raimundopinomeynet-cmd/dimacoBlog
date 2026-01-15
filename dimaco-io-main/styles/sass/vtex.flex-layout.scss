@@ -1,0 +1,106 @@
+@import "variables";
+
+.flexRowContent--menu-link {
+  color: #fff;
+}
+
+.flexRowContent--menu-link :global(.vtex-menu-2-x-styledLink) {
+  color: $c-negro;
+  font-size: 14px;
+  font-family: $c-tipografia;
+}
+
+.flexRowContent--main-header :global(.vtex-menu-2-x-styledLink) {
+  color: $c-negro;
+  font-size: 14px;
+  font-family: $c-tipografia;
+}
+
+.flexCol--filterCol {
+  max-width: 500px;
+  min-width: 230px;
+}
+
+.flexCol--productCountCol {
+  align-items: flex-start;
+}
+
+.flexCol--orderByCol {
+  align-items: flex-end;
+}
+
+.flexCol--orderByMobileCol {
+  width: 42%;
+}
+
+.flexCol--filterMobileCol {
+  width: 38%;
+}
+
+.flexRow--quickviewMainRow {
+  display: flex;
+  max-height: 100%;
+}
+
+.flexColChild--quickviewDetails:first-child {
+  overflow-y: auto;
+  height: 66% !important;
+  overflow-x: hidden;
+}
+
+.flexColChild--quickviewDetails:last-child {
+  height: 34% !important;
+}
+
+.flexRow--addToCartRow {
+  padding-bottom: 1rem;
+}
+
+.flexRow--imagenes____cyber,
+.flexRow--preguntas__frecuentes {
+  margin-top: 4rem;
+}
+
+.flexColChild--preguntas__frecuentes_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow--preguntas__frecuentes {
+  margin-bottom: 4rem;
+}
+
+.flexRow--preguntas__frecuentes_row {
+  padding: 0 15%;
+  padding-top: 30px;
+}
+
+.flexRow--imagenes____black,
+.flexRow--preguntas__frecuentes_black{
+  margin-top: 4rem;
+}
+
+.flexRow--preguntas__frecuentes_black{
+  margin-bottom: 4rem;
+}
+
+.flexRow--preguntas__frecuentes_black_row {
+  padding: 0 15%;
+  padding-top: 30px;
+ }
+
+.flexColChild--preguntas__frecuentes_black_col {
+  display: flex;
+  flex-direction: column;
+ }
+
+@media screen and (max-width: 768px) {
+  .flexRow--preguntas__frecuentes_row {
+    padding: 0 5%;
+    padding-top: 30px;
+  }
+  .flexRow--preguntas__frecuentes_black_row {
+    padding: 0 5%;
+    padding-top: 30px;
+  }
+}

@@ -1,0 +1,154 @@
+{
+	//DESKTOP MAIN MENU
+	"flex-layout.col#mega-menu": {
+		"children": [
+			"flex-layout.row#main-menu",
+			"flex-layout.row#mega-menu"
+		]
+	},
+	"flex-layout.row#main-menu": {
+		"props": {
+			"blockClass": "mainMenu"
+		},
+		"children": [
+			"flex-layout.col#hamburguer-container"
+		]
+	},
+	"flex-layout.col#hamburguer-container": {
+		"props": {
+			"blockClass": "megamenu",
+			"verticalAlign": "middle"
+		},
+		"children": [
+			"flex-layout.row#trigger-mega-menu"
+		]
+	},
+	"flex-layout.row#trigger-mega-menu": {
+		"props": {
+			"verticalAlign": "middle"
+		},
+		"children": [
+			"mega-menu-trigger-btn"
+		]
+	},
+	"flex-layout.row#mega-menu": {
+		"children": [
+			"mega-menu#desktop"
+		]
+	},
+	"drawer": {
+		"children": [
+			"drawer-close-button#close__button",
+			"mega-menu#mobile",
+			"flex-layout.row#more__mobile"
+		],
+		"blocks": [
+			"drawer-header#my-drawer"
+		]
+	},
+	
+	"flex-layout.row#more__mobile": {
+		"props": { 
+			"blockClass": "more__mobile"
+		},
+		"children": [
+			"flex-layout.col#more__mobile"
+		]
+	},
+	"flex-layout.col#more__mobile": {
+		"children": [
+			"rich-text#tiendas__mobile",
+			"flex-layout.col#tiendas___mobile",
+			"rich-text#cotiza__mobile",
+			"rich-text#blog__mobile"
+		],
+		"props": {
+			"blockClass": "more__mobile"
+		}
+	},
+	"flex-layout.col#tiendas___mobile": {
+		"children": [
+			"flex-layout.col#tienda__1",
+			"flex-layout.col#tienda__2",
+			"flex-layout.col#tienda__3",
+			"flex-layout.col#tienda__4"
+		],
+		"props": {
+			"blockClass": "tiendas___mobile"
+		}
+	},
+	"rich-text#tiendas__mobile": {
+		"props": {
+			"text": "Tiendas",
+			"blockClass": "tiendas__mobile"
+		}
+	},
+	"rich-text#cotiza__mobile": {
+		"props": {
+			"text": "[Cotiza con nosotros](/cotiza-con-nosotros)",
+			"blockClass": "cotiza__mobile"
+		}
+	},
+	"rich-text#blog__mobile": {
+		"props": {
+			"text": "[Blog](https://blogdimaco.wordpress.com/)",
+			"blockClass": "blog__mobile"
+		}
+	},
+	"drawer-close-button#close__button": {
+		"props": {
+			"blockClass": "close__button"
+		}
+	},
+	"drawer-header#my-drawer": {
+		"children": [
+			"flex-layout.row#drawer-header"
+		]
+	},
+	"flex-layout.row#drawer-header": {
+		"children": [
+			"flex-layout.col#mega-menu-go-back-btn"/* ,
+			"flex-layout.col#drawer-close-button" */
+		],
+		"props": {
+			"blockClass": "drawer-header",
+			"preventHorizontalStretch": true,
+			"preventVerticalStretch": true,
+			"preserveLayoutOnMobile": true,
+			"fullWidth": true
+		}
+	},
+	"flex-layout.col#drawer-close-button": {
+		"children": [
+			"drawer-close-button"
+		],
+		"props": {
+			"verticalAlign": "middle",
+			"horizontalAlign": "right"
+		}
+	},
+	"flex-layout.col#mega-menu-go-back-btn": {
+		"children": [
+			"mega-menu-go-back-btn"
+		],
+		"props": {
+			"verticalAlign": "middle",
+			"horizontalAlign": "left",
+			"paddingLeft": 4
+		}
+	},
+	//COMMON COMPONENTS -------------------------------
+	"mega-menu#desktop": {
+		"props": {
+			"title": "Categorías",
+			"orientation": "horizontal"
+		}
+	},
+	"mega-menu#mobile": {
+		"props": {
+			"title": "Categorías",
+			"orientation": "vertical",
+			"openOnly": "vertical"
+		}
+	}
+}

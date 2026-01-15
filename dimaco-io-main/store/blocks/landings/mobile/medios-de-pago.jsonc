@@ -1,0 +1,212 @@
+{
+    "responsive-layout.mobile#medios-de-pago": {
+        "children": [
+            "image#image__banner",
+            "flex-layout.row#main__landing__medios__mobile"
+        ]
+    },
+    "flex-layout.row#main__landing__medios__mobile": {
+        "title": "main landing",
+        "children": ["flex-layout.col#main__landing__medios__mobile"],
+        "props": {
+            "blockClass": "main__landing__mobile"
+        }
+    },
+    "flex-layout.col#main__landing__medios__mobile": {
+        "children": [
+            "rich-text#titulo__menu__landing",
+            "rich-text#texto__menu__landing",
+            "disclosure-layout-group#paginas__info__medios"
+        ],
+        "props": {
+            "blockClass": "main__landing__mobile"
+        }
+    },
+    "disclosure-layout-group#paginas__info__medios": {
+		"children": [
+			"disclosure-layout#terminos__condiciones",
+			"disclosure-layout#cambios__devoluciones",
+            "disclosure-layout#medios__de__pago",
+			"disclosure-layout#politica__landing",
+			"disclosure-layout#historia__landing"
+		]
+	},
+
+    /* CAMBIOS */
+    "disclosure-layout#cambios__devoluciones": {
+		"children": [
+			"disclosure-trigger#cambios__devoluciones",
+			"disclosure-content#cambios__devoluciones"
+		],
+		"props": {
+			"blockClass":[ "details__pdp_layout"]
+		}
+	},
+	"disclosure-trigger#cambios__devoluciones": {
+		"children": [
+			"rich-text#cambios__devoluciones__mobile",
+			"disclosure-state-indicator#pdp"
+		],
+		"props": {
+			"as": "span",
+			"blockClass": ["details__pdp_trigger", "cambios__devoluciones"]
+		}
+	},
+	"disclosure-content#cambios__devoluciones": {
+		"children": [
+			 "flex-layout.col#contenido__landing__cambios"
+		],
+		"props": {
+			"blockClass": "details__pdp_content"
+		}
+	},
+	"rich-text#cambios__devoluciones__mobile": {
+		"props": {
+			"text": "Cambios y devoluciones",
+			"blockClass": "title_disclosure"
+		}
+	},
+
+
+    /* MEDIOS DE PAGO */
+    "disclosure-layout#medios__de__pago": {
+		"children": [
+			"disclosure-trigger#medios__de__pago",
+			"disclosure-content#medios__de__pago"
+		],
+		"props": {
+			"blockClass": ["details__pdp_layout"]
+		}
+	},
+	"disclosure-trigger#medios__de__pago": {
+		"children": [
+			"rich-text#medios__de__pago__mobile",
+			"disclosure-state-indicator#pdp"
+		],
+		"props": {
+			"as": "span",
+			"blockClass": ["details__pdp_trigger","medios__de__pago"]
+		}
+	},
+	"disclosure-content#medios__de__pago": {
+		"children": [
+			 "flex-layout.col#contenido__landing__medios"
+		],
+		"props": {
+			"blockClass": "details__pdp_content"
+		}
+	},
+	"rich-text#medios__de__pago__mobile": {
+		"props": {
+			"text": "Medios de pago",
+			"blockClass": "title_disclosure"
+		}
+	},
+
+	/* TERMINOS */
+	"disclosure-layout#terminos__condiciones": {
+		"children": [
+			"disclosure-trigger#terminos__condiciones",
+			"disclosure-content#terminos__condiciones"
+		],
+		"props": {
+			"blockClass": ["details__pdp_layout"]
+		}
+	},
+	"disclosure-trigger#terminos__condiciones": {
+		"children": [
+			"rich-text#terminos__condiciones__mobile",
+			"disclosure-state-indicator#pdp"
+		],
+		"props": {
+			"as": "span",
+			"blockClass": ["details__pdp_trigger","terminos__condiciones"]
+		}
+	},
+	"disclosure-content#terminos__condiciones": {
+		"children": [
+			  "flex-layout.col#contenido__landing"
+		],
+		"props": {
+			"blockClass": "details__pdp_content"
+		}
+	},
+	"rich-text#terminos__condiciones__mobile": {
+		"props": {
+			"text": "Términos y condiciones",
+			"blockClass": "title_disclosure"
+		}
+	},
+
+
+	/* POLITICA */
+	"disclosure-layout#politica__landing": {
+		"children": [
+			"disclosure-trigger#politica__landing",
+			"disclosure-content#politica__landing"
+		],
+		"props": {
+			"blockClass":[ "details__pdp_layout"]
+		}
+	},
+	"disclosure-trigger#politica__landing": {
+		"children": [
+			"rich-text#politica__landing__mobile",
+			"disclosure-state-indicator#pdp"
+		],
+		"props": {
+			"as": "span",
+			"blockClass": ["details__pdp_trigger","politica__landing"]
+		}
+	},
+	"disclosure-content#politica__landing": {
+		"children": [
+			 "flex-layout.col#contenido__landing__politica"
+		],
+		"props": {
+			"blockClass": "details__pdp_content"
+		}
+	},
+	"rich-text#politica__landing__mobile": {
+		"props": {
+			"text": "Política de envío",
+			"blockClass": "title_disclosure"
+		}
+	},
+
+	/* HISTORIA */
+	"disclosure-layout#historia__landing": {
+		"children": [
+			"disclosure-trigger#historia__landing",
+			"disclosure-content#historia__landing"
+		],
+		"props": {
+			"blockClass":[ "details__pdp_layout"]
+		}
+	},
+	"disclosure-trigger#historia__landing": {
+		"children": [
+			"rich-text#historia__landing__mobile",
+			"disclosure-state-indicator#pdp"
+		],
+		"props": {
+			"as": "span",
+			"blockClass": ["details__pdp_trigger","historia__landing"]
+		}
+	},
+	"disclosure-content#historia__landing": {
+		"children": [
+			"flex-layout.col#contenido__landing__historia"
+		],
+		"props": {
+			"blockClass": "details__pdp_content"
+		}
+	},
+	"rich-text#historia__landing__mobile": {
+		"props": {
+			"text": "Nuestra historia",
+			"blockClass": "title_disclosure"
+		}
+	}
+
+}

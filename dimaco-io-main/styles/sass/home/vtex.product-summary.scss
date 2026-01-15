@@ -1,0 +1,144 @@
+@import "../variables";
+
+.container--products__home__v2{
+    width: 251px !important;
+    height: 447px;
+    margin: 0 !important;
+    @media (width <= 785px) {
+        height: 430px;
+    }
+    @media (width <= 710px) {
+        height: 410px;
+    }
+    @media (width <= 640px) {
+        height: 445px;
+    }
+    @media (width <= 550px) {
+        height: 430px;
+    }
+    @include mobile__460{
+        height: 370px;
+        max-width: 156px !important;
+    }
+    &:hover{ 
+       /*  background-color: #7A7D78; */
+        background-color: #f4f4f4;
+    }
+     /*  MARCA  */
+    .productBrandContainer--semanales__brand{
+        display: flex;
+        height: 34px;
+        align-items: center;
+        .productBrandName--semanales__brand{
+            text-transform: capitalize !important;
+            color: $orange;
+            font-family: $font;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16.8px; /* 16.8px */
+            text-align: start;
+            @include mobile__460 {
+                font-size: 8px;
+            }
+            @include mobile__640{
+                text-align: start;
+            }
+        }
+    }
+    /*  NOMBRE  */
+    .nameContainer--name__home__products{
+        padding: 12px 0 !important;
+        padding-bottom: 0 !important;
+        justify-content: start;
+        @include mobile__640{
+            padding:  0 !important; 
+        }
+        .brandName--name__home__products{
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 19.6px; /* 19.6px */
+            display: block;
+            height: 40px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            display: -webkit-box;
+            -webkit-line-clamp: 2; 
+            -webkit-box-orient: vertical;
+            text-align: start;
+            @include mobile__460 {
+                font-size: 10px;
+            }
+        }
+    }
+
+    
+} 
+
+.imageContainer--products__home__promociones{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    @include mobile__1024{
+        height: 210px;
+    }
+    @include mobile__640{
+        height: 154px;
+    }
+}
+
+.element--products__home__v2{
+    position: relative;
+    justify-content: space-between !important;
+    :global(.vtex-flex-layout-0-x-flexRow--promotions__pdp){
+        position: absolute;
+        z-index: 10;
+         :global(.vtex-product-highlights-2-x-productHighlightText){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 0.5rem;
+            margin-left: 0.5rem;
+            font-size: 12px;
+            padding: 6px 16px;
+            background-color: #066830ee;
+            border-radius: 20px;
+            width: max-content;
+            color: white;
+            @media ( width <= 550px) {
+                margin-top: 0.25rem;
+                margin-left: 0.25rem;
+                font-size: 10px;
+                padding: 6px;
+                gap: 3px;
+            }
+             @media ( width <= 420px) {
+                margin-top: 0;
+                margin-left: 0;
+            }
+            &::before{
+                @media ( width <= 395px) {
+                    display: none;
+                }
+                display: block;
+                height: 18px;
+                width: 18px;
+                content: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiBoZWlnaHQ9IjE4cHgiIHdpZHRoPSIxOHB4IiB2ZXJzaW9uPSIxLjIiIGJhc2VQcm9maWxlPSJ0aW55IiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmlld0JveD0iMCAwIDI1NiAyNTYiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0cm9rZT0iI2ZmZmZmZiI+PGcgaWQ9IlNWR1JlcG9fYmdDYXJyaWVyIiBzdHJva2Utd2lkdGg9IjAiPjwvZz48ZyBpZD0iU1ZHUmVwb190cmFjZXJDYXJyaWVyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvZz48ZyBpZD0iU1ZHUmVwb19pY29uQ2FycmllciI+IDxwYXRoIGQ9Ik0yNDkuNSwyMDYuMUwxMTQsMjUzLjdMNDkuOCw3Mi4ybDE5LjYtMjZjMi4xLDAuNiw0LjMsMS4yLDYuNSwxLjljMTMuNSw0LjQsMjQuNiwxMC4zLDMyLDE2LjhjLTMuNCw1LjgtNC4zLDEyLjktMS45LDE5LjcgYzQuMywxMi4yLDE3LjcsMTguNywyOS45LDE0LjRzMTguNy0xNy43LDE0LjQtMjkuOWMtNC4zLTEyLjItMTcuNy0xOC43LTI5LjktMTQuNGMtMC4zLDAuMS0wLjUsMC4yLTAuOCwwLjMgYy0xMC40LTkuOC0yNS40LTE3LjItNDEtMjIuMWwyMy4xLTMwLjhsODMuNywyMC45TDI0OS41LDIwNi4xeiBNNzguMiwzMy4zQzYwLjgsMjYuOCwyMy41LDI0LDIuOSwyNS44bDAuMSwxNSBjMTcuNy0xLjYsNTAuMywwLjYsNjYuMSw1LjJMNzguMiwzMy4zeiI+PC9wYXRoPiA8L2c+PC9zdmc+");
+            }
+        }
+    }
+}
+
+@include mobile__460{
+    .image--products__home__promociones{
+        width: 154px;
+        height: 154px;
+        object-fit: contain;
+    }
+}

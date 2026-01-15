@@ -1,0 +1,143 @@
+{
+	"footer": {
+		"blocks": [
+			"footer-layout.desktop",
+			"footer-layout.mobile"
+		]
+	},
+	"footer-layout.desktop": {
+		"children": [
+			"flex-layout.row#footer-1-desktop",
+			"flex-layout.row#footer__bottom"
+		],
+		"props": {
+			"blockClass": "footer__layout__main"
+		}
+	},
+	"flex-layout.row#footer-1-desktop": {
+		"children": [
+			"flex-layout.col#footer__main"
+		],
+		"props": {
+			"blockClass": "footer__main__"
+		}
+	},
+	"flex-layout.col#footer__main": {
+		"children": [
+			"flex-layout.col#footer__main__logos",
+			"flex-layout.col#footer__menus__news"
+		],
+		"props": {
+			"blockClass": "footer__main"
+		}
+	},
+	"flex-layout.col#footer__main__logos": {
+		"children": [
+			"image#Logo__footer",
+			"flex-layout.row#greenti__vtex",
+			"flex-layout.row#redes__sociales"
+		],
+		"props": {
+			"blockClass": "footer__main__logos"
+		}
+	},
+
+	/* ################################################# */
+	/* #######  COMIENZA SECCION DE LOGOS Y REDES ###### */
+	/* ################################################# */
+
+	"image#Logo__footer": {
+		"props": {
+			"src": "/arquivos/Logo__footer.svg",
+			"blockClass": "Logo__footer__"
+		}
+	},
+	"flex-layout.row#greenti__vtex": {
+		"children": [
+			"image#greenti",
+			"image#vtex",
+			"image#pcic"
+		],
+		"props": {
+			"blockClass": "greenti__vtex"
+		}
+	},
+	"image#greenti": {
+		"props": {
+			"src": "/arquivos/green.svg",
+			"blockClass": "greenti__vtex"
+		}
+	},
+	"image#vtex": {
+		"props": {
+			"src": "/arquivos/vtex.svg",
+			"blockClass": "greenti__vtex"
+		}
+	},
+	"image#pcic": {
+		"props": {
+			"src": "/arquivos/pcic.svg",
+			"blockClass": "greenti__vtex"
+		}
+	},
+	"flex-layout.row#redes__sociales": {
+		"children": [
+			"image#face",
+			"image#insta",
+			"image#whats"
+		],
+		"props": {
+			"blockClass": "redes__sociales"
+		}
+	},
+	"image#face": {
+		"props": {
+			"src": "/arquivos/face.svg",
+			"blockClass": "redes__sociales",
+			"link": {
+				"title": "Facebook",
+				"openNewTab": true,
+				"url": "https://www.facebook.com/dimaco.chilemat"
+			}
+		}
+	},
+	"image#insta": {
+		"props": {
+			"src": "/arquivos/insta.svg",
+			"blockClass": "redes__sociales",
+			"link": {
+				"title": "Instagram",
+				"openNewTab": true,
+				"url": "https://www.instagram.com/dimacochilemat/"
+			}
+		}
+	},
+	"image#whats": {
+		"props": {
+			"src": "/arquivos/whats.svg",
+			"blockClass": "redes__sociales",
+			"link": {
+				"title": "WhatsApp",
+				"openNewTab": true,
+				"url": "https://api.whatsapp.com/send?phone=56987007691"
+			}
+		}
+	},
+	/* ################################################# */
+	/* #######  SE ACABA SECCION DE LOGOS Y REDES ###### */
+	/* ################################################# */
+
+	/* ################################################# */
+	/* #######  COMIEZA SECCION DE MENUS Y NEWSLETTER ## */
+	/* ################################################# */
+	"flex-layout.col#footer__menus__news": {
+		"children": [
+			"flex-layout.col#footer__menu__servicios",
+			"flex-layout.col#footer__menu__antencion",
+			"flex-layout.col#newsletterFooter"
+		],
+		"props": {
+			"blockClass": "footer__menus__news"
+		}
+	}
+}

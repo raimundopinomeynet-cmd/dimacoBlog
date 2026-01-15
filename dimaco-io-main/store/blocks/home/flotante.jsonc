@@ -1,0 +1,20 @@
+{
+    "flex-layout.row#flotante__wa": {
+        "title": "Icono Flotante WA",
+        "children": [
+            "link#__link__"
+        ],
+        "props": {
+            "blockClass":  "flotante__wa" 
+        }
+    },
+    "link#__link__": {
+        "title": "mi__texto",
+        "props": {
+            "blockClass":  "flotante__wa" ,
+            "label":  "", 
+            "href":  "https://wa.me/+56987007691",
+            "target": "__blank"
+        }
+    }
+}

@@ -1,0 +1,190 @@
+{
+    "store.custom#terminos-condiciones": {
+        "blocks": [
+           "responsive-layout.desktop#terminos-condiciones",
+           "responsive-layout.mobile#terminos-condiciones"
+        ]
+    },
+    "responsive-layout.desktop#terminos-condiciones": {
+        "children": [
+            "image#image__banner",
+            "flex-layout.row#main__landing"
+        ]
+    },
+      
+    
+    "image#image__banner": {
+        "title": "image banner landing",
+        "props": {
+            "src": "/arquivos/Banner__contacto.svg",
+            "blockClass": "image__banner"
+        }
+    },
+    "flex-layout.row#main__landing": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#main__landing"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#main__landing": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#menu__landing",
+            "flex-layout.col#contenido__landing"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#menu__landing": {
+        "title": "Contenedor Menu",
+        "children": [
+            "rich-text#titulo__menu__landing",
+            "rich-text#texto__menu__landing",
+            "link#terminos__link__active",
+            "link#cambios__link",
+            "link#pagos__link",
+            "link#politicas__link",
+            "link#historia__link"
+        ],
+        "props": {
+            "blockClass": "menu__landing"
+        }
+    },
+    "rich-text#titulo__menu__landing": {
+        "title": "Titulo del menu",
+        "props": {
+            "text": "Tenemos soluciones para ti",
+            "blockClass": "titulo__menu__landing"
+        }
+    },
+    "rich-text#texto__menu__landing": {
+        "title": "Texto del menu",
+        "props": {
+            "text": "La venta de cualquiera de los productos publicados está sujeta a la verificación de stock. Los precios online y los planes de financiación para los productos presentados/publicados en www.dimaco.cl son válidos exclusivamente para la compra vía internet en las páginas antes mencionadas.",
+            "blockClass": "texto__menu__landing"
+        }
+    },
+    "link#terminos__link__active": {
+        "title": "Link Terminos",
+        "props": {
+            "label": "Términos y condiciones",
+            "href": "/terminos-y-condiciones",
+            "blockClass": [
+                "menu__item__link__landing",
+                "menu__item__link__active"
+            ]
+        }
+    },
+    "link#cambios__link": {
+        "title": "Link Cambios y devolucion",
+        "props": {
+            "label": "Cambios y devoluciones",
+            "href": "/cambios-y-devoluciones",
+            "blockClass": [
+                "menu__item__link__landing"
+            ]
+        }
+    },
+    "link#pagos__link": {
+        "title": "Link Medios de Pago",
+        "props": {
+            "label": "Medios de pago",
+            "href": "/medios-de-pago",
+            "blockClass": [
+                "menu__item__link__landing"
+            ]
+        }
+    },
+    "link#politicas__link": {
+        "title": "Link Política de envío",
+        "props": {
+            "label": "Política de envío",
+            "href": "/politica-de-envio",
+            "blockClass": [
+                "menu__item__link__landing"
+            ]
+        }
+    },
+    "link#historia__link": {
+        "title": "Link Nuestra Historia",
+        "props": {
+            "label": "Nuestra Historia",
+            "href": "/nuestra-historia",
+            "blockClass": [
+                "menu__item__link__landing"
+            ]
+        }
+    },
+    "link#historia__link__active": {
+        "title": "Link Nuestra Historia",
+        "props": {
+            "label": "Nuestra Historia",
+            "href": "/nuestra-historia",
+            "blockClass": [
+                "menu__item__link__landing",
+                "menu__item__link__active"
+            ]
+        }
+    },
+    "flex-layout.col#contenido__landing": {
+        "title": "Contenedor contenido__landing",
+        "children": [
+            "rich-text#parrafo__1__landing__terminos",
+            "rich-text#parrafo__2__landing__terminos",
+            "rich-text#parrafo__3__landing__terminos",
+            "rich-text#parrafo__4__landing__terminos",
+            "rich-text#parrafo__5__landing__terminos",
+            "rich-text#parrafo__6__landing__terminos",
+            "rich-text#parrafo__7__landing__terminos"
+        ],
+        "props": {
+            "blockClass": "contenido__landing"
+        }
+    },
+    "rich-text#parrafo__1__landing__terminos": {
+        "props": {
+            "text": "**PRIMERO: GENERALIDADES** Este documento regula los términos y condiciones bajo los cuales Ud. tiene derecho a acceder y usar los servicios del sitio Web https://www.dimaco.cl/ y de cualquier información, texto, vídeo u otro material comunicado en el sitio web. \n\n En este sitio Web podrá usar, sin costo, el software y las aplicaciones para equipos móviles que le permitan navegar, visitar, comparar y si lo desea, adquirir los bienes o servicios que se exhiben aquí. Le recomendamos que lea detenidamente estas Condiciones e imprima o guarde una copia de las mismas en la unidad de disco local para su información. \n\nEstos Términos y Condiciones serán aplicados y se entenderán incorporados en cada uno de los contratos que celebre con Dimaco, en adelante e indistintamente “Dimaco.cl, Dimaco Chilemat, “la empresa”, “el oferente” o “el proveedor/a”, según se indique; por medio de este sitio web. \n\n El uso de esta página web, la aplicación de estos Términos y Condiciones, los actos que ejecute y los contratos que celebre por medio de este sitio web, se encuentran sujetos y sometidos a las leyes de la República de Chile y en especial a la ley 19.496 de protección de los derechos de los consumidores. Dimaco por lo tanto, aplicará estrictamente todos los beneficios, garantías y derechos reconocidos en favor de los consumidores en la ley 19.496. Además, Dimaco adhiere en todas sus partes al Código de Buenas Prácticas para el Comercio Electrónico y derechos del consumidor Del SERNAC",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__2__landing__terminos": {
+        "props": {
+            "text": "**SEGUNDO: LIBERTAD DE NAVEGACIÓN y ACEPTACIÓN DE LOS TÉRMINOS Y CONDICIONES** La mera visita de este sitio no impone ningún tipo de obligación para el usuario, a menos que éste exprese de forma inequívoca, por medio de actos positivos, su voluntad de contratar con la empresa para adquirir bienes o servicios, en la forma indicada en estos términos y condiciones. Para aceptar estos Términos y Condiciones, el usuario deberá hacer clic donde el sitio web de Dimaco ofrezca esta opción en la interfaz del usuario con la frase “he leído y aceptado” u otra equivalente que permita dar su consentimiento inequívoco respecto de la aceptación.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__3__landing__terminos": {
+        "props": {
+            "text": "**TERCERO: REGISTRO** El registro en el sitio y el uso de contraseña no es requisito obligatorio para contratar, sin embargo facilita el acceso personalizado, confidencial y seguro al sitio. \n\n En caso de registrarse en el sitio, el usuario contará con una contraseña secreta de la cual podrá disponer e incluso modificar si así lo requiriera el usuario. Para activar la contraseña deberá completar el formulario de registro disponible en el sitio y enviarlo a Dimaco haciendo clic en el campo respectivo. \n\nRespecto de la confidencialidad de la contraseña serán responsables el usuario y el administrador dentro del ámbito que a cada uno corresponda. \n\nLos Servicios sólo están disponibles para personas que tengan capacidad legal para contratar. No podrán utilizar los servicios y realizar compras, las personas que no tengan esa capacidad y los menores de edad.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__4__landing__terminos": {
+        "props": {
+            "text": "**CUARTO: CÓMO CONTRATAR** Para hacer compras o contratar servicios en este sitio deberá seguir los siguientes pasos haciendo clic en el campo correspondiente.\nPara iniciar el proceso de contratación es necesario que confirme haber leído y aceptado estos Términos y Condiciones. \n\n Seleccione el producto o servicio que le interesa y agrégalo a su “carro de compra”.\nInicie sesión en el sitio, o ingresa tu correo electrónico y complete el formulario con los datos personales.\nSeleccione el tipo de despacho y entrega entre las alternativas disponibles en el sitio, en caso de no haber alternativas disponibles, entre en contacto con el Servicio de Atención al Cliente a través del teléfono (+56) 9 4401 4764. \n\nSeleccione el medio de pago. \n\n Una vez hecha la orden, se desplegará en la pantalla: Esta información debe aparecer antes de la selección del medio de pago y es como funciona en la mayoría de los sitios.\na. Una descripción del producto o servicio contratado.\nb. Precio.\nc. Indicación de costo de envío si corresponde.\nd. Fecha de entrega según el tipo de despacho escogido.\ne. Medio de pago.\nf. Valor total de la operación.\ng. Demás condiciones de la orden.\nh. Posibilidad de imprimir y almacenar la orden.\ni. Un número único de la orden, con la cual podrá hacer seguimiento en línea de ella.\nEnvío de la información al correo electrónico registrado.\n\nLa orden luego pasará automáticamente a un proceso de confirmación de identidad, resguardando siempre la seguridad y privacidad del usuario y del proceso de contratación, disponibilidad, vigencia y cupo del medio de pago que se haya seleccionado.\n\nCumplido con lo anterior se perfecciona el contrato haciendo el cargo en el medio de pago seleccionado, se enviará el comprobante de compra con la boleta o factura que corresponda en formato físico cuando el producto sea despachado.\n\nNo se verá afectado el comprador en sus derechos ni tampoco se le efectuarán cargos, sin que sea confirmada su identidad.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__5__landing__terminos": {
+        "props": {
+            "text": "**QUINTO: MEDIOS DE PAGO** Salvo que se señale un medio diferente para casos u ofertas específicos, los productos y servicios que se informan en este sitio sólo podrán ser pagados por medio de: Tarjeta de crédito bancarias Visa, Mastercard, Dinners Club International o American Express, emitidas en Chile o en el extranjero, siempre que mantengan un contacto vigente para este efecto con Dimaco. Tarjetas de débito bancarias acogidas al sistema Redcompra, emitidas en Chile por bancos nacionales, que mantengan un contrato vigente para tales efectos con Dimaco. Tarjetas prepago. \n\n El pago con tarjetas de débito se realizará a través de WebPay, que es un sistema de pago electrónico que se encarga de hacer el cargo automático a la cuenta bancaria del usuario. Los usuarios declaran que entienden que estos medios de pago o portales de pago pertenecen a terceras empresas proveedoras de estos servicios, independientes y no vinculadas a Dimaco, por lo que la continuidad de su prestación de servicios en el tiempo, así como el correcto funcionamiento de sus herramientas y botones de pago en línea, será de exclusiva responsabilidad de las empresa proveedoras de estos servicios y en ningún caso de Dimaco.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__6__landing__terminos": {
+        "props": {
+            "text": "**SEXTO: DERECHOS y GARANTÍAS** Cambios y devoluciones\nCambios o devoluciones deben ser reportadas al departamento de Servicio de Post Venta por correo electrónico: a matiasespinoza@dimaco.cl con copia de la boleta/guía y/o factura de compra dentro de 6 (seis) meses y contados después de la fecha de entrega por los siguientes motivos: \n\n1.El producto presenta desperfectos de fábrica.\n\n2.El producto no cuenta con las características ni especificaciones técnicas descritas en la página.\n\nPara poder hacer cambio o devolución es necesario que el producto esté sin uso, con todos sus accesorios, embalajes originales y adjuntando la boleta o factura de dicha compra al mail de post venta.\nEl costo de envío del retiro y cambio del producto, en ambos casos será asumido por Dimaco. El cliente para estos casos, tendrá la opción de cambiar el producto o solicitar la devolución del dinero. Si se solicita la devolución del dinero, ésta se realizará una vez el producto haya ingresado a revisión en el servicio técnico autorizado de la marca, el cual será indicado por Dimaco y exista una resolución sobre el caso, o demostrado que el producto no cumple con la especificación hasta 2 días hábiles una vez enviada la documentación.\n\nDerecho de Retracto\nEl usuario tendrá un plazo de 6 meses para poner término al contrato celebrado por medios electrónicos desde que reciba el producto o desde que contrate el servicio, antes que éste sea prestado.\nPara ejercer este derecho deberá utilizar los mismos medios que empleó para celebrar el contrato y siempre que Dimaco le haya enviado comunicación de haberse perfeccionado el contrato, copia íntegra, acceso claro, comprensible e inequívoco de las condiciones generales del mismo y la posibilidad de almacenarlos o imprimirlos.\n\nSi Dimaco no ha dado cumplimiento al envío de la comunicación escrita anteriormente mencionada el plazo se extenderá a 10 días.\nNo podrá ejercerse este derecho cuando el bien, materia del contrato, se haya deteriorado por hecho imputable al consumidor.\n\n Si el bien o servicio se obtuvo por medio de un crédito, éste queda sin efecto pero los intereses son de cargo del consumidor cuando se haya otorgado por un tercero.\nDimaco tendrá la obligación de devolverle las sumas abonadas, sin retención de gastos, y a la mayor brevedad posible y, en cualquier caso, antes de 2 días a la comunicación del retracto.\nTratándose de servicios, la devolución sólo comprenderá aquellas sumas abonadas que no correspondan a servicios ya prestados a la fecha del retracto. Usted deberá restituir en buen estado los elementos de embalaje, los manuales de uso, las cajas, elementos de protección y todo otro elemento que viniera con el bien. \n\nGarantías Legales\nEn caso que el producto no cuente con las características técnicas informadas, si estuviera dañado o incompleto, podrá ser cambiado de inmediato. Si presentara fallas o defectos dentro de los 3 meses siguientes a la fecha en que éste fue recibido, puede optarse entre su reparación gratuita, o previa restitución, su cambio o la devolución de la cantidad pagada, siempre que el producto no se hubiera deteriorado por un hecho imputable al consumidor.\n\nEl producto debe ingresar al servicio técnico autorizado de la marca, el cual será indicado por Dimaco. Se realizará la revisión del producto y se entregará un informe técnico, posterior a eso se determinará la solución al caso. Si el producto tiene opción de reparación, el producto entra en garantía y este es reparado, de lo contrario se gestiona el cambio por un producto nuevo. Si existiese el caso en que es un producto descontinuado o sin stock, se busca una alternativa de igual calidad o se opta por la devolución del dinero.\n\nSi el producto cuenta con una garantía del fabricante, se aplicará el plazo de esta garantía, si este plazo fuera mayor, pero debe ser de forma directa con los servicios técnicos de la marca. Sin embargo, si el producto es perecible o está naturalmente destinado a ser usado o consumido en un período breve, el plazo de devolución será el impreso en el producto o en su envoltorio o, en su defecto, será de 7 días. Todos estos plazos se suspenderán por el tiempo en que el bien esté siendo reparado en ejercicio de la garantía, y hasta que se complete la reparación.\n\nSe considerará como falla o defecto:\n\nProductos sujetos a normas de seguridad o calidad de cumplimiento obligatorio que no cumplan con las especificaciones.\n\nSi los materiales, partes, piezas, elementos, sustancias o ingredientes que constituyan o integren los productos no correspondan a las especificaciones que ostenten o a las menciones del rotulado. Productos que por deficiencias de fabricación, elaboración, materiales, partes, piezas, elementos, sustancias, ingredientes, estructura, calidad o condiciones sanitarias, en su caso, no sea enteramente apto para el uso o consumo al que está destinado o al que el proveedor hubiese señalado en su publicidad.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__7__landing__terminos": {
+        "props": {
+            "text": "**Responsabilidad** El presente documento regula los términos y condiciones bajo los cuales, usted, como cliente, tiene el derecho de acceder y utilizar los servicios del sitio web de Ferretería Dimaco, así como cualquier información, texto, video u otro material comunicado en dicho sitio. \n\nLe recomendamos leer detenidamente estas condiciones y guardar o imprimir una copia para su futura referencia.\n\nEstos Términos y Condiciones serán aplicables y se entenderán como aceptados en cada compra realizada con Ferretería Dimaco a través de este sitio web.\n\nEl uso del sitio web, la aplicación de estos Términos y Condiciones, así como los actos que usted ejecute y los contratos que celebre mediante el sitio web, están sujetos y regidos por las leyes de la República de Chile, en particular por la Ley 19.496 sobre Protección de los Derechos de los Consumidores.\n\nFerretería Dimaco se compromete a aplicar estrictamente todos los beneficios, garantías y derechos reconocidos a favor de los consumidores bajo la Ley 19.496. Además, Ferretería Dimaco se adhiere en su totalidad al Código de Buenas Prácticas para el Comercio Electrónico de la Cámara de Comercio de Santiago.\n\nLos precios y servicios exhibidos en el sitio web dimaco.cl son aplicables únicamente a las compras realizadas a través de dicho sitio y no necesariamente a las transacciones efectuadas en las tiendas físicas de la empresa. Por lo tanto, los precios y servicios mostrados no son aplicables a las tiendas físicas de Ferretería Dimaco.",
+            "blockClass": "parrafo__landing"
+        }
+    }
+}

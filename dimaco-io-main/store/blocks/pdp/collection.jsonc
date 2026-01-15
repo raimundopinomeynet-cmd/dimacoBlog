@@ -1,0 +1,31 @@
+{
+    "flex-layout.row#collection__PDP": {
+        "children": [
+            "vtex.product-highlights@2.x:product-highlights#collectionPDP"
+        ],
+        "props": {
+            "blockClass":  "collectionPDP" 
+        }
+    },
+    "vtex.product-highlights@2.x:product-highlights#collectionPDP": {
+        "props": {
+            "type": "collection"
+        },
+        "children": [
+            "product-highlight-wrapper#pdp"
+        ]
+    },
+    "product-highlight-wrapper#pdp": {
+        "props": {
+            "blockClass": "collection"
+        },
+        "children": [
+            "product-highlight-text#pdp"
+        ]
+    },
+    "product-highlight-text#pdp": {
+        "props": {
+            "message": "{highlightName}"
+        }
+    }
+}

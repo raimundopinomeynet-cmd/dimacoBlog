@@ -1,0 +1,41 @@
+{
+	"vtex.menu@2.x:menu#Products": {
+		"props": {
+			"orientation": "vertical"
+		},
+		"children": [
+			"menu-item#news",
+			"menu-item#blackfriday"
+		]
+	},
+	"menu-item#news": {
+		"props": {
+			"id": "menu-item-news",
+			"type": "custom",
+			"iconId": null,
+			"highlight": false,
+			"itemProps": {
+				"type": "internal",
+				"href": "#",
+				"noFollow": false,
+				"tagTitle": "News",
+				"text": "News"
+			}
+		}
+	},
+	"menu-item#blackfriday": {
+		"props": {
+			"id": "menu-item-black-friday",
+			"type": "custom",
+			"iconId": null,
+			"highlight": false,
+			"itemProps": {
+				"type": "internal",
+				"href": "#",
+				"noFollow": false,
+				"tagTitle": "BlackFriday",
+				"text": "Black Friday"
+			}
+		}
+	}
+}

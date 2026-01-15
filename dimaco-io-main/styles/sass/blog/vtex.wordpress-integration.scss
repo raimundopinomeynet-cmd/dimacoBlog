@@ -1,0 +1,209 @@
+@import "../variables";
+:global(.vtex-flex-layout-0-x-flexRow--col-blog-post), 
+:global(.vtex-flex-layout-0-x-flexRow--col-blog-home) {
+    margin: 50px 0 100px 0;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-50{
+    width: 48%;
+}
+
+.col-100{
+    width: 100%;
+}
+
+.blog-img{
+    display: table;
+    max-width: 75%;
+    margin: 0px auto 30px auto;
+    border-radius: 10px;
+}
+
+
+
+
+.postContainer{    
+    padding: 0;   
+     .postFeaturedImageContainer {
+        padding-bottom: 20px;
+     }
+     .postBody {
+        line-height: 26px;
+        font-size: 16px;
+        color: #000000;
+     }
+}
+
+.postTitle{
+    color: $c-principal !important;
+    font-size: 35px;
+}
+
+.container{
+    color: #545977;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media(max-width:768px){
+    .col-50, .col-100{
+        width: 100%;
+    }
+
+    .blog-img{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.postFeaturedImage{
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.postMetaAuthor{
+    display: none;
+}
+
+
+.paginationComponent{
+    position: relative;
+}
+
+.paginationComponent::before{
+    content: "Entradas por pagina";
+    font-size: 12px;
+    background: #fff;
+    position: absolute;
+    left: 8px;
+    top: 22px;
+    padding: 4px;
+    /* border: 1px solid; */
+}
+
+@media screen and (min-width: 64em){
+    .listFlexItem{
+        width: 32% !important;
+    }
+}
+
+
+@media(max-width:800px){
+    .paginationComponent::before {
+        left: 8px;
+        top: 8px;
+        padding: 8px;
+        width: 85px;
+    }
+}
+
+.listFlex{
+    display: flex;
+    justify-content: space-between;
+    .teaserContainer {
+        height: 100%;
+        :global(.vtex-card) {
+            height: 100%;
+        }
+    }
+    .teaserHeader{
+        display: none !important;
+    }
+
+    .titleAndExcerptContainer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+        .teaserTitle{
+            line-height: 26px;
+            padding: 10px;
+        } 
+        .teaserTitleLink{
+            color: $c-principal;
+            font-size: 20px;
+            text-align: center;            
+            text-decoration: none !important;
+            float: left;
+            width: 100%;
+        }
+    }
+} 
+
+
+.e-con-inner {
+    .elementor-element {
+        .wd-text-block {
+            line-height: 26px;
+            font-size: 16px;
+            color: #000000;
+        }
+
+        .wd-image {
+            .attachment-full {
+                width: 100%;
+            }
+        }  
+        .woodmart-title-container {
+            //color: $c-secundario;
+        }      
+    }
+}
+
+
+
+
+:global(.vtex-flex-layout-0-x-flexCol--col-blog-post){
+    padding-right: 50px;
+    @media(max-width:800px){
+        padding: 0 0 30px 0;
+    }    
+}
+:global(.vtex-flex-layout-0-x-flexCol--col-blog-post-2){
+    background: #eee;
+    padding: 20px;
+    align-items: center;
+
+    :global(.vtex-flex-layout-0-x-flexColChild--col-blog-post-2) {
+        height: auto !important;
+        :global(.vtex-rich-text-0-x-paragraph--title-recientes) {
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+    .listContainer {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100% !important;
+        .paginationComponent, .filtersContainer {
+            display: none;
+        }
+        .listFlex {
+            display: flex;
+            flex-direction: column;
+            .listFlexItem {
+                width: 100% !important;
+                padding: 0;
+                .teaserBody {
+                    display: none;
+                }
+                .teaserTitle{
+                    line-height: 16px;                    
+                } 
+                .teaserTitleLink{                    
+                    font-size: 12px;                    
+                }
+            }
+
+        }
+    }    
+}

@@ -1,0 +1,222 @@
+{
+    "store.custom#cotiza": {
+		"blocks": [
+            "flex-layout.row#cotiza__main"
+        ]
+	},
+    "flex-layout.row#cotiza__main": {
+        "props": {
+            "blockClass": "cotiza__main"
+        },
+        "children": [
+            "flex-layout.col#cotiza__main"
+        ]
+    },
+    "flex-layout.col#cotiza__main": {
+        "children": [
+             "rich-text#title__cotiza",
+             "rich-text#body__cotiza",
+             "rich-text#vendedor__cotiza",
+             "flex-layout.col#cards__vendedores__ferre",
+              "rich-text#vendedor__empresa",
+              "flex-layout.col#cards__vendedores__empresa",
+               "rich-text#localidad__zona",
+               "flex-layout.col#localidad__zona"
+        ],
+        "props": {
+            "blockClass": "cotiza__main"
+        }
+    },
+    "rich-text#title__cotiza": {
+        "props": {
+            "text": "Cotiza Con Nosotros",
+            "blockClass": "title__cotiza"
+        }
+    },
+    "rich-text#body__cotiza": {
+        "props": {
+            "text": "En <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Dimaco</span> , contamos con un equipo especializado para atender las necesidades de <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>ferreterías, contratistas y empresas. </span> Encuentra al vendedor correspondiente según tu tipo de negocio, para que puedan ofrecerte una amplia gama de productos y servicios, adaptados a tus necesidades y proyectos. Nuestro objetivo es acompañarte en cada etapa, asegurando que encuentres las mejores soluciones y productos para alcanzar tus metas de forma fácil y eficiente.",
+            "blockClass": "body__cotiza" 
+        }
+    },
+    /* TITULO DE  CONTENEDOR DE CARDS */
+    "rich-text#vendedor__cotiza": {
+        "props": {
+            "text": "Vendedores para Ferreterías y Contratistas",
+            "blockClass": "vendedor__cotiza"
+        }
+    },
+    /* CONTENEDOR DE CARDS */
+    "flex-layout.col#cards__vendedores__ferre": {
+        "children": [
+            "flex-layout.col#card__vendedores__ferre__1",
+            "flex-layout.col#card__vendedores__ferre__2",
+            "flex-layout.col#card__vendedores__ferre__3",
+            "flex-layout.col#card__vendedores__ferre__4"
+        ],
+        "props": {
+            "blockClass": "cards__vendedores__ferre"
+        }
+    },
+    /* card 1 */
+    "flex-layout.col#card__vendedores__ferre__1": {
+      "children": [ "rich-text#card__vendedores__ferre__1"],
+        "props": {
+            "blockClass": "card__vendedores__ferre"
+        }
+    },
+    "rich-text#card__vendedores__ferre__1": {
+        "props": {
+            "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Alexis Cancino</span>  \n\n Zona Norte y Costa \n\n [+56 9 7771 0384](tel:+56977710384) \n\n [acancino@dimaco.cl](mailto:acancino@dimaco.cl)",
+             "blockClass": "card__vendedores__ferre"
+        }
+    },
+     /* card 2 */
+    "flex-layout.col#card__vendedores__ferre__2": {
+      "children": [ "rich-text#card__vendedores__ferre__2"],
+        "props": {
+            "blockClass": "card__vendedores__ferre"
+        }
+    },
+    "rich-text#card__vendedores__ferre__2": {
+        "props": {
+            "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Pablo Vega</span>  \n\n Zona Centro \n\n [+56 9 9818 3472](tel:+56998183472) \n\n [pvega@dimaco.cl](mailto:pvega@dimaco.cl)",
+             "blockClass": "card__vendedores__ferre"
+        }
+    },
+     /* card 3 */
+    "flex-layout.col#card__vendedores__ferre__3": {
+      "children": [ "rich-text#card__vendedores__ferre__3"],
+        "props": {
+            "blockClass": "card__vendedores__ferre"
+        }
+    },
+    "rich-text#card__vendedores__ferre__3": {
+        "props": {
+            "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Carlos Morales</span>  \n\n Zona Sur y Costa \n\n [+56 9 6227 4533](tel:+56962274533) \n\n [cmorales@dimaco.cl](mailto:cmorales@dimaco.cl)",
+             "blockClass": "card__vendedores__ferre"
+        }
+    },
+     /* card 4 */
+    "flex-layout.col#card__vendedores__ferre__4": {
+      "children": [ "rich-text#card__vendedores__ferre__4"],
+        "props": {
+            "blockClass": "card__vendedores__ferre"
+        }
+    },
+    "rich-text#card__vendedores__ferre__4": {
+        "props": {
+            "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Gabriel Murga</span>  \n\n Zona Sur \n\n [+56 9 6766 5078](tel:+56967665078) \n\n [gmurga@dimaco.cl](mailto:gmurga@dimaco.cl)",
+             "blockClass": "card__vendedores__ferre"
+        }
+    }
+
+
+    ,
+    /* TITULO DE  CONTENEDOR DE CARDS */
+    "rich-text#vendedor__empresa": {
+        "props": {
+            "text": "Jefe y Vendedores para Empresas",
+            "blockClass": ["vendedor__cotiza","cards__vendedores__ferre__mt"]
+        }
+    },
+    /* CONTENEDOR DE CARDS */
+    "flex-layout.col#cards__vendedores__empresa": {
+        "children": [
+            "flex-layout.col#card__empresa__ferre__4",
+            "flex-layout.col#card__empresa__ferre__1",
+            "flex-layout.col#card__empresa__ferre__2",
+            "flex-layout.col#card__empresa__ferre__3"
+        ],
+        "props": {
+            "blockClass": ["cards__vendedores__ferre"]
+        }
+    },
+    /* card 1 */
+    "flex-layout.col#card__empresa__ferre__1": {
+      "children": [ "rich-text#card__empresa__ferre__1"],
+        "props": {
+            "blockClass": "card__vendedores__ferre"
+        }
+    },
+    "rich-text#card__empresa__ferre__1": {
+        "props": {
+            "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Carolina Tobar</span>  \n\n Venta Empresa en Terreno \n\n [+56 9 3425 0367](tel:+56934250367) \n\n [ctoabar@dimaco.cl](mailto:ctoabar@dimaco.cl)",
+             "blockClass": "card__vendedores__ferre"
+        }
+    },
+     /* card 2 */
+    "flex-layout.col#card__empresa__ferre__2": {
+      "children": [ "rich-text#card__empresa__ferre__2"],
+        "props": {
+            "blockClass": "card__vendedores__ferre"
+        }
+    },
+    "rich-text#card__empresa__ferre__2": {
+        "props": {
+            "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Diego Pérez</span>  \n\n Venta Empresa \n\n [+56 9 7416 2971](tel:+56974162971) \n\n [dperez@dimaco.cl](mailto:dperez@dimaco.cl)",
+             "blockClass": "card__vendedores__ferre"
+        }
+    },
+     /* card 3 */
+    "flex-layout.col#card__empresa__ferre__3": {
+      "children": [ "rich-text#card__empresa__ferre__3"],
+        "props": {
+            "blockClass": "card__vendedores__ferre"
+        }
+    },
+    "rich-text#card__empresa__ferre__3": {
+        "props": {
+            "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Ricardo Gómez</span>  \n\n Venta Empresa\n\n [+56 9 7809 1711](tel:+56978091711) \n\n [rgomez@dimaco.cl](mailto:rgomez@dimaco.cl)",
+             "blockClass": "card__vendedores__ferre"
+        }
+    },
+    /* card 4 */
+   "flex-layout.col#card__empresa__ferre__4": {
+     "children": [ "rich-text#card__empresa__ferre__4"],
+       "props": {
+           "blockClass": "card__vendedores__ferre"
+       }
+   },
+   "rich-text#card__empresa__ferre__4": {
+       "props": {
+           "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Cristian San Martin</span>  \n\n Jefe de Venta Empresa\n\n [+56 9 91294574](tel:+56991294574) \n\n [ccsanmartin@dimaco.cl](mailto:ccsanmartin@dimaco.cl)",
+            "blockClass": "card__vendedores__ferre"
+       }
+   },
+
+   "rich-text#localidad__zona": {
+        "props": {
+            "text": "Localidades por Zona",
+            "blockClass": ["vendedor__cotiza","cards__vendedores__ferre__mt"]
+        }
+    },
+    "flex-layout.col#localidad__zona": {
+        "children": [
+             "rich-text#localidad__zona__item1",
+              "rich-text#localidad__zona__item2",
+              "rich-text#localidad__zona__item3"
+        ],
+        "props": {
+            "blockClass": "localidad__zona"
+        }
+    },
+    "rich-text#localidad__zona__item1": {
+      "props": {
+        "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Zona Norte y Costa</span> \n - Lolol \n - Teno \n - Curicó \n - Romeral \n - Iloca \n - Duao \n - Rancura \n - Licantén \n - Hualañé \n - Sagrada Familia \n - Curepto" ,
+        "blockClass": "localidad__zona__item"
+      }
+    },
+    "rich-text#localidad__zona__item2": {
+      "props": {
+        "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Zona Centro</span> \n - Lontue \n - Molina \n - Cumpeo \n - San Rafael \n - Talca \n - Pencahue \n - San Clemente \n - Maule \n - Villa Alegre" ,
+        "blockClass": "localidad__zona__item"
+      }
+    },
+    "rich-text#localidad__zona__item3": {
+      "props": {
+        "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Zona Sur y Costa</span> \n - Linares \n - Colbún \n - Longaví \n - Retiro \n - Parral \n - Cauquenes \n - Chanco \n - Pelluhue \n - Chovellén \n - Curanipe \n - Cobquecura \n - Quirihue \n - Ninhue \n - San Carlos" ,
+        "blockClass": "localidad__zona__item"
+      }
+    }
+}

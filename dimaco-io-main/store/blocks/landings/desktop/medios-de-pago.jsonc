@@ -1,0 +1,95 @@
+{
+    "store.custom#medios-de-pago": {
+        "blocks": [
+            "responsive-layout.desktop#medios-de-pago",
+            "responsive-layout.mobile#medios-de-pago"
+        ]
+    },
+    "responsive-layout.desktop#medios-de-pago": {
+        "children": [
+            "image#image__banner",
+            "flex-layout.row#main__landing__medios"
+        ]
+    },
+    "flex-layout.row#main__landing__medios": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#main__landing__medios"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#main__landing__medios": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#menu__landing__medios",
+            "flex-layout.col#contenido__landing__medios"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#menu__landing__medios": {
+        "title": "Contenedor Menu",
+        "children": [
+            "rich-text#titulo__menu__landing",
+            "rich-text#texto__menu__landing",
+            "link#terminos__link",
+            "link#cambios__link",
+            "link#pagos__link__active",
+            "link#politicas__link",
+            "link#historia__link"
+        ],
+        "props": {
+            "blockClass": "menu__landing"
+        }
+    },
+    "link#pagos__link__active": {
+        "title": "Link Medios de Pago",
+        "props": {
+            "label": "Medios de pago",
+            "href": "/medios-de-pago",
+            "blockClass": [
+                "menu__item__link__landing",
+                "menu__item__link__active"
+            ]
+        }
+    },
+    "flex-layout.col#contenido__landing__medios": {
+        "title": "Contenedor contenido__landing",
+        "children": [
+            "rich-text#parrafo__1__landing__medios" ,
+            "rich-text#parrafo__2__landing__medios",
+            "rich-text#parrafo__3__landing__medios",
+            "rich-text#parrafo__4__landing__medios"
+        ],
+        "props": {
+            "blockClass": "contenido__landing"
+        }
+    },
+    "rich-text#parrafo__1__landing__medios": {
+        "props": {
+            "text": "**Medios de pago** Los medios de pago disponibles en www.dimaco.cl son los siguientes: \n - Tarjetas de crédito y débito bancarias emitidas por entidades financieras en Chile, procesadas a través de WebPay. \n - Transferencias bancarias, gestionadas por Khipu. \n\nLos aspectos relacionados con el funcionamiento de las tarjetas bancarias aceptadas en este sitio web están sujetos al contrato existente entre el cliente y el banco emisor, por lo que www.dimaco.cl no asume ninguna responsabilidad en relación con los aspectos señalados en dichos contratos. \n\nLos usuarios declaran entender que estos medios de pago, así como los portales de pago, son proporcionados por empresas terceras, independientes de Ferretería Dimaco. En consecuencia, la continuidad de sus servicios, así como el correcto funcionamiento de las herramientas y botones de pago en línea, son de exclusiva responsabilidad de las empresas proveedoras de estos servicios, y en ningún caso recaerán en Ferretería Dimaco.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__2__landing__medios": {
+        "props": {
+            "text": "**¿Cómo pagar con Webpay?** \n\n - Selecciona pagar con redcompra o tarjeta crédito bancaria u otras. \n\n -Ingresa los datos de tu tarjeta, y pincha 'Pagar'. \n\n - Se abrirá la página del banco para que te identifiques y termines con el proceso de pago.  ",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__3__landing__medios": {
+        "props": {
+            "text": "**Derechos del usuario** El usuario de la página web dimaco.cl tiene todos los derechos reconocidos por la legislación sobre Protección al Consumidor en Chile. Dimaco no utilizará los datos personales del cliente para otros fines que no sean los estrictamente relacionados con la compra vía web de productos ofrecidos. \n\n Dimaco podrá dirigirse al usuario a través del correo electrónico que el mismo cliente ingresó al registrarse, para el envío de información, ofertas, promociones, descuentos y otros beneficios comerciales.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__4__landing__medios": {
+        "props": {
+            "text": "**Políticas de la compra** El usuario podrá comprar cuantas veces quiera los productos ofrecidos en nuestro sitio web www.dimaco.cl, acorde a la disponibilidad de cada producto, y de acuerdo a los requisitos planteados anteriormente. \n\n Al término del proceso de compra el usuario deberá elegir una forma de pago, una fecha de despacho del producto, llenar sus datos de facturación y dirección de despacho. \n\n Toda compra realizada en nuestro sitio web estará debidamente documentada y formalizada con la entrega de la boleta o factura correspondiente. \n\n Al aceptar la transacción el usuario declara estar plenamente de acuerdo con todas las condiciones anteriormente descritas y suscritas en este documento de Términos y Condiciones.",
+            "blockClass": "parrafo__landing"
+        }
+    }
+}

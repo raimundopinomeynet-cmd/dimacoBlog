@@ -1,0 +1,17 @@
+{
+    "responsive-layout.mobile#blog-tendencias": {
+        "children": [
+            "flex-layout.row#article__header__tendencias",
+            "flex-layout.row#article__content__tendencias__mobile"
+        ]
+    },
+    "flex-layout.row#article__content__tendencias__mobile": {
+        "title": "Article Content Mobile",
+        "children": [
+            "flex-layout.col#article__main__tendencias"
+        ],
+        "props": {
+            "blockClass": "article__content__mobile"
+        }
+    }
+}

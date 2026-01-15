@@ -1,0 +1,23 @@
+
+
+.rowDataSpecs{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+@media (width < 700px) {
+    .rowDataSpecs{
+        padding: 10px 15px;
+    }
+}
+
+.rowDataSpecsPropertie{
+    font-weight: 600;
+}
+
+.rowDataSpecsColor{
+    background-color: rgba(57, 181, 74, 0.204);
+    border-radius: 4px;
+}

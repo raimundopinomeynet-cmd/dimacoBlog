@@ -1,0 +1,8 @@
+{
+    "responsive-layout.mobile#politica-envios": {
+        "children": [
+            "image#image__banner",
+            "flex-layout.row#main__landing__medios__mobile"
+        ]
+    }
+}

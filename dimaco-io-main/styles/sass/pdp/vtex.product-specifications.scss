@@ -1,0 +1,25 @@
+:global(.vtex-flex-layout-0-x-flexRowContent--formas-de-uso) {
+  .specificationValue {
+      background-size: 40px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      padding-top: 50px;
+  }  
+  .specificationValue[data-specification-value="Contenido"] {
+    background-image: url(/arquivos/usos-contenido.png);
+  }  
+  .specificationValue[data-specification-value="Dispositivos"] {
+    background-image: url(/arquivos/usos-dispositivos.png);
+  }  
+  .specificationValue[data-specification-value="Gaming"] {
+    background-image: url(/arquivos/usos-gamming.png);
+  }  
+  .specificationValue[data-specification-value="Streaming"] {
+    background-image: url(/arquivos/usos-streaming.png);
+  }  
+  .specificationValue[data-specification-value="Videollamadas"] {
+    background-image: url(/arquivos/usos-videollamadas.png);
+  }
+}
+
+

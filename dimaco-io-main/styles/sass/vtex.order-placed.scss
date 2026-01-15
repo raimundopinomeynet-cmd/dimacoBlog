@@ -1,0 +1,537 @@
+
+
+.orderPlacedWrapper--order__placed__checkout{
+    background: var(--Gray-1, #F9F9F9);
+    @media (width <= 640px) {
+        padding-top: 2.75rem;
+    }
+    :global(.vtex-store-components-3-x-container){
+        padding: 0;
+    }
+
+    
+    :global(.vtex-rich-text-0-x-wrapper--title__header__order){
+        margin: auto;
+        :global(.vtex-rich-text-0-x-paragraph--title__header__order){
+            margin: 0;
+            color: var(--Primary-Green, #007934);
+            text-align: center;
+            font-family: "Gotham";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 120%; /* 28.8px */
+        }
+    }
+
+    :global(.vtex-flex-layout-0-x-flexCol--title__email__order){
+        max-width: 1300px;
+        margin: 2.5rem auto;
+        background: var(--Primary-White, #FFF);
+        box-shadow: 0px 4px 12px -4px rgba(0,0,0,.2);
+        height: auto !important;
+
+        .confirmationTitle {
+            font-size: 0;
+            margin-top: 4.5rem;
+            margin-bottom: 0.5rem;
+            &::before{
+                content: "Pedido realizado con éxito";
+                color: var(--Primary-Black, #000);
+                font-family: "Gotham";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 120%; /* 24px */
+            }
+        }
+
+        .confirmationMessage{
+            font-size: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before{
+                content: "Enviamos un correo con los detalles a ";
+                color: var(--Primary-Black, #000);
+                text-align: center;
+                font-family: "Gotham";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 19.2px */
+                margin-right: 6px;
+            }
+            margin-bottom: 4.5rem;
+            margin-top: 0.5rem;
+        }
+
+        :global(.vtex-flex-layout-0-x-flexColChild--title__email__order){
+            height: auto !important;
+        }
+    }
+
+    .orderNumber{
+        text-align: center;
+        color: var(--Primary-Black, #000);
+        font-family: "Gotham";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120%; /* 28.8px */
+        margin-bottom: 6rem;
+        @media (width <= 640px) {
+            font-size: 20px;
+        }
+    }
+
+    .orderPlacedMainWrapper--order__placed__checkout{
+        max-width: 1300px;
+        width: 100% !important;
+        :global(.vtex-flex-layout-0-x-flexCol--section__data__order){
+            flex-direction: row;
+            height: auto !important;
+            justify-content: space-between;
+            align-items: baseline;
+            :global(.vtex-flex-layout-0-x-flexColChild--section__data__order){
+                width: 30%;
+                height: auto !important;
+                border-top: 1px solid #DEDEDE;
+                padding: 1rem;
+
+                :global(.vtex-flex-layout-0-x-flexColChild--section__data__row):last-child{
+                    padding-top: 0.5rem;
+                    padding-left: 1rem;
+                }
+                :global(.vtex-rich-text-0-x-paragraph--section__data__title){
+                    margin-top: 4px; 
+                    margin-bottom: 0.25rem;
+                    color:#000;
+                    font-family: "Gotham";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 19.2px */
+                }
+
+                .customerInfoListContainer{
+                    color: var(--Primary-Black, #000);
+                    font-family: "Gotham";
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%; /* 16.8px */
+                }
+
+                .section--paymentMethods{
+                    border-color: transparent !important;
+                    .orderPaymentItem{
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        .paymentValue,
+                        .paymentGroup{
+
+                            color: var(--Primary-Black, #000);
+    
+                            /* Paragraph/Book/12 */
+                            font-family: "Gotham";
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%; /* 16.8px */
+                        }
+                    }
+                }
+
+                .totalListWrapper{
+                    .totalList{
+                        width: 100% !important;
+                        margin:  0 !important;
+                        .totalListItemValue{
+                            color: var(--Primary-Black, #000);
+                            font-family: Gotham;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%; /* 19.6px */
+                        }
+                        .totalListItemLabel{
+                            color: var(--Primary-Black, #000);
+                            font-family: "Gotham";
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 120%; /* 16.8px */
+                            &::after{
+                                content: ":";
+                                color: var(--Primary-Black, #000);
+                                font-family: "Gotham";
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 16.8px */
+                                margin-left: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        :global(.vtex-flex-layout-0-x-flexCol--section__data__shipping){
+            margin-top: 3rem;
+            flex-direction: row;
+            height: auto !important;
+            justify-content: space-between;
+            align-items: baseline;
+            @media (width <= 640px) {
+                margin-top: 0.5rem;  
+            }
+            :global(.vtex-flex-layout-0-x-flexColChild--section__data__shipping){
+                width: 100%;
+                height: auto !important;
+                padding: 0;
+                padding-top: 1rem;
+            }
+        }
+
+        .section{
+            border-color: transparent !important;
+            .package{
+                margin: 1rem auto;
+               /*  padding: 2rem 0; */
+                .packageHeaderColumn{
+                    padding-top: 2rem;
+                    border-top: 1px solid #DEDEDE;
+
+                   .packageHeader{
+                       color: var(--Primary-Black, #000);
+                       font-family: "Gotham";
+                       font-size: 16px;
+                       font-style: normal;
+                       font-weight: 600;
+                       line-height: 120%; /* 19.2px */
+                       margin: 0;
+                       .packageSLA,
+                       .packageShippingEstimate{
+                           color: var(--Primary-Black, #000);
+                           /* Paragraph/Book/12 */
+                           font-family: "Gotham";
+                           font-size: 12px;
+                           font-style: normal;
+                           font-weight: 400;
+                           line-height: 140%; /* 16.8px */
+                           padding-left: 1rem;
+                           display: block;
+                           margin-top: 1rem;
+                       }
+                       .packageSLA{
+                        margin: 0;
+                       }
+                   }
+           
+                   .packageAddressWrapper,
+                   .packageInfoWrapper{
+                       .pickupFriendlyName,
+                       .addressContainer{
+                           color: var(--Primary-Black, #000) !important;
+                           padding-left: 1rem;
+                           /* Paragraph/Book/12 */
+                           font-family: "Gotham";
+                           font-size: 12px;
+                           font-style: normal;
+                           font-weight: 400;
+                           line-height: 140%; /* 16.8px */
+                       }
+                       .pickupFriendlyName{
+                           padding: 0 !important;
+                       }
+                   }
+           
+                   .packageReceiver{
+                       .packageAdditionalInfo,
+                       .packageReceiverName{
+                           color: var(--Primary-Black, #000);
+                           font-family: "Gotham";
+                           font-size: 12px;
+                           font-style: normal;
+                           font-weight: 400;
+                           line-height: 140%; /* 16.8px */
+                           padding-left: 1rem;
+                           display: block;
+                           margin-top: 1rem;
+                           margin-top: 0;
+                       }
+                   }
+                }
+
+                .productList{
+                    padding-top: 2rem;
+                    border-top: 1px solid #DEDEDE;
+                    &::before{
+                        content: "Resumen del pedido";
+                        color: var(--Primary-Black, #000);
+                        font-family: "Gotham";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%; /* 19.2px */
+                        display: block;
+                        margin-bottom: 1.5rem;
+                    }
+                    .productListItem{
+                        border-bottom: transparent !important;
+                        margin: 0;
+                        padding-top: 1.5rem;
+                        padding-bottom: 0;
+                        .productWrapper{
+                            background: var(--Primary-White, #FFF);
+                            padding: 1rem;
+                            border-radius: 5px;
+                            box-shadow: 0px 4px 12px -4px rgba(0,0,0,.2);
+                            position: relative;
+                            .productImageColumn{
+                                margin-right: 0.75rem;
+                                .productImageWrapper{
+                                    height: 66px;
+                                    width: 66px;
+                                }
+                            }
+
+                            .productName{
+                                color: var(--Primary-Black, #000);
+                                font-family: "Gotham";
+                                font-size: 13px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 14.4px */
+                            }
+
+                            .productQuantity{
+                                position: absolute;
+                                bottom: 1rem;
+                                right: 1rem;
+                                color: var(--Primary-Black, #000);
+                                text-align: right;
+                                
+                                /* Paragraph/Regular/16 */
+                                font-family: "Gotham";
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 19.2px */
+                            }
+
+                            .productPrice{
+                                position: absolute;
+                                bottom: 1rem;
+                                left: 1rem;
+                                padding-left: 76px;
+                                color: var(--Primary-Gray, #B0AFB5);
+
+                                /* Paragraph/Book/12 */
+                                font-family: "Gotham";
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%; /* 16.8px */
+                            }
+                        }
+                    }
+
+                    .productListItem:first-child{
+                        border-top: 1px solid #DEDEDE !important;
+                    }
+                    .productListItem:last-child{
+                        padding-bottom: 1.5rem;
+                        border-bottom: 1px solid #DEDEDE !important;
+                    }
+                }
+            }
+        }
+
+
+        :global(.vtex-flex-layout-0-x-flexCol--btn__footer__order){
+            flex-direction: row;
+            justify-content: end;
+            margin-top: 2.5rem;
+            margin-bottom: 3.75rem;
+            height: auto !important;
+            :global(.vtex-store-link-0-x-link--seguir__comprando){
+                text-decoration: none;
+                border-radius: 4px;
+                background: var(--Secondary-Green-Dark, #090F05);
+                border: 1px solid var(--Secondary-Green-Dark, #090F05);
+
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 20px;
+                margin-right: 2rem;
+                :global(.vtex-store-link-0-x-label--seguir__comprando){
+                    color: #FFF;
+                    text-align: center;
+                    
+                    /* CTA/Bold/16 */
+                    font-family: "Gotham";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 19.2px */
+                }
+            }
+
+            :global(.vtex-store-link-0-x-link--pedidos__order){
+                text-decoration: none;
+                border-radius: 4px;
+                background: transparent;
+                border: 1px solid var(--Secondary-Green-Dark, #090F05);
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 20px;
+                :global(.vtex-store-link-0-x-label--pedidos__order){
+                    color: black;
+                    text-align: center;
+                    font-family: "Gotham";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 19.2px */
+                }
+            }
+        }
+
+        :global(.vtex-flex-layout-0-x-flexRowContent--total__footer__order){
+            .totalList{
+                margin: 0;
+                .totalListItem{ display: none; }
+                .totalListItem:last-child{ 
+                    padding: 0;
+                    display: flex; 
+                    .totalListItemLabel{
+                        color: var(--Primary-Black, #000);
+                        font-family: "Gotham";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%; /* 19.2px */
+                    }
+                    .totalListItemValue{
+                        color: var(--Primary-Black, #000);
+                        font-family: "Gotham";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%; /* 19.2px */
+                    }
+                }
+            }
+        }
+    }
+
+    @media (width <= 1335px) {
+        .orderPlacedMainWrapper--order__placed__checkout,
+        .orderPlacedHeader{
+            width: 95% !important;
+            margin: auto;
+        }
+    }
+    @media (width <= 1220px) {
+        .package{
+            flex-wrap: wrap;
+            .productList,
+            .packageHeaderColumn{
+                width: 100%; 
+                margin:auto;
+            }
+        }
+        :global(.vtex-flex-layout-0-x-flexCol--btn__footer__order),
+        :global(.vtex-flex-layout-0-x-flexRowContent--total__footer__order){
+            width: 100%; 
+            margin:auto;
+            .totalList{
+                width: 100%;
+            }
+        }
+    }
+    @media (width <= 1024px){
+        :global(.vtex-flex-layout-0-x-flexCol--section__data__order){
+            flex-wrap: wrap;
+            :global(.vtex-flex-layout-0-x-flexColChild--section__data__order){
+                width: 100% !important;
+            }
+        }
+
+        .section--confirmation{
+            margin-bottom: 0.5rem;
+        }
+        .orderNumber{
+            margin-bottom: 1.5rem !important;
+        }
+    }
+    @media (width <= 750px) {
+        .orderPlacedMainWrapper--order__placed__checkout,
+        .orderPlacedHeader{
+            width: 93% !important;
+            margin: auto;
+        }
+    }
+    @media (width <= 640px) {
+        .productWrapper{
+            .productImageColumn{
+                margin-right: 0 !important;
+                margin-bottom: 0.5rem;
+            }
+
+            .productInfoColumn{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .productQuantity{
+                position: unset !important;
+                margin: 0;
+            }
+
+            .productPrice{
+                position: unset !important;
+                padding: 0 !important;
+                text-align: start;
+            }
+        }
+    }
+    @media (width <= 525px) {
+        .productWrapper{
+            .productInfoColumn{
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: space-between;
+                .productQuantity{
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+        .confirmationMessage{
+            flex-direction: column;
+        }
+    }
+    @media (width <= 440px) {
+        :global(.vtex-flex-layout-0-x-flexCol--btn__footer__order ){
+            flex-direction: column !important;
+            :global(.vtex-store-link-0-x-link--seguir__comprando){
+                margin-right: 0 !important;
+                margin-bottom: 1rem;
+            }
+        }
+        .productName{
+            text-align: start !important;
+        }
+    }
+}

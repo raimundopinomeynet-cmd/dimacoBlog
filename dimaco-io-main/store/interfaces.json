@@ -1,0 +1,17 @@
+{
+    "screen-loader": {
+        "component": "ScreenLoader"
+    },
+    "specs-pdp": {
+      "component": "ProductSpecs"
+    },
+    "form-contact": {
+      "component": "FormContact"
+    },
+    "square-meter-calculator": {
+      "component": "SquareMeterCalculator"
+    },
+    "complemento": {
+      "component": "Complemento"
+    }
+}

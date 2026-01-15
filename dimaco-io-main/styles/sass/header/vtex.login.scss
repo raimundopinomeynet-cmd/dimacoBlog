@@ -1,0 +1,113 @@
+@import "../variables";
+
+.label  {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: $c-tipografia;
+    font-style: normal;         
+    color: $c-principal;
+    text-transform: none;
+    padding: 0;
+    @media screen and (max-width: 1025px) {
+        display: none;
+    }
+}
+.profile {
+  color: $greenDark;
+  font-family: $c-tipografia;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: none;
+  line-height: 12px; 
+  width: 100px;
+  -webkit-line-clamp: 2; /* Limita a 2 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* Oculta el texto adicional */
+  text-overflow: ellipsis; 
+}
+.profileIcon {
+  height: 20px;
+  width: 20px;
+  color: $c-principal;
+}
+.contentContainer {
+  border-radius: 12px;  
+  .content--accountOptions {
+    .accountOptions{
+      :global(.vtex-button),
+      .button {
+        text-transform: none;
+        background: $primary;
+        color: $c-blanco;
+        width: 100%;
+        text-align: center;
+        border-radius: 12px;
+        padding: 0;
+        border: 0;
+        line-height: 30px;
+        font-size: 12px;
+        transition: 0.2s;
+        &:hover {
+          background: black;
+          color: white;
+        }
+      }
+      :global(.vtex-button__label) {
+        padding: 0 !important;
+      }
+    } 
+  }
+}
+.arrowUp {
+  width: 15px;
+  right: 10px;
+}
+.content--loginOptions {
+  border-radius: 12px;  
+  padding: 15px;
+}
+.loginOptionsContainer .formTitle {
+  display: none;
+}
+
+.optionsListItem .button :global(.vtex-button) {
+  font-size: 12px;   
+  font-weight: 700; 
+  width: 100%;
+  min-height: 36px;  
+  border-radius: 12px;  
+  color: $c-blanco;
+  background: $primary;
+  text-transform: none;    
+  &:hover{
+    background-color: #055a2a;
+  }
+}
+
+.oauthLabel {
+  font-size: 12px;
+}
+
+.formFooter {
+  border-top: 0;
+}
+.formFooter .sendButton :global(.vtex-button) {
+  border-radius: 12px;
+}
+
+.contentForm .inputContainer :global(.vtex-input-prefix__group) {
+
+  padding: 0 15px;
+}
+
+.contentForm .accountOptions :global(.t-action--small) {
+  text-transform: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .container {
+    :global(.vtex-button__label) {
+      padding: 0 0 0 20px !important; 
+    }
+  }
+}

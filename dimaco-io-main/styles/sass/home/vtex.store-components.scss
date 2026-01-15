@@ -1,0 +1,90 @@
+@import "../variables";
+
+.imageElement--card__image__destacada{
+    display: block;
+    margin: auto;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+   width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: fill;
+}
+
+
+.imageElement--promosde3__home{
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        box-shadow: 1px 0px 5px 0px rgba(138,134,138,1);
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+    @include mobile__640{
+        width: 267px; 
+    }
+}
+
+.imageElement--imagen__promos4{
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        box-shadow: 1px 0px 5px 0px rgba(138,134,138,1);
+        cursor: pointer;
+        transform: scale(1.015);
+    }
+    @include mobile__640{
+        width: 143px;
+        min-width: 143px;
+    }
+}
+
+.imageElement--seleccionados__image{
+    margin: auto;
+    display: block;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        box-shadow: 1px 0px 5px 0px rgba(138,134,138,1);
+        cursor: pointer;
+        transform: scale(1.015);
+    }
+    @include tablet__1245{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    } 
+}
+
+.imageElement--seleccionados__image__mobile{
+    @include mobile__640{
+    }
+}
+
+.imageElement--seleccionados__image__mobile__margin{
+    @include mobile__640{
+    }
+}
+
+
+.imageElement--sliderTop__images__marcas{
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    /* width: 168px !important; */
+    object-fit: contain;
+    @include mobile__640{
+        width: 120px !important;
+    }
+    &:hover{
+        transform: scale(1.035);
+    }
+}
+
+.discountInsideContainer{
+    display: none !important;
+}
+
+@include tablet__1200{
+    .imageElement--banner__products__desk{
+        display: none !important;
+    }
+}

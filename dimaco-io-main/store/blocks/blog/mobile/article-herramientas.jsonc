@@ -1,0 +1,17 @@
+{
+    "responsive-layout.mobile#blog-herramientas": {
+        "children": [
+            "flex-layout.row#article__header__herramientas",
+            "flex-layout.row#article__content__herramientas__mobile"
+        ]
+    },
+    "flex-layout.row#article__content__herramientas__mobile": {
+        "title": "Article Content Mobile",
+        "children": [
+            "flex-layout.col#article__main__herramientas"
+        ],
+        "props": {
+            "blockClass": "article__content__mobile"
+        }
+    }
+}

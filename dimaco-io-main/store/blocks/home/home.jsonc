@@ -1,0 +1,28 @@
+{
+    "store.home": {
+        "blocks": [
+           /*  "screen-loader", */
+            "flex-layout.row#bannerPrincipal",
+            "flex-layout.row#initial__home",
+             "flex-layout.row#flotante__wa"
+        ]
+    },
+    "flex-layout.row#initial__home": {
+        "title": "contenedor HOME",
+        "children": [
+            "flex-layout.col#initial__home"
+        ]
+    },
+    "flex-layout.col#initial__home": {
+        "title": "contenedor HOME",
+        "children": [
+            "__fold__",
+            "flex-layout.row#categorias__destacadas",
+            "flex-layout.row#productos__semana",
+            "flex-layout.row#selecionados__home",
+            "flex-layout.row#banner__products",
+            "flex-layout.row#mejores__ofertas",
+            "flex-layout.row#Slider__marcas"
+        ]
+    }
+}

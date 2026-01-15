@@ -1,0 +1,35 @@
+
+
+
+.quantitySelectorContainer--quantity__pdp {
+    margin-bottom: 0;
+    justify-content: center;
+    .quantitySelectorTitle--quantity__pdp{
+        display: none;
+    }
+    .quantitySelectorStepper--quantity__pdp{
+        :global(.vtex-numeric-stepper-container){
+            border-radius: 20px;
+            border: 1px solid #000;
+            width: 104px;
+            justify-content: center;
+            :global(.vtex-numeric-stepper__input),
+            :global(.vtex-numeric-stepper__minus-button ),
+            :global(.vtex-numeric-stepper__plus-button){
+                border: none;
+                background-color: transparent;
+                width: 32px !important;
+                :global(.vtex-numeric-stepper__minus-button__text),
+                :global(.vtex-numeric-stepper__plus-button__text){
+                    color: #000;
+                    text-align: center;
+                    font-family: "Poppins";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}

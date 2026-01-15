@@ -1,0 +1,595 @@
+{
+  "store.custom#black": {
+    "blocks": [
+      "flex-layout.row#blackR1",
+      "flex-layout.row#categorias__destacadas__black",
+      "flex-layout.row#destacados__black",
+      "flex-layout.row#preguntas__frecuentes_black"
+    ]
+  },
+  // Banner Principal
+  "flex-layout.row#blackR1": {
+    "title": "banner Principal",
+    "props": {
+      "blockClass": "home-bannerComplejoPrincipal",
+      "verticalAlign": "center",
+      "horizontalAlign": "center",
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#principal__black"]
+  },
+  "flex-layout.col#principal__black": {
+    "props": {
+      "blockClass": "columna-derecha",
+      "verticalAlign": "middle",
+      "width": "100%"
+    },
+    "children": ["list-context.image-list#sliderTop__black"]
+  },
+  "list-context.image-list#sliderTop__black": {
+    "children": ["slider-layout#sliderTop-images__black"],
+    "title": "sliderTop",
+    "props": {
+      "height": 720,
+      "images": [
+        {
+          "image": "/arquivos/Banner__home.jpg",
+          "mobileImage": "/arquivos/banner__princial__mobile.jpg",
+          "link": {
+            "url": ""
+          }
+        },
+        {
+          "image": "/arquivos/Banner__home.jpg",
+          "mobileImage": "/arquivos/banner__princial__mobile.jpg",
+          "link": {
+            "url": ""
+          }
+        }
+      ]
+    }
+  },
+  "slider-layout#sliderTop-images__black": {
+    "props": {
+      "fullWidth": true,
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 6000,
+        "stopOnHover": false
+      },
+      "infinite": true,
+      "showNavigationArrows": "always",
+      "showPaginationDots": "always",
+      "blockClass": ["carousel", "sliderTop__images"]
+    }
+  },
+  // Categorias Destacadas
+  "flex-layout.row#categorias__destacadas__black": {
+    "title": "categorias destacadas",
+    "props": {
+      "blockClass": "categorias__destacadas"
+    },
+    "children": ["flex-layout.col#categorias__destacadas__black"]
+  },
+  "flex-layout.col#categorias__destacadas__black": {
+    "title": "categorias destacadas",
+    "props": {
+      "blockClass": "categorias__destacadas"
+    },
+    "children": [
+      "rich-text#head__categorias__destacadas__black",
+      "rich-text#subHead__categorias__destacadas__black",
+      "flex-layout.row#images__destacadas__black"
+    ]
+  },
+  "rich-text#head__categorias__destacadas__black": {
+    "title": "destacadas title",
+    "props": {
+      "text": "# Categorías Destacadas",
+      "blockClass": "head__categorias__destacadas"
+    }
+  },
+  "rich-text#subHead__categorias__destacadas__black": {
+    "title": "destacadas text",
+    "props": {
+      "text": "## Tenemos los mejores productos de alta calidad",
+      "blockClass": "subHead__categorias__destacadas"
+    }
+  },
+  "flex-layout.row#images__destacadas__black": {
+    "title": "contenedor images",
+    "children": ["flex-layout.col#images__destacadas__black"],
+    "props": {
+      "blockClass": ["container__images__destacadas", "images__black__rounded"]
+    }
+  },
+  "flex-layout.col#images__destacadas__black": {
+    "children": [
+      "flex-layout.col#image__card__3",
+      "flex-layout.col#image__card__8",
+      "flex-layout.col#image__card__1",
+      "flex-layout.col#image__card__4",
+      "flex-layout.col#image__card__7",
+      "flex-layout.col#image__card__2"
+    ],
+    "props": {
+      "blockClass": "images__destacadas"
+    }
+  },
+  // Destacados black
+  "flex-layout.row#destacados__black": {
+    "title": "imagenes black",
+    "children": ["flex-layout.col#imagenes__black"],
+    "props": {
+      "blockClass": "imagenes____black"
+    }
+  },
+  "flex-layout.col#imagenes__black": {
+    "title": "imagenes black",
+    "props": {
+      "blockClass": "imagenes__black"
+    },
+    "children": [
+      "rich-text#head__black__destacadas",
+      "rich-text#subHead__black__destacadas",
+      "flex-layout.row#imagenes__black"
+    ]
+  },
+  "rich-text#head__black__destacadas": {
+    "title": "destacadas title",
+    "props": {
+      "text": "# Destacados black 2025",
+      "blockClass": "head__categorias__destacadas"
+    }
+  },
+  "rich-text#subHead__black__destacadas": {
+    "title": "destacadas text",
+    "props": {
+      "text": "## Productos exclusivos seleccionados para ti",
+      "blockClass": "subHead__categorias__destacadas"
+    }
+  },
+  "flex-layout.row#imagenes__black": {
+    "title": "imagenes black",
+    "children": ["flex-layout.col#imagenes__black_col"],
+    "props": {
+      "blockClass": "imagenes__promos4"
+    }
+  },
+  "flex-layout.col#imagenes__black_col": {
+    "title": "imagenes black",
+    "props": {
+      "blockClass": "imagenes__promos4"
+    },
+    "children": [
+      "image#imagen__black__1",
+      "image#imagen__black__2",
+      "image#imagen__black__3",
+      "image#imagen__black__4"
+    ]
+  },
+  "image#imagen__black__1": {
+    "title": "imagen black-1",
+    "props": {
+      "src": "/arquivos/promode4__1.jpg",
+      "blockClass": "imagen__promos4"
+    }
+  },
+  "image#imagen__black__2": {
+    "title": "imagen black-2",
+    "props": {
+      "src": "/arquivos/promode4__2.jpg",
+      "blockClass": "imagen__promos4"
+    }
+  },
+  "image#imagen__black__3": {
+    "title": "imagen black-3",
+    "props": {
+      "src": "/arquivos/promode4__3.jpg",
+      "blockClass": "imagen__promos4"
+    }
+  },
+  "image#imagen__black__4": {
+    "title": "imagen black-4",
+    "props": {
+      "src": "/arquivos/promode4__4.jpg",
+      "blockClass": "imagen__promos4"
+    }
+  },
+  // Preguntas Frecuentes
+  "flex-layout.row#preguntas__frecuentes_black": {
+    "title": "Preguntas Frecuentes",
+    "children": ["flex-layout.col#preguntas__frecuentes_black"],
+    "props": {
+      "blockClass": "preguntas__frecuentes_black"
+    }
+  },
+  "flex-layout.col#preguntas__frecuentes_black": {
+    "title": "Preguntas Frecuentes",
+    "props": {
+      "blockClass": "preguntas__frecuentes_black"
+    },
+    "children": [
+      "rich-text#head__black__preguntas__frecuentes",
+      "rich-text#subHead__black__preguntas__frecuentes",
+      "flex-layout.row#preguntas__frecuentes_black_row"
+    ]
+  },
+  "rich-text#head__black__preguntas__frecuentes": {
+    "title": "destacadas title",
+    "props": {
+      "text": "# Preguntas frecuentes sobre el Dimaco black",
+      "blockClass": "head__categorias__destacadas"
+    }
+  },
+  "rich-text#subHead__black__preguntas__frecuentes": {
+    "title": "destacadas text",
+    "props": {
+      "text": "## Esas son las marcas de confiabilidad a la hora de decidire por un producto en Dimaco",
+      "blockClass": "subHead__categorias__destacadas"
+    }
+  },
+  "flex-layout.row#preguntas__frecuentes_black_row": {
+    "title": "Preguntas Frecuentes",
+    "children": ["flex-layout.col#preguntas__frecuentes_black_col"],
+    "props": {
+      "blockClass": "preguntas__frecuentes_black_row"
+    }
+  },
+  "flex-layout.col#preguntas__frecuentes_black_col": {
+    "title": "Preguntas Frecuentes",
+    "props": {
+      "blockClass": "preguntas__frecuentes_black_col"
+    },
+    "children": ["disclosure-layout-group#group__black"]
+  },
+  "disclosure-layout-group#group__black": {
+    "children": [
+      "disclosure-layout#black__first",
+      "disclosure-layout#black__second",
+      "disclosure-layout#black__third",
+      "disclosure-layout#black__fourth",
+      "disclosure-layout#black__fifth",
+      "disclosure-layout#black__sixth",
+      "disclosure-layout#black__seventh",
+      "disclosure-layout#black__eighth",
+      "disclosure-layout#black__nine"
+    ]
+  },
+  "disclosure-state-indicator": {
+    "props": {
+      "Show": "icon-caret#down",
+      "Hide": "icon-caret#up"
+    }
+  },
+  "icon-caret#down": {
+    "props": {
+      "orientation": "down"
+    }
+  },
+  "icon-caret#up": {
+    "props": {
+      "orientation": "up"
+    }
+  },
+  // Primera Pregunta
+  "disclosure-layout#black__first": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#black__first",
+      "disclosure-content#black__first"
+    ]
+  },
+  "disclosure-trigger#black__first": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question1_black"]
+  },
+  "disclosure-content#black__first": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer1_black"]
+  },
+  "rich-text#question1_black": {
+    "props": {
+      "text": "¿En qué consiste el Black Friday Dimaco?",
+      "blockClass": "question-black"
+    }
+  },
+  "rich-text#answer1_black": {
+    "props": {
+      "text": "Es un evento especial de descuentos donde podrás acceder a una amplia variedad de productos de ferretería, construcción, hogar y herramientas con precios imperdibles. Una oportunidad ideal para equiparte y ahorrar.",
+      "blockClass": "answer-black"
+    }
+  },
+  // Segunda Pregunta
+  "disclosure-layout#black__second": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#black__second",
+      "disclosure-content#black__second"
+    ]
+  },
+  "disclosure-trigger#black__second": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question2_black"]
+  },
+  "disclosure-content#black__second": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer2_black"]
+  },
+  "rich-text#question2_black": {
+    "props": {
+      "text": "¿Cuándo empieza el Black Friday Dimaco?",
+      "blockClass": "question-black"
+    }
+  },
+  "rich-text#answer2_black": {
+    "props": {
+      "text": "El Black Friday Dimaco se realizará desde el 26 de noviembre al 3 de diciembre, o hasta agotar stock. Te recomendamos revisar nuestro sitio web a diario para no perderte ninguna oferta.",
+      "blockClass": "answer-black"
+    }
+  },
+  // Tercera Pregunta
+  "disclosure-layout#black__third": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#black__third",
+      "disclosure-content#black__third"
+    ]
+  },
+  "disclosure-trigger#black__third": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question3_black"]
+  },
+  "disclosure-content#black__third": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer3_black"]
+  },
+  "rich-text#question3_black": {
+    "props": {
+      "text": "¿Habrá ofertas anticipadas o pre-Black Friday Dimaco?",
+      "blockClass": "question-black"
+    }
+  },
+  "rich-text#answer3_black": {
+    "props": {
+      "text": "Sí, podrás encontrar promociones previas al evento en productos seleccionados. Mantente atento a nuestras redes y sitio web para acceder a las mejores oportunidades antes del inicio oficial.",
+      "blockClass": "answer-black"
+    }
+  },
+  // Cuarta Pregunta
+  "disclosure-layout#black__fourth": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#black__fourth",
+      "disclosure-content#black__fourth"
+    ]
+  },
+  "disclosure-trigger#black__fourth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question4_black"]
+  },
+  "disclosure-content#black__fourth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer4_black"]
+  },
+  "rich-text#question4_black": {
+    "props": {
+      "text": "¿Qué descuentos y productos habrá en el Black Friday Dimaco?",
+      "blockClass": "question-black"
+    }
+  },
+  "rich-text#answer4_black": {
+    "props": {
+      "text": "Durante el evento encontrarás descuentos exclusivos en categorías como herramientas, ferretería, construcción, electricidad, baño y cocina. Todas las promociones aplican a productos seleccionados y estarán disponibles solo por tiempo limitado.",
+      "blockClass": "answer-black"
+    }
+  },
+  // Quinta Pregunta
+  "disclosure-layout#black__fifth": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#black__fifth",
+      "disclosure-content#black__fifth"
+    ]
+  },
+  "disclosure-trigger#black__fifth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question5_black"]
+  },
+  "disclosure-content#black__fifth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer5_black"]
+  },
+  "rich-text#question5_black": {
+    "props": {
+      "text": "¿Se puede comprar online y retirar en tienda durante el Black Friday Dimaco?",
+      "blockClass": "question-black"
+    }
+  },
+  "rich-text#answer5_black": {
+    "props": {
+      "text": "Sí, puedes comprar desde nuestra tienda online y elegir la opción Retiro en tienda. Te avisaremos por correo o WhatsApp en cuanto tu pedido esté listo.",
+      "blockClass": "answer-black"
+    }
+  },
+  // Sexta Pregunta
+  "disclosure-layout#black__sixth": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#black__sixth",
+      "disclosure-content#black__sixth"
+    ]
+  },
+  "disclosure-trigger#black__sixth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question6_black"]
+  },
+  "disclosure-content#black__sixth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer6_black"]
+  },
+  "rich-text#question6_black": {
+    "props": {
+      "text": "¿Hay envío gratis durante el Black Friday Dimaco y cuánto tardan los envíos?",
+      "blockClass": "question-black"
+    }
+  },
+  "rich-text#answer6_black": {
+    "props": {
+      "text": "Sí, contamos con envío gratis en la Región del Maule y realizamos despachos a todo Chile. Los plazos de entrega varían según la ubicación, con un promedio de 3 a 6 días hábiles.",
+      "blockClass": "answer-black"
+    }
+  },
+  // Séptima Pregunta
+  "disclosure-layout#black__seventh": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#black__seventh",
+      "disclosure-content#black__seventh"
+    ]
+  },
+  "disclosure-trigger#black__seventh": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question7_black"]
+  },
+  "disclosure-content#black__seventh": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer7_black"]
+  },
+  "rich-text#question7_black": {
+    "props": {
+      "text": "¿Qué opciones de pago hay en el Black Friday Dimaco?",
+      "blockClass": "question-black"
+    }
+  },
+  "rich-text#answer7_black": {
+    "props": {
+      "text": "Puedes pagar con tarjetas de débito, crédito, transferencias bancarias, en nuestras plataformas seguras como Webpay y Khipu. Además, ofrecemos hasta 3 cuotas sin interés con Webpay, sujeto a las condiciones de tu banco.",
+      "blockClass": "answer-black"
+    }
+  },
+  // Octava Pregunta
+  "disclosure-layout#black__eighth": {
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#black__eighth",
+      "disclosure-content#black__eighth"
+    ]
+  },
+  "disclosure-trigger#black__eighth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question8_black"]
+  },
+  "disclosure-content#black__eighth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer8_black"]
+  },
+  "rich-text#question8_black": {
+    "props": {
+      "text": "¿Cuál es el límite de compra por producto en el Black Friday Dimaco?",
+      "blockClass": "question-black"
+    }
+  },
+
+  "rich-text#answer8_black": {
+    "props": {
+      "text": "No existe un límite de compra, puedes adquirir todas las unidades que necesites de los productos en oferta durante el evento.",
+      "blockClass": "answer-black"
+    }
+  },
+// Novena pregunta
+  "disclosure-layout#black__nine":{
+    "props": {
+      "animated":true
+    },
+    "children": [
+      "disclosure-trigger#black__nine",
+      "disclosure-content#black__nine"
+    ]
+  },
+  "disclosure-trigger#black__nine":{
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children":["disclosure-state-indicator", "rich-text#question9_black"]
+  },
+  "disclosure-content#black__nine":{
+    "props":{
+      "blockClass":"answer"
+    },
+    "children": ["rich-text#answer9_black"]
+  },
+  "rich-text#question9_black": {
+    "props": {
+      "text": "¿Se reponen los productos si se agotan durante el Black Friday Dimaco?",
+      "blockClass":"question-black"
+    }
+  },
+  "rich-text#answer9_black": {
+    "props":{
+      "text": "Las promociones aplican a un stock limitado, por lo que si un producto se agota no podemos garantizar su reposición. Te sugerimos comprar cuanto antes para asegurar tu elección.",
+      "blockClass":"answer-black"
+    }
+  }
+}

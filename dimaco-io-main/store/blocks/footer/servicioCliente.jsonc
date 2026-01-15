@@ -1,0 +1,104 @@
+{
+    "flex-layout.col#footer__menu__servicios": {
+        "children": [
+            "rich-text#title__footer__menu__servicios",
+            "vtex.menu@2.x:menu#servicioCliente"
+        ],
+        "props": {
+            "blockClass": "footer__menu__servicios"
+        }
+    },
+    "rich-text#title__footer__menu__servicios": {
+        "props": {
+            "text": "Servicio al Cliente",
+            "blockClass": "title__footer__menu__"
+        }
+    },
+	"vtex.menu@2.x:menu#servicioCliente": {
+		"props": {
+			"orientation": "vertical"
+		},
+		"children": [
+			"menu-item#terminos",
+			"menu-item#cambios",
+            "menu-item#pagos",
+            "menu-item#poli"/* ,
+            "menu-item#historia" */
+		]
+	},
+	"menu-item#terminos": {
+		"props": {
+			"id": "menu-item-news",
+			"type": "custom",
+			"highlight": false,
+            "blockClass": ["footer__link__terminos"],
+			"itemProps": {
+				"type": "internal",
+				"href": "/terminos-y-condiciones",
+				"noFollow": false,
+				"tagTitle": "Términos y condiciones",
+				"text": "Términos y condiciones"
+			}
+		}
+	},
+	"menu-item#cambios": {
+		"props": {
+			"id": "menu-item-black-friday",
+			"type": "custom",
+			"highlight": false,
+            "blockClass": ["footer__link__terminos"],
+			"itemProps": {
+				"type": "internal",
+				"href": "/cambios-y-devoluciones",
+				"noFollow": false,
+				"tagTitle": "Cambios y devoluciones",
+				"text": "Cambios y devoluciones"
+			}
+		}
+	},
+	"menu-item#pagos": {
+		"props": {
+			"id": "menu-item-black-friday",
+			"type": "custom",
+			"highlight": false,
+            "blockClass": ["footer__link__terminos"],
+			"itemProps": {
+				"type": "internal",
+				"href": "/medios-de-pago",
+				"noFollow": false,
+				"tagTitle": "Medios de pago",
+				"text": "Medios de pago"
+			}
+		}
+	},
+	"menu-item#poli": {
+		"props": {
+			"id": "menu-item-black-friday",
+			"type": "custom",
+			"highlight": false,
+            "blockClass": ["footer__link__terminos"],
+			"itemProps": {
+				"type": "internal",
+				"href": "/politica-de-envio",
+				"noFollow": false,
+				"tagTitle": "Política de envío",
+				"text": "Política de envío"
+			}
+		}
+	},
+	"menu-item#historia": {
+		"props": {
+			"id": "menu-item-black-friday",
+			"type": "custom",
+			"highlight": false,
+            "blockClass": ["footer__link__terminos"],
+			"itemProps": {
+				"type": "internal",
+				"href": "/nuestra-historia",
+				"noFollow": false,
+				"tagTitle": "Nuestra Historia",
+				"text": "Nuestra Historia"
+			}
+		}
+	}
+}

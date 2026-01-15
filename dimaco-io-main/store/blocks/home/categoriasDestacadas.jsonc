@@ -1,0 +1,259 @@
+{
+    "flex-layout.row#categorias__destacadas": {
+        "title": "categorias destacadas",
+        "props": {
+            "blockClass": "categorias__destacadas"
+        },
+        "children": [
+             "flex-layout.col#categorias__destacadas"
+        ]
+    },
+    "flex-layout.col#categorias__destacadas": {
+        "title": "categorias destacadas",
+        "props": {
+            "blockClass": "categorias__destacadas"
+        },
+        "children": [
+            "rich-text#head__categorias__destacadas",
+            "rich-text#subHead__categorias__destacadas",
+            "flex-layout.row#images__destacadas"
+        ]
+    },
+    "rich-text#head__categorias__destacadas": {
+        "title": "destacadas title",
+        "props": {
+            "text": "# Categorías Destacadas",
+            "blockClass": "head__categorias__destacadas"
+        }
+    },
+    "rich-text#subHead__categorias__destacadas": {
+        "title": "destacadas text",
+        "props": {
+            "text": "## Tenemos los mejores productos de alta calidad",
+            "blockClass": "subHead__categorias__destacadas"
+        }
+    },
+    "flex-layout.col#images__destacadas": {
+        "children": [
+            "flex-layout.col#image__card__1",
+            "flex-layout.col#image__card__2",
+            "flex-layout.col#image__card__3",
+            "flex-layout.col#image__card__4",
+            "flex-layout.col#image__card__5",
+            "flex-layout.col#image__card__6",
+            "flex-layout.col#image__card__7",
+            "flex-layout.col#image__card__8"
+        ], 
+        "props": {
+            "blockClass": "images__destacadas"
+        }
+    },
+    "flex-layout.row#images__destacadas": {
+        "title": "contenedor images",
+        "children": [
+           "flex-layout.col#images__destacadas"
+        ],
+        "props": {
+            "blockClass": "container__images__destacadas"
+        }
+    },
+    "flex-layout.col#image__card__1": {
+        "title": "Destacada 1",
+        "children": [
+            "image#card__image__1",
+            "rich-text#card__text__1"
+        ],
+        "props": {
+            "blockClass": "image__card__text"
+        }
+    },
+    "rich-text#card__text__1": {
+        "title": "card__text__1",
+        "props": {
+            "text": "Herramientas",
+            "blockClass": "card__text__destacada"
+        }
+    },
+    "image#card__image__1": {
+        "title": "card__image__1",
+        "props": {
+            "src": "/arquivos/destacada1.jpg",
+            "blockClass": "card__image__destacada"
+        }
+    },
+
+    "flex-layout.col#image__card__2": {
+        "title": "Destacada 2",
+        "children": [
+            "image#card__image__2",
+            "rich-text#card__text__2"
+        ],
+        "props": {
+            "blockClass": "image__card__text"
+        }
+    },
+    "rich-text#card__text__2": {
+        "title": "card__text__2",
+        "props": {
+            "text": "Maquinaria",
+            "blockClass": "card__text__destacada"
+        }
+    },
+    "image#card__image__2": {
+        "title": "card__image__2",
+        "props": {
+            "src": "/arquivos/destacada2.jpg",
+            "blockClass": "card__image__destacada"
+        }
+    },
+    
+    "flex-layout.col#image__card__3": {
+        "title": "Destacada 3",
+        "children": [
+            "image#card__image__3",
+            "rich-text#card__text_3"
+        ],
+        "props": {
+            "blockClass": "image__card__text"
+        }
+    },
+    "rich-text#card__text_3": {
+        "title": "card__text_3",
+        "props": {
+            "text": "Baño y cocina",
+            "blockClass": "card__text__destacada"
+        }
+    },
+    "image#card__image__3": {
+        "title": "card__image__3",
+        "props": {
+            "src": "/arquivos/destacada3.jpg",
+            "blockClass": "card__image__destacada"
+        }
+    },
+    
+    "flex-layout.col#image__card__4": {
+        "title": "Destacada 4",
+        "children": [
+            "image#card__image__4",
+            "rich-text#card__text_4"
+        ],
+        "props": {
+            "blockClass": "image__card__text"
+        }
+    },
+    "rich-text#card__text_4": {
+        "title": "card__text_4",
+        "props": {
+            "text": "Iluminación y electricidad",
+            "blockClass": "card__text__destacada"
+        }
+    },
+    "image#card__image__4": {
+        "title": "card__image__4",
+        "props": {
+            "src": "/arquivos/destacada4.jpg",
+            "blockClass": "card__image__destacada"
+        }
+    },
+    
+    "flex-layout.col#image__card__5": {
+        "title": "Destacada 5",
+        "children": [
+            "image#card__image__5",
+            "rich-text#card__text_5"
+        ],
+        "props": {
+            "blockClass": "image__card__text"
+        }
+    },
+    "rich-text#card__text_5": {
+        "title": "card__text_5",
+        "props": {
+            "text": "Hogar",
+            "blockClass": "card__text__destacada"
+        }
+    },
+    "image#card__image__5": {
+        "title": "card__image__5",
+        "props": {
+            "src": "/arquivos/destacada5.jpg",
+            "blockClass": "card__image__destacada"
+        }
+    },
+    
+    "flex-layout.col#image__card__6": {
+        "title": "Destacada 6",
+        "children": [
+            "image#card__image__6",
+            "rich-text#card__text_6"
+        ],
+        "props": {
+            "blockClass": "image__card__text"
+        }
+    },
+    "rich-text#card__text_6": {
+        "title": "card__text_6",
+        "props": {
+            "text": "Climatización",
+            "blockClass": "card__text__destacada"
+        }
+    },
+    "image#card__image__6": {
+        "title": "card__image__6",
+        "props": {
+            "src": "/arquivos/destacada6.jpg",
+            "blockClass": "card__image__destacada"
+        }
+    },
+    
+    "flex-layout.col#image__card__7": {
+        "title": "Destacada 7",
+        "children": [
+            "image#card__image__7",
+            "rich-text#card__text_7"
+        ],
+        "props": {
+            "blockClass": "image__card__text"
+        }
+    },
+    "rich-text#card__text_7": {
+        "title": "card__text_7",
+        "props": {
+            "text": "Piso y pared",
+            "blockClass": "card__text__destacada"
+        }
+    },
+    "image#card__image__7": {
+        "title": "card__image__7",
+        "props": {
+            "src": "/arquivos/destacada7.jpg",
+            "blockClass": "card__image__destacada"
+        }
+    },
+    
+    "flex-layout.col#image__card__8": {
+        "title": "Destacada 8",
+        "children": [
+            "image#card__image__8",
+            "rich-text#card__text_8"
+        ],
+        "props": {
+            "blockClass": "image__card__text"
+        }
+    },
+    "rich-text#card__text_8": {
+        "title": "card__text_8",
+        "props": {
+            "text": "Materiales de construcción",
+            "blockClass": "card__text__destacada"
+        }
+    },
+    "image#card__image__8": {
+        "title": "card__image__8",
+        "props": {
+            "src": "/arquivos/destacada8.jpg",
+            "blockClass": "card__image__destacada"
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "responsive-layout.mobile#blog": {
+        "children": [
+            "flex-layout.row#blog__banner",
+            "flex-layout.row#main__blog__mobile"
+        ]
+    },
+    "flex-layout.row#main__blog__mobile": {
+        "title": "Main Blog Container Mobile",
+        "children": [
+            "flex-layout.col#main__blog__mobile"
+        ],
+        "props": {
+            "blockClass": "main__blog__mobile"
+        }
+    },
+    "flex-layout.col#main__blog__mobile": {
+        "children": [
+            "flex-layout.col#blog__categories",
+            "flex-layout.col#blog__articles__mobile"
+        ],
+        "props": {
+            "blockClass": "main__blog__content__mobile"
+        }
+    },
+    "flex-layout.col#blog__articles__mobile": {
+        "title": "Artículos del Blog Mobile",
+        "children": [
+            "rich-text#blog__articles__title",
+            "flex-layout.col#blog__articles__grid__mobile"
+        ],
+        "props": {
+            "blockClass": "blog__articles__mobile"
+        }
+    },
+    "flex-layout.col#blog__articles__grid__mobile": {
+        "children": [
+            "flex-layout.col#article__1",
+            "flex-layout.col#article__2",
+            "flex-layout.col#article__3"
+        ],
+        "props": {
+            "blockClass": "blog__articles__grid__mobile"
+        }
+    }
+}

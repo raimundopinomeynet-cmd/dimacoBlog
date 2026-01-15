@@ -1,0 +1,178 @@
+{
+    "store.custom#blog-construccion": {
+        "blocks": [
+            "responsive-layout.desktop#blog-construccion",
+            "responsive-layout.mobile#blog-construccion"
+        ]
+    },
+    "responsive-layout.desktop#blog-construccion": {
+        "children": [
+            "flex-layout.row#article__header__construccion",
+            "flex-layout.row#article__content__construccion"
+        ]
+    },
+    "flex-layout.row#article__header__construccion": {
+        "title": "Article Header",
+        "children": [
+            "flex-layout.col#article__header__construccion"
+        ],
+        "props": {
+            "blockClass": "article__header"
+        }
+    },
+    "flex-layout.col#article__header__construccion": {
+        "children": [
+            "link#back__to__blog",
+            "rich-text#article__title__construccion",
+            "rich-text#article__meta__construccion",
+            "image#article__featured__construccion"
+        ],
+        "props": {
+            "blockClass": "article__header__content"
+        }
+    },
+    "rich-text#article__title__construccion": {
+        "props": {
+            "text": "# 10 consejos esenciales para construcción en el hogar",
+            "blockClass": "article__title"
+        }
+    },
+    "rich-text#article__meta__construccion": {
+        "props": {
+            "text": "**Publicado el:** 10 de Enero, 2026 | **Categoría:** Construcción",
+            "blockClass": "article__meta"
+        }
+    },
+    "image#article__featured__construccion": {
+        "props": {
+            "src": "https://via.placeholder.com/1200x600/2196F3/ffffff?text=Construccion",
+            "alt": "Construcción en el hogar",
+            "blockClass": "article__featured__image"
+        }
+    },
+    "flex-layout.row#article__content__construccion": {
+        "title": "Article Content",
+        "children": [
+            "flex-layout.col#article__main__construccion"
+        ],
+        "props": {
+            "blockClass": "article__content"
+        }
+    },
+    "flex-layout.col#article__main__construccion": {
+        "children": [
+            "rich-text#article__intro__construccion",
+            "rich-text#article__tip1__construccion",
+            "rich-text#article__tip2__construccion",
+            "rich-text#article__tip3__construccion",
+            "rich-text#article__tip4__construccion",
+            "rich-text#article__tip5__construccion",
+            "rich-text#article__tip6__construccion",
+            "rich-text#article__tip7__construccion",
+            "rich-text#article__tip8__construccion",
+            "rich-text#article__tip9__construccion",
+            "rich-text#article__tip10__construccion",
+            "rich-text#article__conclusion__construccion",
+            "flex-layout.row#article__cta__construccion"
+        ],
+        "props": {
+            "blockClass": "article__main"
+        }
+    },
+    "rich-text#article__intro__construccion": {
+        "props": {
+            "text": "Realizar proyectos de construcción o remodelación en casa puede ser gratificante, pero requiere planificación y conocimiento. Aquí te compartimos 10 consejos esenciales para que tu proyecto sea un éxito.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip1__construccion": {
+        "props": {
+            "text": "## 1. Planifica antes de comenzar\n\nUn buen proyecto comienza con una planificación detallada. Define el alcance del trabajo, crea un presupuesto realista y establece un cronograma. Considera posibles imprevistos y añade un margen de seguridad del 15-20% en tiempo y presupuesto.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip2__construccion": {
+        "props": {
+            "text": "## 2. Obtén los permisos necesarios\n\nAntes de iniciar cualquier construcción significativa, verifica si necesitas permisos municipales. Trabajar sin los permisos adecuados puede resultar en multas y problemas al vender la propiedad.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip3__construccion": {
+        "props": {
+            "text": "## 3. La seguridad es primero\n\nInvierte en equipo de seguridad: cascos, guantes, gafas protectoras y calzado de seguridad. No escatimes en protección, especialmente cuando uses herramientas eléctricas o trabajes en altura.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip4__construccion": {
+        "props": {
+            "text": "## 4. Compra materiales de calidad\n\nLos materiales baratos pueden parecer una buena opción, pero a largo plazo suelen generar más gastos. Busca el equilibrio entre calidad y precio, priorizando durabilidad en elementos estructurales.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip5__construccion": {
+        "props": {
+            "text": "## 5. Mide dos veces, corta una vez\n\nLa precisión es clave en construcción. Tómate el tiempo necesario para medir correctamente antes de hacer cualquier corte o perforación. Un error de medición puede costarte materiales y tiempo.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip6__construccion": {
+        "props": {
+            "text": "## 6. Conoce tus límites\n\nSé honesto sobre tus habilidades. Algunos trabajos, como instalaciones eléctricas o de gas, requieren profesionales certificados. No pongas en riesgo tu seguridad ni la de tu familia.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip7__construccion": {
+        "props": {
+            "text": "## 7. Prepara el área de trabajo\n\nAntes de comenzar, protege pisos y muebles, asegura buena ventilación y organiza tu espacio de trabajo. Un área ordenada es más segura y eficiente.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip8__construccion": {
+        "props": {
+            "text": "## 8. Mantén las herramientas en buen estado\n\nHerramientas bien mantenidas funcionan mejor y son más seguras. Limpia, afila y calibra tus herramientas regularmente. Reemplaza las que estén dañadas o desgastadas.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip9__construccion": {
+        "props": {
+            "text": "## 9. Documenta el proceso\n\nToma fotos antes, durante y después del proyecto. Esta documentación es útil para referencia futura, seguros y aumenta el valor de reventa de tu propiedad.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__tip10__construccion": {
+        "props": {
+            "text": "## 10. No te apresures\n\nLa calidad requiere tiempo. Trabajar con prisa aumenta los errores y accidentes. Es mejor tomarse un día extra que tener que rehacer el trabajo.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__conclusion__construccion": {
+        "props": {
+            "text": "## Conclusión\n\nSiguiendo estos consejos, estarás mejor preparado para enfrentar tu proyecto de construcción. Recuerda que en Dimaco encontrarás todos los materiales y herramientas que necesitas, además de asesoría experta.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "flex-layout.row#article__cta__construccion": {
+        "children": [
+            "flex-layout.col#article__cta__construccion"
+        ],
+        "props": {
+            "blockClass": "article__cta"
+        }
+    },
+    "flex-layout.col#article__cta__construccion": {
+        "children": [
+            "rich-text#article__cta__title",
+            "link#article__cta__button__construccion"
+        ],
+        "props": {
+            "blockClass": "article__cta__content"
+        }
+    },
+    "link#article__cta__button__construccion": {
+        "props": {
+            "href": "/",
+            "label": "Ver productos para construcción",
+            "blockClass": "article__cta__button"
+        }
+    }
+}

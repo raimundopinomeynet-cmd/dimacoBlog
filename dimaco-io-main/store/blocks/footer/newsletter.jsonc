@@ -1,0 +1,57 @@
+{
+    "flex-layout.col#newsletterFooter": {
+        "title": "Newsletter container",
+        "props": {
+            "blockClass": "newsletter__footer"
+        },
+        "children": [
+            "rich-text#newsletterText",
+            "newsletter-form#footer"
+        ]
+    },
+    "rich-text#newsletterText": {
+        "title": "Text newsletter",
+        "props": {
+            "text": "Los mejores descuentos y \n ofertas exclusivos",
+            "blockClass": "newsletterText"
+        }
+    },
+    "newsletter-form#footer": {
+        "props": {
+            "blockClass":["footer__form"],
+            "LoadingState": "rich-text#newsletterLoading",
+            "SuccessState": "rich-text#newsletterSuccess"
+        },
+        "children": [
+            "newsletter-input-email",
+            "newsletter-submit"
+        ]
+    },
+     "newsletter-input-email":{
+        "props": {
+            "placeholderText": "Ingresa tu email",
+            "errorMessage": "Correo no válido."
+        }
+    },
+    "newsletter-submit":{
+        "props": {
+            "submitButtonLabel": "Suscribirse"
+        }
+    },
+
+    //messages
+    "rich-text#newsletterLoading": {
+        "title": "Text newsletter",
+        "props": {
+            "text": "**Cargando...**",
+            "blockClass": "newsletterLoading"
+        }
+    },
+    "rich-text#newsletterSuccess": {
+        "title": "Text newsletter",
+        "props": {
+            "text": "**Gracias por registrarte.**",
+            "blockClass": "newsletterSuccess"
+        }
+    }
+}

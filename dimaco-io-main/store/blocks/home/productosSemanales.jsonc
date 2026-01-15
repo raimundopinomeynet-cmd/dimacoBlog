@@ -1,0 +1,205 @@
+{
+    "flex-layout.row#productos__semana": {
+        "title": "productos semana",
+        "children": [ "flex-layout.col#productos__semana"],
+        "props": {
+            "blockClass": "productos__semana"
+        }
+    },
+    "flex-layout.col#productos__semana": {
+        "title": "productos semana",
+        "children": [
+             "rich-text#title__productos__semana",
+             "rich-text#text__productos__semana",
+             "flex-layout.col#productos__semanales",
+             "rich-text#ver__mas__productos"
+        ],
+        "props": {
+            "blockClass": "productos__semana"
+        }
+    },
+    "rich-text#ver__mas__productos": {
+        "title": "Ver todos los productos",
+        "props": {
+            "text": "[Ver todos los productos](/)",
+            "blockClass": "ver__mas__productos"
+        }
+    },
+    "rich-text#title__productos__semana": {
+        "title": "title productos semana",
+        "props": {
+            "text": "# Productos de la semana",
+            "blockClass": "head__categorias__destacadas"
+        }
+    },
+    "rich-text#text__productos__semana": {
+        "title": "text productos semana",
+        "props": {
+            "text": "## Los productos más comprados por nuestros clientes",
+            "blockClass": ["subHead__categorias__destacadas","text__productos__semana"] 
+        }
+    },
+
+    /* ######################################## */
+    "flex-layout.col#productos__semanales": {
+		"title": "Productos semanales",
+		"children": [
+			"list-context.product-list#productos__semanales"
+		],
+		"props": {
+			"width": "100%",
+            "blockClass": "productos__semanales"
+		}
+	},
+	"list-context.product-list#productos__semanales": {
+		"blocks": [
+            "product-summary.shelf#products__home__v2"
+		],
+		"children": [
+			"slider-layout#productos__semanales"
+		],
+		"props": {
+            "blockClass": "productos__semanales"
+            
+		}
+	},
+	"slider-layout#productos__semanales": {
+		"props": {
+			"itemsPerPage": {
+				"desktop": 4,
+				"tablet": 3,
+				"phone": 2
+			},
+			"autoplay": {
+				"timeout": 5000000000,
+				"stopOnHover": true
+			}, 
+            "centerMode": {
+				"desktop": "to-the-left",
+				"tablet": "disabled",
+				"mobile": "disabled"
+			},
+			"centerModeSlidesGap": 10,
+			"infinite": true,
+			"fullWidth": false,
+			"showNavigationArrows": "always",
+			"showPaginationDots": "always", 
+			"blockClass": [
+				"productos__semanales__desktop",
+				"productos__semanales__mobile"
+			]
+		}
+	},
+
+
+    "product-summary.shelf#products__home__v2":{
+        "children": [
+            "flex-layout.row#promotions__plp",
+            "stack-layout#img__promociones__v2" ,
+            "product-summary-brand#semanales__brand",
+            "product-summary-name#name__home__products__promociones",
+            "flex-layout.row#price__home__products__promociones",
+            "flex-layout.row#listPrice__home__products",
+           "condition-layout.product#isProductAvailable"
+        ],
+        "props": {
+            "blockClass": "products__home__v2"
+        }
+    }, 
+   "product-price-savings#savings__percentage": {
+        "props": {
+            "markers": ["discount"],
+            "message": "{savingsPercentage}",
+            "percentageStyle": "compact",
+            "blockClass": "savings__percentage"
+        }
+    },
+    "flex-layout.row#listPrice__home__products": {
+        "children": [
+             "product-list-price#price__home__products"
+        ],
+        "props": {
+            "blockClass": "listPrice__home__products"
+        }
+    },
+    "product-list-price#price__home__products": {
+        "props": {
+            "blockClass": "listPrice__home__products"
+        }
+    },
+    "stack-layout#img__promociones__v2": {
+		"children": [
+			"product-summary-image#products__home__promociones",
+            /*  */
+            "flex-layout.row#collection__PDP",
+            /*  */
+			"add-to-list-btn#products__home__promociones"
+		],
+        "props": {
+            "blockClass": "img__stack"
+        }
+	},
+    "product-summary-brand#semanales__brand": {
+        "props": {
+            "blockClass": "semanales__brand",
+            "displayMode": "text"
+        }
+    },
+    "product-summary-image#products__home__promociones": {
+        "props": {
+            "showBadge": true,
+            "blockClass": ["products__home", "products__home__promociones"]
+        }
+    },
+    "add-to-list-btn#products__home__promociones": {
+        "props": {
+            "blockClass": "img__whl"
+        }
+    },
+    "product-summary-name#name__home__products__promociones": {
+        "props": {
+            "blockClass": "name__home__products"
+        }
+    },
+    "flex-layout.col#price__home__products__promociones": {
+        "children": [
+           "product-selling-price#price__home__products",
+            "product-price-savings#savings__percentage"
+        ],
+        "props": {
+            "blockClass": "price__home__products__promociones"
+        }
+    },
+     "product-selling-price#price__home__products": {
+        "props": {
+            "blockClass": "price__home__products"
+        }
+     },
+    "flex-layout.row#price__home__products__promociones": {
+        "children": [
+            "flex-layout.col#price__home__products__promociones"
+        ],
+        "props": {
+            "blockClass": "price__home__products__promociones"
+        }
+    },
+    "condition-layout.product#isProductAvailable": {
+        "props": {
+            "conditions": [{ "subject": "isProductAvailable" }],
+            "Then":  "flex-layout.row#btn__home__products",
+            "Else":   "flex-layout.row#not__available__btn__home__products"
+        }
+    },
+    "flex-layout.row#btn__home__products": {
+        "children": ["add-to-cart-button"],
+        "props": {
+            "blockClass": "btn__home__products"
+        }
+    },
+    "flex-layout.row#not__available__btn__home__products": {
+        "children": ["add-to-cart-button"],
+        "props": {
+            "blockClass": ["btn__home__products","not__available__btn"]
+        }
+    }
+}

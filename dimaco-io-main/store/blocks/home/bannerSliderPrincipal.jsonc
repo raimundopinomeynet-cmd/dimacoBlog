@@ -1,0 +1,67 @@
+{
+	"flex-layout.row#bannerPrincipal": {
+		"title": "banner Principal",
+		"props": {
+			"blockClass": "home-bannerComplejoPrincipal",
+			"verticalAlign": "center",
+			"horizontalAlign": "center",
+			"fullWidth": true
+		},
+		"children": [
+			"flex-layout.col#principal"
+		]
+	},
+	"flex-layout.col#principal": {
+		"props": {
+			"blockClass": "columna-derecha",
+			"verticalAlign": "center",
+			"width": "100%"
+		},
+		"children": [
+			"list-context.image-list#sliderTop"
+		]
+	},
+	"list-context.image-list#sliderTop": {
+		"children": [
+			"slider-layout#sliderTop-images"
+		],
+		"title": "sliderTop",
+		"props": {
+			"height": 720,
+			"images": [
+				{
+					"image": "/arquivos/Banner__home.jpg",
+					"mobileImage": "/arquivos/banner__princial__mobile.jpg",
+					"link": {
+						"url": ""
+					}
+				},
+				{
+					"image": "/arquivos/Banner__home.jpg",
+					"mobileImage": "/arquivos/banner__princial__mobile.jpg",
+					"link": {
+						"url": ""
+					}
+				}
+			]
+		}
+	},
+	"slider-layout#sliderTop-images": {
+		"props": {
+			"fullWidth": true,
+			"itemsPerPage": {
+				"desktop": 1, 
+				"tablet": 1,
+				"phone": 1
+			},
+			"autoplay": {
+				"timeout": 6000,
+				"stopOnHover": false
+			},
+			"infinite": true,
+			"showNavigationArrows": "always",
+			"showPaginationDots": "always",
+			"blockClass": ["carousel","sliderTop__images"]
+		}
+	}
+}

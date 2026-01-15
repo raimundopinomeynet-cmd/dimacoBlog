@@ -1,0 +1,28 @@
+@import "variables";
+
+.layoutContainer--shelf {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 96rem;
+  min-height: 550px;
+}
+
+.sliderTrackContainer--shelfSliderDesktop {
+  padding: 20px 0;
+}
+
+.sliderLayoutContainer--marcasPopulares {
+  .sliderTrackContainer--marcasPopulares {
+    padding: 0 50px;
+  }  
+}
+
+:global(.vtex-flex-layout-0-x-flexRow--wrap-preHeader) {
+  .sliderLeftArrow,
+  .sliderRightArrow {
+    background: transparent !important;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+  }    
+}

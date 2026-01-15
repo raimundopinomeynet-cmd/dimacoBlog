@@ -1,0 +1,70 @@
+@import "../variables";
+
+.flexRow--bloque-informativo-producto {
+	padding: 70px 0;
+	@media screen and (max-width: 990px) {
+		padding: 30px 0;
+	}	
+	.flexRowContent--bloque-informativo-producto {
+		display: flex;
+		align-items: center;
+		@media screen and (max-width: 990px) {
+			flex-direction: column;
+		}
+		.flexCol--bloque-informativo-producto {
+			padding: 0 100px 0 0;
+			@media screen and (max-width: 990px) {
+				padding: 0 0 30px 0;
+			}
+			:global(.vtex-rich-text-0-x-heading--rich-titulo) {
+				color: $c-principal;
+				font-size: 36px;
+				font-style: normal;
+				font-weight: 700;
+				margin: 0 0 24px 0;
+				:global(.vtex-rich-text-0-x-strong--rich-titulo) {
+					color: $c-secundario;
+				}
+			}
+			:global(.vtex-rich-text-0-x-paragraph--rich-bajada) {
+				font-family: $c-tipografia;
+				color: $c-principal;
+				font-size: 17px;
+				font-style: normal;
+				font-weight: 300;
+				margin: 0 0 24px 0;
+			}
+		}
+	}
+}
+
+.flexRow--landing-departamento {
+	margin: 0;
+	padding: 70px 0;
+	@media screen and (max-width: 990px) {
+		padding: 30px 0;
+	}	
+	.flexRowContent--landing-departamento {
+		:global(.vtex-rich-text-0-x-container--shelf-title--departamentos) {			
+			text-align: center;
+			display: flex;
+			justify-content: center;
+
+			:global(.vtex-rich-text-0-x-heading--shelf-title--departamentos) {
+				font-family: $c-tipografia;
+				color: $c-principal;
+				font-size: 32px;
+				font-style: normal;
+				font-weight: 700;
+				margin: 0;
+			}			
+			:global(.vtex-rich-text-0-x-strong--shelf-title--departamentos) {			
+				color: $c-secundario;				
+			}
+		}		
+	}
+}
+
+.flexRow--condiciones-de-campana {
+	margin-bottom: 70px;
+}

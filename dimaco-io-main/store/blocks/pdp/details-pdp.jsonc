@@ -1,0 +1,259 @@
+{
+    "flex-layout.col#details-pdp": {
+		"children": [
+			"disclosure-layout-group#details-pdp"
+		],
+		"props": {
+			"blockClass": "disclosure__details_pdp"
+		}
+	},
+	"disclosure-layout-group#details-pdp": {
+		"children": [
+			"disclosure-layout#details-pdp-1",
+			// "disclosure-layout#details-pdp-2",
+			/* "disclosure-layout#details-pdp-3", */
+			"condition-layout.product#manual-de-uso"
+		]
+	},
+	"disclosure-layout#details-pdp-1": {
+		"children": [
+			"disclosure-trigger#details-pdp-1",
+			"disclosure-content#details-pdp-1"
+		],
+		"props": {
+			"initialVisibility": "visible",
+			"blockClass": "details__pdp_layout"
+		}
+	},
+	"disclosure-trigger#details-pdp-1": {
+		"children": [
+			"rich-text#details-pdp-1"
+			// "disclosure-state-indicator#pdp"
+		],
+		"props": {
+			"as": "span",
+			"blockClass": "details__pdp_trigger"
+		}
+	},
+	"disclosure-content#details-pdp-1": {
+		"children": [
+			"product-description"
+		],
+		"props": {
+			"blockClass": "details__pdp_content"
+		}
+	},
+	"rich-text#details-pdp-1": {
+		"props": {
+			"text": "Descripción del producto",
+			"blockClass": "title_disclosure"
+		}
+	},
+
+
+
+
+	"disclosure-layout#details-pdp-2": {
+		"children": [
+			"disclosure-trigger#details-pdp-2",
+			"disclosure-content#details-pdp-2"
+		],
+		"props": {
+			"blockClass": "details__pdp_layout"
+		}
+	},
+	"disclosure-trigger#details-pdp-2": {
+		"children": [
+			"rich-text#details-pdp-2",
+			"disclosure-state-indicator#pdp"
+		],
+		"props": {
+			"as": "span",
+			"blockClass": "details__pdp_trigger"
+		}
+	},
+	"disclosure-content#details-pdp-2": {
+		"children": [
+			"specs-pdp"
+		],
+		"props": {
+			"blockClass": "details__pdp_content"
+		}
+	},
+	"rich-text#details-pdp-2": {
+		"props": {
+			"text": "Especificaciones técnicas",
+			"blockClass": "title_disclosure"
+		}
+	},
+
+
+	"condition-layout.product#manual-de-uso": {
+		"props": {
+			"conditions": [
+				{
+					"subject": "specificationProperties",
+					"arguments": {
+						"name": "Ficha-tecnica"
+					}
+				},
+				{
+					"subject": "specificationProperties",
+					"arguments": {
+						"name": "Manual-de-uso"
+					}
+				}
+			],
+			"matchType": "any",
+			"Then": "disclosure-layout#details-pdp-3"
+		}
+	},
+
+	"disclosure-layout#details-pdp-3": {
+		"children": [
+			"disclosure-trigger#details-pdp-3",
+			"disclosure-content#details-pdp-3"
+		],
+		"props": {
+			"blockClass": "details__pdp_layout"
+		}
+	},
+	"disclosure-trigger#details-pdp-3": {
+		"children": [
+			"rich-text#details-pdp-3",
+			"disclosure-state-indicator#pdp"
+		],
+		"props": {
+			"as": "span",
+			"blockClass": "details__pdp_trigger"
+		}
+	},
+	"disclosure-content#details-pdp-3": {
+		"children": [
+			"flex-layout.col#archivos__des"
+		],
+		"props": {
+			"blockClass": "details__pdp_content"
+		}
+	},
+	"rich-text#details-pdp-3": {
+		"props": { 
+			"text": "Archivos descargables",
+			"blockClass": "title_disclosure"
+		}
+	},
+	"condition-layout.product#manual-de-uso__link": {
+		"props": {
+			"conditions": [
+				{
+					"subject": "specificationProperties",
+					"arguments": {
+						"name": "Manual-de-uso"
+					}
+				}
+			],
+			"Then": "flex-layout.col#archivos__des__2"
+		}
+	},
+
+	"condition-layout.product#ficha__link": {
+		"props": {
+			"conditions": [
+				{
+					"subject": "specificationProperties",
+					"arguments": {
+						"name": "Ficha-tecnica"
+					}
+				}
+			],
+			"Then": "flex-layout.col#archivos__des__1"
+		}
+	},
+
+
+	"flex-layout.col#archivos__des": {
+		"children": [
+			"condition-layout.product#ficha__link",
+			"condition-layout.product#manual-de-uso__link"
+		],
+		"props": {
+			"blockClass": "archivos__des"
+		}
+	},
+	"flex-layout.col#archivos__des__1": {
+		"children": [
+			"rich-text#label__descargable__1",
+			"link.product#link__descargable__1"
+		],
+		"props": {
+			"blockClass": "archivo__descargable"
+		}
+	},
+	"rich-text#label__descargable__1": {
+		"props": {
+			"text": "Ficha tecnica",
+			"blockClass": "label__descargable"
+		}
+	},
+	"link.product#link__descargable__1": {  
+		"props": { 
+			"target": "_blank",
+			"href": "{specificationGroups.Descargables.specifications.Ficha-tecnica}",
+			"label": "Descargar pdf"
+		}
+    },
+
+	"flex-layout.col#archivos__des__2": {
+		"children": [
+			"rich-text#label__descargable__2",
+			"link.product#link__descargable__2"
+		],
+		"props": {
+			"blockClass": "archivo__descargable"
+		}
+	},
+	"rich-text#label__descargable__2": {
+		"props": {
+			"text": "Manual de uso",
+			"blockClass": "label__descargable"
+		}
+	},
+	"link.product#link__descargable__2": {  
+		"props": { 
+			"target": "_blank",
+			"href": "{specificationGroups.Descargables.specifications.Manual-de-uso}",
+			"label": "Descargar pdf"
+		}
+    },
+
+
+	"disclosure-state-indicator#pdp": {
+		"props": {
+			"Show": "icon#Vs-plus-pdp",
+			"Hide": "icon#vs-minus-pdp",
+			"blockClass": "icon__indicator"
+		}
+	},
+	"icon#Vs-plus-pdp": {
+		"props": {
+			"id": "nav-caret--down",
+			"size": 12,
+			"viewBox": "0 0 16 16",
+			"activeClassName": "c-on",
+			"isActive": true,
+			"mutedClassName": "c-on",
+			"blockClass": "icon__indicator"
+		}
+	},
+	"icon#vs-minus-pdp": {
+		"props": {
+			"id": "nav-caret--up",
+			"size": 12,
+			"viewBox": "0 0 16 16",
+			"activeClassName": "c-on",
+			"isActive": true,
+			"mutedClassName": "c-on",
+			"blockClass": "icon__indicator"
+		}
+	}
+}

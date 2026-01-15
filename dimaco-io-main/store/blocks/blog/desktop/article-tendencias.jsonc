@@ -1,0 +1,143 @@
+{
+    "store.custom#blog-tendencias": {
+        "blocks": [
+            "responsive-layout.desktop#blog-tendencias",
+            "responsive-layout.mobile#blog-tendencias"
+        ]
+    },
+    "responsive-layout.desktop#blog-tendencias": {
+        "children": [
+            "flex-layout.row#article__header__tendencias",
+            "flex-layout.row#article__content__tendencias"
+        ]
+    },
+    "flex-layout.row#article__header__tendencias": {
+        "title": "Article Header",
+        "children": [
+            "flex-layout.col#article__header__tendencias"
+        ],
+        "props": {
+            "blockClass": "article__header"
+        }
+    },
+    "flex-layout.col#article__header__tendencias": {
+        "children": [
+            "link#back__to__blog",
+            "rich-text#article__title__tendencias",
+            "rich-text#article__meta__tendencias",
+            "image#article__featured__tendencias"
+        ],
+        "props": {
+            "blockClass": "article__header__content"
+        }
+    },
+    "rich-text#article__title__tendencias": {
+        "props": {
+            "text": "# Tendencias en construcción y ferretería para 2026",
+            "blockClass": "article__title"
+        }
+    },
+    "rich-text#article__meta__tendencias": {
+        "props": {
+            "text": "**Publicado el:** 5 de Enero, 2026 | **Categoría:** Novedades",
+            "blockClass": "article__meta"
+        }
+    },
+    "image#article__featured__tendencias": {
+        "props": {
+            "src": "https://via.placeholder.com/1200x600/FF9800/ffffff?text=Tendencias+2026",
+            "alt": "Tendencias en construcción 2026",
+            "blockClass": "article__featured__image"
+        }
+    },
+    "flex-layout.row#article__content__tendencias": {
+        "title": "Article Content",
+        "children": [
+            "flex-layout.col#article__main__tendencias"
+        ],
+        "props": {
+            "blockClass": "article__content"
+        }
+    },
+    "flex-layout.col#article__main__tendencias": {
+        "children": [
+            "rich-text#article__intro__tendencias",
+            "rich-text#article__trend1__tendencias",
+            "rich-text#article__trend2__tendencias",
+            "rich-text#article__trend3__tendencias",
+            "rich-text#article__trend4__tendencias",
+            "rich-text#article__trend5__tendencias",
+            "rich-text#article__conclusion__tendencias",
+            "flex-layout.row#article__cta__tendencias"
+        ],
+        "props": {
+            "blockClass": "article__main"
+        }
+    },
+    "rich-text#article__intro__tendencias": {
+        "props": {
+            "text": "El 2026 trae consigo innovaciones emocionantes en el mundo de la construcción y la ferretería. Desde tecnologías sustentables hasta herramientas inteligentes, conoce las tendencias que están transformando la industria.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__trend1__tendencias": {
+        "props": {
+            "text": "## 1. Construcción Sustentable y Materiales Eco-friendly\n\nLa sostenibilidad ya no es una opción, es una necesidad. Los materiales reciclados, la madera certificada y los productos con bajo impacto ambiental están ganando terreno. Las construcciones eficientes energéticamente no solo cuidan el planeta, sino que también reducen costos operativos a largo plazo.\n\n**Materiales destacados:**\n- Paneles solares integrados\n- Aislantes térmicos ecológicos\n- Pinturas sin VOC (compuestos orgánicos volátiles)\n- Maderas de bosques sostenibles certificados",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__trend2__tendencias": {
+        "props": {
+            "text": "## 2. Herramientas Inteligentes y Conectadas\n\nLa IoT (Internet de las Cosas) llega a las herramientas. Taladros que se ajustan automáticamente según el material, sierras con guías láser inteligentes y sistemas de gestión de inventario en tiempo real están revolucionando los sitios de construcción.\n\n**Innovaciones destacadas:**\n- Herramientas con conectividad Bluetooth\n- Apps de diagnóstico y mantenimiento predictivo\n- Baterías inteligentes con mayor duración\n- Sistemas de rastreo GPS para equipos",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__trend3__tendencias": {
+        "props": {
+            "text": "## 3. Impresión 3D en Construcción\n\nLa impresión 3D está dejando de ser ciencia ficción. Casas completas pueden construirse en días usando concreto impreso en 3D, reduciendo costos y tiempos de construcción significativamente.\n\n**Aplicaciones actuales:**\n- Estructuras habitacionales de bajo costo\n- Componentes arquitectónicos personalizados\n- Reparaciones y restauraciones precisas\n- Prototipos de diseño arquitectónico",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__trend4__tendencias": {
+        "props": {
+            "text": "## 4. Realidad Aumentada y Virtual\n\nAR y VR están transformando la forma de planificar y ejecutar proyectos. Los clientes pueden visualizar remodelaciones antes de comenzar, y los constructores pueden detectar problemas antes de que ocurran.\n\n**Usos prácticos:**\n- Visualización de proyectos terminados\n- Capacitación de personal\n- Detección de interferencias en instalaciones\n- Planificación de espacios interactiva",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__trend5__tendencias": {
+        "props": {
+            "text": "## 5. Automatización y Robótica\n\nDrones para inspecciones, robots para trabajos repetitivos y exoesqueletos para reducir la fatiga física están mejorando la seguridad y eficiencia en obras.\n\n**Tecnologías emergentes:**\n- Drones de inspección y topografía\n- Robots de albañilería\n- Exoesqueletos para carga pesada\n- Vehículos autónomos de construcción",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "rich-text#article__conclusion__tendencias": {
+        "props": {
+            "text": "## Conclusión\n\nEl 2026 marca un punto de inflexión en la industria de la construcción. La tecnología, la sostenibilidad y la eficiencia se combinan para crear un futuro más prometedor. En Dimaco, estamos comprometidos con traerte las últimas innovaciones para mantener tus proyectos a la vanguardia.",
+            "blockClass": "article__paragraph"
+        }
+    },
+    "flex-layout.row#article__cta__tendencias": {
+        "children": [
+            "flex-layout.col#article__cta__tendencias"
+        ],
+        "props": {
+            "blockClass": "article__cta"
+        }
+    },
+    "flex-layout.col#article__cta__tendencias": {
+        "children": [
+            "rich-text#article__cta__title",
+            "link#article__cta__button__tendencias"
+        ],
+        "props": {
+            "blockClass": "article__cta__content"
+        }
+    },
+    "link#article__cta__button__tendencias": {
+        "props": {
+            "href": "/",
+            "label": "Descubre nuestros productos innovadores",
+            "blockClass": "article__cta__button"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.trigger--question {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.trigger--question:hover {
+  color: #007934;
+}
+
+.content--answer,
+.trigger--question--hidden {
+  border-bottom: 1px solid #ccc;
+}
+.content--answer--visible {
+  display: block;
+}
+.content--answer--hidden {
+  display: none;
+}
+.trigger--question--visible {
+  border-bottom: none;
+}

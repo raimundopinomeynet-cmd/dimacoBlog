@@ -1,0 +1,261 @@
+.container {
+	margin-bottom: 100px;
+}
+.storesMapCol {
+	min-height: 500px;
+}
+
+
+
+.searchInput {
+    width: 100%;
+    padding: 10px 0 10px 30px;
+    margin-bottom: 16px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+    border-radius: none;
+    height: 41px;
+    max-height: 41px;
+    margin-bottom: 26px;
+}
+
+.addressStoreInstructionsContainer {
+    display: block;
+}
+
+.addressInstructionsItem {
+    display: block;
+    text-align: left;
+}
+
+.wrapperInput {
+    width: 100%;
+    position: relative;
+}
+
+.wrapperInput .iconInput {
+    top: 10px;
+    position: absolute;
+    left: 10px;
+}
+
+.searchInput::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #b7b7b7;
+}
+
+.listingMapContainer {
+    max-height: 100%;
+    min-height: 31.94rem;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.storesList {
+    margin-left: 2.375rem;
+}
+
+.buttonMyLocation {
+    width: 100%;
+    margin-bottom: 11px;
+    background: #000000;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    transition: all 0.3s ease-in;
+}
+
+.addressList {
+    height: 28rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.addressList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.addressList::-webkit-scrollbar-track {
+    width: 8px;
+    background: rgba(26, 26, 26, 0.1);
+}
+
+.addressList::-webkit-scrollbar-thumb {
+    background: #d3d3d3;
+    height: 48px;
+}
+
+.addressList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.addressList::-webkit-scrollbar-track {
+    width: 8px;
+    background: rgba(26, 26, 26, 0.1);
+}
+
+.addressList::-webkit-scrollbar-thumb {
+    background: #000000;
+    height: 147px;
+}
+
+.addressListItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 19px 0;
+    margin-right: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.addressListItem:hover {
+    background: #f3f3f3;
+}
+
+.wrapperMyLocation {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Lista Address */
+.addressStoreName,
+.pickpoint {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #575757;
+}
+
+.addressStoreAddressGroupA,
+.addressStoreAddress {
+    display: flex !important;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #575757;
+}
+
+.markerInfoStoreName {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+}
+
+.markerInfoAddress {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #575757;
+}
+
+.addressStoreInstructions {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #575757;
+}
+
+.addresComplete .iconAddress,
+.addressTel .iconAddress {
+    margin-right: 8px;
+}
+
+.addressStoreShowMore {
+    background: #0b0e0b;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: #ffffff;
+    justify-content: flex-start;
+    padding: 13px 16px;
+    transition: all 0.3s ease-in;
+    border: none;
+}
+
+.addressStoreShowMore:hover,
+.buttonMyLocation:hover {
+    opacity: 0.9;
+}
+
+.addressListItem .divider {
+    width: 90%;
+    height: 1px;
+    background: #dcdcdc;
+    margin-top: 24px;
+}
+
+.hoursContainer {
+    display: none;
+}
+
+@media (max-width: 1240px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 738px) {
+    .addressStoreShowMore {
+        font-size: 0.75rem;
+    }
+}
+@media (max-width: 769px) {
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    .storesListCol {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .storesMapCol {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .storesList {
+        margin: 0;
+        width: 100%;
+    }
+
+    .searchInput::placeholder {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}

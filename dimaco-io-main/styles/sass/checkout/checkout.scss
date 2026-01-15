@@ -1,0 +1,2549 @@
+@import "../variables";
+/*********************************** Estilos generales de checkout: Header, Paginador y footer ***************************** */
+body {
+    background-color: #F5FAFF;
+    padding: 0 !important;
+}
+
+body a {
+    color: #000;
+}
+
+body.v-custom-step-profile .client-pre-email h3.client-pre-email-h span:before,
+body.v-custom-step-shipping .client-pre-email h3.client-pre-email-h span:before,
+body.v-custom-step-shipping .client-profile-data .accordion-toggle>span:before,
+body.v-custom-step-payment .client-pre-email h3.client-pre-email-h span:before,
+body.v-custom-step-payment .client-profile-data .accordion-toggle>span:before,
+body.v-custom-step-payment .shipping-data .accordion-toggle:before,
+body.v-custom-step-email .client-pre-email h3.client-pre-email-h span:before,
+body.v-custom-step-profile .client-profile-data .accordion-toggle>span:before,
+body.v-custom-step-shipping .shipping-data .accordion-toggle:before,
+body.v-custom-step-payment .payment-data .accordion-toggle>span:not(.payment-edit-link):before,
+body.js-vcustom-hideEmailStep .client-profile-data .accordion-toggle>span:before {
+    color: #FFF;
+}
+
+div.sitio-seguro {
+    margin-top: 0.5rem;
+}
+
+/* Color de input radio */
+svg.srp-icon-radio-selected.db path {
+    fill: #000;
+}
+
+/* Nombre y precio del producto */
+.mini-cart .item .fn,
+.mini-cart .price {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #505050;
+}
+
+/*Texto resumen de cuenta */
+
+.link-cart {
+    display: none;
+}
+
+.resumen {
+   position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: #000;
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+/* Total y precio en la tabla de resumen */
+
+.custom-cart-template-wrap {
+    border: 1px solid #DADADA !important;
+    border-radius: 0px !important;
+}
+
+.summary-template-holder tbody td {
+    display: inline-block;
+    text-align: left !important;
+    width: auto;
+    color: #7C8288;
+    font-size: 16px;
+    padding: 0 0 10px 0 !important;
+}
+.summary-template-holder tbody .Items td {
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.orderform-template .cart-template.mini-cart .summary-totalizers .tfoot tr table tfoot tr .info td.info td {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px !important;
+    line-height: 160.7%;
+}
+
+@media (max-width:1023px) {
+    .totalizers-list {
+        margin-top: 2rem;
+    }
+
+    .custom-cart-template-wrap {
+        margin-top: 2rem !important;
+    }
+}
+
+/* Icon de editar */
+.icon-edit:before {
+    color: #000;
+}
+
+.icon-edit:before {
+    font-size: 20px;
+}
+
+/* Numerador de los setp */
+body.js-vcustom-hideEmailStep .client-profile-data .accordion-toggle>span:before,
+body.js-vcustom-hideEmailStep .shipping-data .accordion-toggle:before,
+.payment-data .accordion-toggle>span:not(.payment-edit-link):before {
+    background: $c-secundario !important;
+    border-color: $c-secundario !important;
+    color: #fff !important;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Radio de selección de envío */
+svg.vtex-omnishipping-1-x-svg path {
+    fill: #000;
+}
+
+/* Eliminación de un paso del paginador  */
+.pasos .paso:not(:first-child):before {
+    left: -85% !important;
+    width: 133% !important;
+}
+
+
+/* Cambio de background de step de acurdo a si están activos o no */
+
+.orderform-template-holder #shipping-data, 
+.orderform-template-holder #client-profile-data, 
+.orderform-template-holder #payment-data {
+    padding: 0;
+    background: #f9f9f9 !important;
+    border-bottom: 1px solid #eeeeee;
+    border: 1px solid #DADADA !important;
+    border-radius: 0;
+}
+
+.orderform-template-holder #client-profile-data form.client-pre-email,
+.orderform-template-holder #client-profile-data .step.client-profile-data,
+.orderform-template-holder #shipping-data,
+.orderform-template-holder #payment-data {
+    margin-bottom: 0 !important;
+}
+
+.orderform-template-holder .step {
+    padding: 30px;
+    box-sizing: border-box;
+    background: transparent !important;
+}
+
+.orderform-template-holder .step.active {
+    background: white !important;
+}
+
+/*Focus de elementos */
+* {
+    box-shadow: none;
+}
+
+/* HEADER */
+.container-header {
+ background: $c-blanco;
+ .header_checkout {
+     padding: 20px 10px;
+     margin-bottom: 25px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 1200px;
+     margin: auto;
+ }
+}
+/* FIN DE HEADER */
+
+
+/* PAGINADOR */
+
+.container {
+    max-width: 1200px;
+}
+
+.container:before,
+.container:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+pasos {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: transparent;
+    position: relative;
+    z-index: 0 !important;
+}
+
+.paso {
+    width: 25%;
+    position: relative;
+}
+
+.paso.activo a {
+    color: $c-principal !important;
+    border: 1px solid $c-principal;
+    background: $c-principal !important;
+}
+
+.paso a {
+    display: table;
+    margin: 0 auto;
+    width: 22px;
+    height: 22px;
+    background: #C6C6C6;
+    color: #C6C6C6 !important;
+    border-radius: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    position: relative;
+    z-index: 99;
+}
+
+.pasos .paso:not(:first-child):before {
+    content: "";
+    position: absolute;
+    left: -46%;
+    top: 10px;
+    height: 2px;
+    width: 92%;
+    background: #C4C4C4;
+    z-index: 98;
+}
+
+.pasos .paso.activo:not(:first-child):before {
+    background: $c-principal;
+}
+
+.pasos #paso-1 a,
+.pasos #paso-2 a,
+.pasos #paso-4 a {
+    position: relative;
+}
+
+
+
+#paso-0.paso.activo a:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background-size: cover;
+    padding: 1px;
+}
+
+#paso-1.paso.activo a:after {
+    content: url(https://constructor31.vtexassets.com/arquivos/paso-1-carrito.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -40px;
+    left: -5px;
+    background-size: cover;
+    padding: 1px;
+}
+
+#paso-2.paso.activo a:after {
+    content: url(https://constructor31.vtexassets.com/arquivos/envio.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -40px;
+    left: -5px;
+    background-size: cover;
+    padding: 1px;
+}
+
+#paso-3.paso.activo a:after {
+    content: url(https://constructor31.vtexassets.com/arquivos/check.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background-size: cover;
+    padding: 1px;
+}
+
+#paso-4.paso.activo a:after {
+    content: url(https://constructor31.vtexassets.com/arquivos/check.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    background-size: cover;
+    padding: 1px;
+}
+
+
+.orderform-template-holder .step .form-step fieldset p span.help.error {
+    position: static !important;
+}
+
+.box-client-info-pf div .client-phone span.help.error {
+    display: none !important;
+}
+
+.orderform-template-holder #shipping-data input {
+    box-shadow: none;
+    font-weight: 300;
+    font-size: 16px;
+}
+.orderform-template-holder .step .form-step fieldset p label {
+    margin: 10px 0 5px 0;
+    display: block;
+    color: #3A3A3A;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* PAGINADOR */
+
+
+/* FOOTER */
+
+footer.footer-checkout {
+    background: $c-blanco;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 30px 0;
+}
+
+footer.footer-checkout img {
+    margin: 0 10px;
+}
+
+.logo-vtex-pci {
+    width: 50px;
+}
+
+.logo-vtex-foot {
+    width: 70px;
+}
+
+@media (max-width:1023px) {
+    footer.footer-checkout {
+        margin-bottom: 50px;
+    }
+}
+
+
+/* FIN DE FOOTER */
+
+/* *******************************FIn de estilos generales de checkout: Header, Paginador y footer  ****************************/
+
+
+
+
+/*********************************** CHECKOUT STEP RESUMEN DE COMPRA********************************************** */
+/* Tabla de  productos */
+
+.table.cart-items thead tr th.product {
+    width: calc(100% - 333px) !important;
+}
+.table.cart-items thead tr th.quantity {
+    margin-right: 50px;
+}
+
+.table.cart-items thead tr th {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.table.cart-items td.product-image a, 
+.table.cart-items td.product-image img {
+    width: 50px;
+    display: block;
+    max-width: initial;
+    height: auto;
+}
+
+.table.cart-items tbody tr td.product-name {
+    padding: 0;
+}
+.table.cart-items td.product-name a, 
+.table.cart-items td.product-name a:hover {
+    color: #000;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: none;
+    line-height: 20px;
+}
+
+.table.cart-items tbody tr td.product-price {
+    margin-left: 50px;
+}
+@media (min-width:769px) {
+    .table.cart-items tbody tr td.product-name {
+        width: calc(100% - 404px) !important;
+    }
+}
+
+
+/*Recuadro de productos*/
+.cart-template-holder .cart {
+    margin-bottom: 100px;
+}
+
+@media (max-width: 998px) {
+    .body-cart-vertical .cart-template-holder {
+        width: 100% !important;
+    }
+    .cart-template-holder .cart {
+        margin-bottom: 50px;
+    }
+}
+
+
+/* Precio tachado */
+
+
+/* Ocultar vendido por */
+.seller.muted {
+    display: none !important;
+}
+
+/*Icono de información */
+.table.cart-items tbody tr td i.icon-question-sign {
+    display: none;
+}
+
+
+/* Fin de tabla de productos */
+
+
+/*Tabla de cupón y resumen de compra */
+
+/*Recuadro de Resumen */
+
+.summary-template-holder {
+    border: 0px solid #DADADA;
+    border-radius: 0px;
+}
+
+.body-cart-vertical .summary-template-holder {
+    width: 30%;
+}
+
+@media (max-width: 998px) {
+    .body-cart-vertical .summary-template-holder {
+        width: 100% !important;
+        margin-top: 20px;
+    }
+
+    table.cart-items i.icon.icon-remove.item-remove-ico:before {
+        margin-top: 10px;
+    }
+}
+.table.cart-items i.icon.icon-remove.item-remove-ico:before {
+    content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjg0LjI4NiwyNTYuMDAyTDUwNi4xNDMsMzQuMTQ0YzcuODExLTcuODExLDcuODExLTIwLjQ3NSwwLTI4LjI4NWMtNy44MTEtNy44MS0yMC40NzUtNy44MTEtMjguMjg1LDBMMjU2LDIyNy43MTcNCgkJCUwzNC4xNDMsNS44NTljLTcuODExLTcuODExLTIwLjQ3NS03LjgxMS0yOC4yODUsMGMtNy44MSw3LjgxMS03LjgxMSwyMC40NzUsMCwyOC4yODVsMjIxLjg1NywyMjEuODU3TDUuODU4LDQ3Ny44NTkNCgkJCWMtNy44MTEsNy44MTEtNy44MTEsMjAuNDc1LDAsMjguMjg1YzMuOTA1LDMuOTA1LDkuMDI0LDUuODU3LDE0LjE0Myw1Ljg1N2M1LjExOSwwLDEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdMMjU2LDI4NC4yODcNCgkJCWwyMjEuODU3LDIyMS44NTdjMy45MDUsMy45MDUsOS4wMjQsNS44NTcsMTQuMTQzLDUuODU3czEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdjNy44MTEtNy44MTEsNy44MTEtMjAuNDc1LDAtMjguMjg1DQoJCQlMMjg0LjI4NiwyNTYuMDAyeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K);
+    width: 10px;
+    height: 10px;
+}
+
+.coupon-fields::before {
+    color:  #000;
+    content: "¿Tienes un Cupón de Descuento?";
+    display: block;    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+/* FIn de tabla de cupón y resumen de compra */
+
+button#cart-coupon-add {
+    background-color: $c-secundario;    
+    border: none;
+    color: white;
+    font-size: 0px;
+    width: 50%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    &::after {
+        content: "Sumar cupón";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        border-right: none;
+    }
+}
+
+
+.summary-template-holder .summary-coupon fieldset.coupon-fieldset button[type=submit] {
+    height: 40px;
+    line-height: 40px;
+    max-height: initial;
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.summary-template-holder .summary-coupon p.coupon-fields span input {
+    width: 80%;
+    margin-right: 0;
+}
+
+.summary-template-holder .accordion-body.collapse.in {
+    position: relative;
+    padding: 25px 0 15px 0;
+    margin-top: 20px;
+    &::before {
+      color:  #000;
+      content: "Resumen de compra";
+      text-transform: uppercase;
+      display: block;    
+      text-align: center;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+    }
+}
+
+.summary-template-holder .summary-coupon fieldset.coupon-fieldset p {
+    margin-bottom: 1rem;
+}
+
+.full-cart .totalizers .tfoot td tr info td.info {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px !important;
+    line-height: 30px;
+}
+
+.summary-template-holder tfoot tr td.monetary {
+    text-align: right !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000000 !important;
+    width: auto;
+}
+
+.summary-template-holder tbody {
+    border-top: none;
+    border-bottom: 1px solid #cbcbcb;
+    padding-bottom: 0;
+}
+
+/* Boton de Finalizar compra */
+a#cart-to-orderform {
+    font-size: 0;
+    background: $c-principal;
+    padding: 0;
+}
+
+a#cart-to-orderform:after {
+    content: "Finalizar Compra";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 40px;
+    background: $c-principal;
+    border-radius: 0px;
+}
+
+.btn-success {
+    background: $c-principal;
+    border: none;
+}
+
+.btn-large,
+.client-pre-email .client-email.input.text .btn-success {
+    padding: 10px 19px;
+}
+
+.cart-links p {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0;
+}
+
+.more {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 40px;
+    color: #000000;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Sección de calcular envío */
+.cart-more-options {
+    max-width: 380px;
+    width: 100%;
+    box-shadow: 0px 4px 12px -4px #00000033;
+    border: 0px solid #DADADA;
+    border-radius: 0px !important;
+}
+/*Color de  código postal */
+
+.cart-more-options .srp-container .onda-v1 .blue {
+    color: #000;
+    outline: none;
+}
+.cart-more-options .srp-container .srp-main-title {
+    font-style: normal;    
+    font-size: 0px;    
+}
+
+.cart-more-options .srp-container .srp-main-title:before {
+    background-image: url(/arquivos/fecha-entrega.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    content: "Fecha de entrega de su pedido";
+    padding-left: 10px 0 10px 40px;
+
+    font-style: normal;    
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.cart-more-options .srp-container .srp-main-title:after {
+    content: "En el siguiente paso podrá ver las opciones disponibles de entrega.";
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    float: left;
+    width: 100%;
+}
+.srp-description {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 131.7%;
+}
+
+/* Contenedor de calcular envío */
+#shipping-preview-container {
+    margin: 20px 35px;
+    width: 100%;
+}
+
+/* Texto de calcular envío */
+.onda-v1 .mw5 {
+    max-width: 21rem;
+}
+
+/* Calcular envío */
+button#shipping-calculate-link {
+    color: white;
+    border-radius: 0px;
+    width: 40%;
+    font-size: 0;
+    background: $c-principal;
+    border: 1px solid $c-principal;
+    border-radius: 0px;
+}
+
+button#shipping-calculate-link:before {
+    content: "Calcular Envío";
+    display: block;
+    font-size: .75rem;
+    background: $c-principal;
+    border: 1px solid $c-principal;
+    border-radius: 0px;
+    text-transform: capitalize;
+}
+
+.cart-more-options .srp-container .vtex-shipping-preview-0-x-pc .btn {
+    background: $c-principal;
+    color: #fff;
+    border-color: $c-principal;
+}
+
+/* Row con botones de envío y entrega */
+.srp-toggle.mb6.pb2.ml1.mr3 {
+    display: none;
+}
+
+/*Botón finalizar compra del step0 */
+@media (max-width: 690px) {
+    .summary-template-holder .cart-links-bottom {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+    }
+
+    .summary-template-holder .cart-links-bottom a {
+        border-radius: 0px;
+    }
+}
+
+/********************************************** FIN DE CHECKOUT STEP  RESUMEN DE COMPRA*******************************************/
+
+
+/********************************************** CHECKOUT STEP 1  IDENTIFICACIÓN *******************************************/
+/* Recuadro del formulario de los datos de identificación */
+@media (min-width: 769px) {
+    .orderform-template .orderform-template-holder {
+        width: 75% !important;
+    }
+}
+
+/* Título del paso 2 */
+.orderform-template-holder #client-profile-data .step.client-profile-data .accordion-toggle>span {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    color: #000 !important;
+}
+
+.orderform-template-holder #client-profile-data .step.client-profile-data .accordion-toggle>span:after {
+    content: "Datos Personales y de Facturación";
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+/*Círculo con el número de paso */
+.client-profile-data .accordion-toggle>span:before {}
+
+.client-profile-data .accordion-body.collapse.in {
+    position: relative;
+    padding: 0;
+    margin-top: 0;
+}
+
+.step.client-profile-data.active .box-step .form-step[style*="display: block"],
+.step.shipping-data.active .accordion-inner.shipping-container,
+#payment-data .box-step form.form-step {
+    padding-top: 0 !important;
+}
+
+/* Sumary con los datos del comprador  */
+.orderform-template-holder .step .box-info[style*="display: block"] {
+    margin-top: 0;
+}
+
+.box-info .client-profile-email {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+p.client-profile-summary {
+    line-height: 1.7;
+}
+
+p.client-profile-email .email:before {
+    content: "Correo electrónico: ";
+    color: #000;
+    font-weight: bold;
+}
+
+.client-profile-summary span.name:before {
+    content: "Nombre y apellido: ";
+    font-weight: bold;
+}
+
+.client-profile-summary span.tel:before {
+    content: "Teléfono: ";
+    font-weight: bold;
+}
+
+/* Input de teléfono */
+.client-phone label {
+    margin: 10px 0 5px 0;
+}
+
+.client-phone-mobile label.checkbox {
+    position: absolute;
+    right: 14px;
+    top: -27px;
+    margin: 0;
+}
+
+input#client-phone1 {
+    width: 30% !important;
+}
+
+input#client-phone3 {
+    width: 61% !important;
+}
+
+/* Recibir newsletter  */
+.orderform-template-holder .step .form-step #is-corporate-client {
+    color: #000;
+}
+
+/* Boton de pasar a la entrega */
+.orderform-template-holder .step .submit.btn.btn-success {
+    min-width: 60%;
+}
+
+button#go-to-shipping,
+button#go-to-payment {
+    font-size: 0;
+    padding: 0;
+    line-height: 40px;
+}
+
+button#go-to-shipping:before {
+    color: #fff;
+    font-size: 16px;
+    content: "Ir a la Entrega";
+    font-weight: 300;
+    float: left;
+    width: 100%;
+}
+
+button#go-to-payment:after {
+    content: "Ir al Pago";
+    font-size: 16px;
+    font-weight: 300;
+    float: left;
+    width: 100%;
+}
+
+.orderform-template-holder .step .submit.btn.btn-success:hover {
+    background: $c-principal;
+    border: 1px solid;
+}
+
+
+/* Recuadro que contiene el/los producto/s :  Nombre, Precio e Imagen*/
+.orderform-template .cart-template.mini-cart .item {
+    
+}
+
+.orderform-template .cart-template.mini-cart .quantity {
+    background: $c-principal;
+    color: #fff;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+/*Columna de Resumen de compra */
+
+.orderform-template .custom-cart-template-wrap {
+    position: relative;
+    background: #FFF;
+    padding: 30px;
+    text-align: left;
+    box-sizing: border-box;
+    border: 0 !important;
+    box-shadow: 0px 4px 12px -4px #00000033;
+}
+
+/* Se elimina el form de cupón */
+.orderform-template .cart-template.mini-cart .summary-template-holder .summary>.summary-coupon-wrap {
+    display: none !important;
+}
+
+.orderform-template .cart-template.mini-cart .item .description {
+    display: block;
+}
+.orderform-template .cart-template.mini-cart .summary-template-holder {    
+    box-shadow: none;
+}
+
+/* Precio */
+.mini-cart .description .price {
+    font-size: 16px;
+}
+
+.cart-items .shipping-date {
+    text-align: start;
+}
+
+.orderform-template .cart-template.mini-cart h2 {
+    display: none;
+}
+
+.orderform-template .cart-template.mini-cart .summary-totalizers tbody {
+    border-top: none;
+    border-bottom: 1px solid #000;
+}
+.orderform-template .cart-template.mini-cart .summary-totalizers tbody td {
+    display: inline-block;
+    text-align: left !important;
+    width: auto;
+    color: #666;
+    font-size: 16px;    
+    padding: 0 0 10px 0 !important;
+}
+.orderform-template .cart-template.mini-cart .summary-totalizers tbody .Items td {    
+    color: #000;    
+    font-weight: 700;
+}
+
+
+
+/********************************************** FIN DE CHECKOUT STEP 1  IDENTIFICACIÓN *******************************************/
+
+/********************************************** CHECKOUT STEP 2  DOMICILIO Y ENTREGA*******************************************/
+
+.orderform-template-holder #shipping-data .accordion-toggle {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Sumary con los datos del comprador */
+.vtex-omnishipping-1-x-SummaryItemAddress {
+    margin-bottom: 0px !important;
+}
+
+.vtex-omnishipping-1-x-summaryPackage.shp-summary-package {
+    line-height: 1.7;
+    display: none
+        /*OCULTA LINEA DE TEXTO ENVIO A PUNTO PICKUP */
+}
+
+.address-summary.address-summary-ARG {
+    line-height: 1.7;
+}
+
+.vtex-omnishipping-1-x-SummaryItemAddress span.postalCode:before {
+    content: "CP: ";
+    font-weight: bold;
+}
+
+.shp-summary-package-time span:before {
+    content: "Envío a punto pickup: ";
+    font-weight: bold;
+}
+
+.orderform-template-holder #shipping-data .accordion-toggle:after {
+    content: "Domicilio y Entrega";
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* Botones de enviar y recibir */
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsWrapper {
+    border: none;
+    width: 63%;
+    margin-top: 2.5rem;
+}
+
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-isLoading {
+    width: 63%;
+}
+
+.vtex-omnishipping-1-x-deliveryGroup .glide-container {
+    display: none;
+}
+
+
+
+@media (max-width: 640px) {
+    .orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsWrapper {
+        border: none;
+        width: 100%;
+        margin-top: 2.5rem;
+    }
+
+    .orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-isLoading {
+        width: 100%;
+    }
+}
+
+/*Text de los botones */
+/* botón Recibir */
+
+#shipping-option-delivery span.shp-method-option-text {
+    font-size: 0;
+    background-color: $c-principal;
+
+}
+
+#shipping-option-delivery span.shp-method-option-text:before {
+    content: "Despacho";
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#shipping-option-delivery.shp-method-option-inactive span.shp-method-option-text:before {
+    color: #000 !important;
+}
+
+
+
+#shipping-option-delivery .vtex-omnishipping-1-x-deliveryChannelsComplement:before {
+    content: "a Domicilio";
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+
+
+#shipping-option-delivery.vtex-omnishipping-1-x-deliveryOptionInactive .vtex-omnishipping-1-x-deliveryChannelsComplement:before {
+    color: #000;
+}
+
+.vtex-omnishipping-1-x-deliveryChannelsComplement {
+    font-size: 0 !important;
+    display: block;
+}
+
+/* Boton retirar*/
+#shipping-option-pickup-in-point span.shp-method-option-text {
+    font-size: 0;
+}
+
+#shipping-option-pickup-in-point span.shp-method-option-text:before {
+    content: "Retirar";
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#shipping-option-pickup-in-point.shp-method-option-inactive span.shp-method-option-text:before {
+    color: #000 !important;
+}
+
+#shipping-option-pickup-in-point span.shp-method-option-complement.vtex-omnishipping-1-x-deliveryChannelsComplement:before {
+    content: "en Tienda";
+    font-size: 16px;
+}
+
+vtex-omnishipping-1-x-deliveryOptionInactive {
+    color: #000;
+}
+
+.vtex-omnishipping-1-x-deliveryChannelsToggle {
+    background: none !important;
+    border: none !important;
+}
+
+button#shipping-option-delivery,
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsWrapper,
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsToggle {
+    border-radius: 0px;
+    color: #000;
+}
+
+/*Cuando uno de los botones esté activo */
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-pickupButton,
+.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-pickupViewOptionActive,
+.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-pickupViewOptionActive:hover,
+.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-pickupViewOptionActive:active,
+.orderform-template-holder .step.shipping-data .vtex-pickup-points-modal-3-x-pickupViewOptionActive:focus,
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsTogglePickup,
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsOption.vtex-omnishipping-1-x-deliveryOptionActive,
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-deliveryChannelsOption.vtex-omnishipping-1-x-deliveryOptionActive {
+    border-color: #000;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+/*Botón de ubicación */
+button#find-pickups-manualy-button-denied:before {
+    content: "Usar mi Ubicación Actual";
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 .6rem;
+}
+
+button#find-pickups-manualy-button-denied {
+    font-size: 0;
+}
+
+/*Container de form */
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address div {
+    grid-gap: 10px;
+}
+
+.vtex-omnishipping-1-x-shippingSectionTitle {
+    display: none;
+}
+
+/*
+
+p.input.ship-receiverName.required.text {
+    display: none;
+}
+
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address div .ship-city{
+    grid-area: 1 / 2;
+}
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address div .ship-state{
+    grid-area: 1 / 3;
+}
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address div .ship-street{
+    grid-area: 2 / 2;
+}
+
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address div .ship-complement{
+    grid-area: 2 / 3;
+}
+*/
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address div .ship-complement label {
+    font-size: 0;
+    margin: 10px 0 1px 0;
+}
+
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address div .ship-complement label::before {
+    content: "Piso / Dpto. (Opcional)";
+    color: $c-principal;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.shp-option-text-price {
+    color: $c-principal !important;
+}
+
+#btn-go-to-payment {
+    min-width: 30%;
+    font-size: 0;
+    margin-top: 4rem;
+}
+
+button#btn-go-to-payment:before {
+    content: "Ir al Pago";
+    font-size: 16px;
+    font-weight: 300;
+    float: left;
+    width: 100%;
+}
+
+.orderform-template-holder .step .input.text label, 
+.vcustom--vtex-omnishipping-1-x-address label {
+    margin: 10px 0 5px 0;
+    display: block;
+    color: $c-principal;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+a#open-shipping {
+    display: none;
+}
+
+p.input.ship-city.required.text {
+    margin-left: 0.6rem;
+}
+
+/* Input radio de envío: envio simple y retiro en punto pickup */
+
+/*
+.vtex-omnishipping-1-x-leanShippingTextLabelSingle:before {
+    content: "Despacho a domicilio";
+    color: #333;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+*/
+
+.shp-option-text-package {
+    grid-area: 2 / 2;
+}
+
+select#ship-state,
+select#ship-city {
+    width: 200px !important;
+}
+
+select#ship-neighborhood {
+    width: 200px !important;
+}
+
+div#delivery-packages-options {
+    width: 55%;
+}
+
+.address-summary.address-summary-CHL {
+    width: 50%;
+}
+
+
+.shp-option-text-price.vtex-omnishipping-1-x-optionPrice {
+    color: $c-principal !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+@media (max-width: 494px) {
+    .orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-address div {
+        display: block;
+        width: 80%;
+    }
+
+    .vtex-omnishipping-1-x-addressFormPart1 div {
+        display: grid;
+        grid-template-columns: auto !important;
+    }
+
+    /* Código postal */
+    p.input.ship-postalCode.required.text {
+        width: 80%;
+    }
+
+    .vtex-omnishipping-1-x-addressSummaryActive {
+        width: 82.5%;
+    }
+
+    div#delivery-packages-options {
+        width: 100% !important;
+    }
+}
+
+/********************************************** FIN DE CHECKOUT STEP 2  DOMICILIO Y ENTREGA*******************************************/
+
+
+/********************************************** CHECKOUT STEP 3  PAGO*******************************************/
+
+/* Título del paso 3: Pago */
+
+.orderform-template-holder #payment-data .accordion-toggle {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+/*Subtítulo */
+.orderform-template-holder .step.active .accordion-heading:after {
+    content: "Solicitamos Únicamente la Información Esencial para la Finalización de la Compra.";
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+}
+
+#client-profile-data .client-notice {
+    display: none;
+}
+
+/* Container de los forms */
+.accordion-body.payment-body {
+    position: relative;
+    padding: 25px 15px 15px 15px;
+    margin-top: 20px;
+    width: 100%;
+     /* width: 700%; */
+    box-sizing: border-box;
+}
+
+/*Botón comprar */
+.btn-success:hover {
+    background: $c-principal;
+    border: 1px solid $c-principal;
+}
+
+.btn#payment-data-submit span {
+    font-size: 0;
+    display: none;
+}
+
+#payment-data-submit.btn-success:before {
+    content: "COMPRAR AHORA";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 40px;
+    float: left;
+    width: 100%;
+
+}
+
+/*Estilos flecha hacia abajo 2 */
+.orderform-template-holder #payment-data .payment-group-item.active:before {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    transform: none;
+    top: 0%;
+    width: 0;
+    height: 0;
+    border-style: none;
+}
+
+#payment-data-submit .icon-lock {
+    display: none;
+}
+
+/*Container y nombre del medio de pago + icon */
+.orderform-template-holder #payment-data .payment-group-item:hover {
+    box-shadow: none;
+    border: none;
+}
+
+span.payment-group-item-text {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    line-height: 17px !important;
+}
+
+#payment-group-customPrivate_401PaymentGroup span.payment-group-item-text:after {
+    content: "";
+    background-image: url(https://construyaalcostoar.myvtex.com/arquivos/tarjeta-debito.svg);
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+}
+
+#payment-group-creditCardPaymentGroup span.payment-group-item-text:after {
+    content: "";
+    background-image: url(https://atlanticsaear.myvtex.com/arquivos/tarjeta-credito.svg);
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+
+}
+
+#payment-group-debitCardPaymentGroup span.payment-group-item-text:after {
+    content: "";
+    background-image: url(https://construyaalcostoar.myvtex.com/arquivos/tarjeta-debito.svg);
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+
+}
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item-text {
+    margin-right: auto;
+    text-align: left;
+    line-height: 27px !important;
+    white-space: nowrap;
+    justify-content: flex-start;
+}
+
+#payment-group-custom201PaymentGroupPaymentGroup span.payment-group-item-text:after {
+    content: "";
+    background-image: url(https://construyaalcostoar.myvtex.com/arquivos/transferencia.svg);
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+
+}
+body.body-order-form .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item#payment-group-cashPaymentGroup .payment-group-item-text {
+  font-size: 0 !important;
+  display: flex;
+  align-items: center;
+    justify-content: flex-start;
+}
+body.body-order-form .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item#payment-group-cashPaymentGroup .payment-group-item-text:after {
+  content: "Transferencia bancaria";
+  font-size: 12px !important;
+}
+body.body-order-form .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item .payment-method .cashPaymentGroup:before {
+  content: "Se entregarán los datos de transferencia cuando continues al siguiente paso";
+  font-size: 12px;
+  font-weight: 700;
+}
+
+body.body-order-form .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-method  .cashPaymentGroup .payment-description {
+  font-size: 0;
+}
+body.body-order-form .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-method .cashPaymentGroup .payment-description:before {
+  font-size: 12px;
+  content: "Se entregarán los datos de transferencia cuando continues al siguiente paso";
+}
+
+
+body.body-order-form .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item#payment-group-ETPayPaymentGroup .payment-group-item-text {
+  font-size: 0 !important;
+  display: flex;
+  align-items: center;
+    justify-content: flex-start;
+}
+
+body.body-order-form .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item#payment-group-ETPayPaymentGroup .payment-group-item-text:after {
+  content: "Transferencia Bancaria Master-G";
+  font-size: 14px !important;
+}
+
+.ETPayPaymentGroup .payment-description{
+  font-size: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ETPayPaymentGroup .payment-description:after{
+  content: "Transferencia Bancaria Master-G";
+  font-size: 14px !important;
+}
+
+.webpayPaymentGroup .payment-description {
+  /*
+    background-image: url(/arquivos/logo-webpay.png);
+    background-repeat: no-repeat;
+    color: transparent;
+    background-position: top -19px left;
+    font-size: 0;
+    background-size: 130px;
+    width: 60%;
+    height: 80%;
+*/
+/*TBK*/
+ /*
+    content: "";
+    background-image: url(https://gaseicl.vtexassets.com/assets/vtex.file-manager-graphql/images/dd97acad-81ff-4ef1-91f1-0a652fe913b0___9675094….png);
+    width: 60%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+*/
+}
+
+.ETPayPaymentGroup:after{
+    content: "";
+    background-image: url(https://gaseicl.vteximg.com.br/arquivos/ETpay_Checkout-02@2x.png);
+    float: left;
+    width: 100%;
+    height: 155px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+#payment-group-MercadoPagoProPaymentGroup span.payment-group-item-text:after {
+  /*
+    content: "";
+    background-image: url(https://construyaalcostoar.myvtex.com/arquivos/mercado-pago.svg);
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    */
+    content: "";
+    background-image: url(https://gaseicl.vtexassets.com/assets/vtex.file-manager-graphql/images/117e2992-bdff-4bb1-97cf-9b4b6686f381___11cdba45b4c8284ba5a42a3f91f44444.png);
+    width: 60%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+
+}
+
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap {
+    border: none !important;
+    border-bottom: 1px solid #cbcbcb !important;
+}
+
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item.active {
+    border-bottom: none !important;
+    background-color: #fff !important;
+}
+
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap.active,
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap:hover {
+    border: none !important;
+}
+
+/* Estilos campo Promissory */
+
+/* .orderform-template-holder #payment-data .v-custom-payment-item-wrap:nth-child(4) a span {
+    font-size: 0 !important;
+}*/
+
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap:nth-child(4) a:before {
+   /* content: "Webpay" !important;*/
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    font-size: 12px !important;
+    font-weight: bold;
+    white-space: nowrap !important;
+}
+
+/* Container de medios  de pagos */
+.orderform-template-holder #payment-data .payment-group-item {
+    width: 100% !important;
+}
+
+.orderform-template-holder #payment-data .payment-group-item {
+    box-sizing: border-box;
+    margin: 0 0 5px 0;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid #f3f3f3;
+    color: #c1c1c1;
+    /* padding: 0; */
+    background: #fff;
+}
+
+.orderform-template-holder #payment-data .payment-group-item.active {
+    box-shadow: 0 5px 20px #00000033;
+    border: none;
+    color: #000;
+}
+
+/*Estilos flecha hacia abajo*/
+.orderform-template-holder #payment-data .payment-group-item.active:after {
+    display: none !important;
+}
+
+/*Container inputs */
+.orderform-template-holder #payment-data .steps-view {
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fbfbfb;
+}
+
+#app-container {
+    background: #fbfbfb;
+}
+
+#app-container .PaymentInstallments {
+    margin: 15px 0;
+}
+
+
+/*Input de select cuotas*/
+#app-container .PaymentInstallments select {
+    max-width: 100%;
+}
+
+/*Container, label e input de código de seguridad */
+.PaymentCardCVV {
+    display: flex;
+}
+
+.PaymentCardCVV label {
+    width: 40%;
+}
+
+#app-container input#creditCardpayment-card-0Code {
+    width: 60%;
+    flex: 1;
+}
+
+/*Container, label e input de fecha de vencimiento */
+.PaymentCardDueDate.clearfix {
+    display: flex;
+    margin: 15px 0;
+}
+
+.PaymentCardDueDate p.payment-card-due-month {
+    width: 30%;
+}
+
+.PaymentCardDueDate .payment-card-lash {
+    display: none;
+}
+
+.PaymentCardDueDate p.payment-card-due-year {
+    width: 26%;
+    flex: 1;
+    margin-left: 10px;
+}
+
+label.FormFieldLabel.pull-left {
+    width: 40% !important;
+}
+
+.FormFieldLabel {
+    font-weight: 700 !important;
+    color: #000000 !important;
+}
+
+/*VERSIÓN MOBILE */
+@media (max-width: 640px) {
+    .accordion-body.payment-body {
+        position: relative;
+        padding: 25px 15px 15px 15px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .accordion-body.collapse.in {
+        padding: 0;
+    }
+
+    /* Títulos de los steps */
+    .orderform-template-holder #client-profile-data .step.client-profile-data .accordion-toggle>span:after,
+    .orderform-template-holder #shipping-data .accordion-toggle:after {
+        font-size: 4vw;
+    }
+
+    /* Subtítulo de los steps */
+    .orderform-template-holder .step.active .accordion-heading:after {
+        font-size: 12px;
+        color: #333333;
+    }
+
+    /* Numeradores */
+    .client-pre-email h3.client-pre-email-h span:before,
+    .client-profile-data .accordion-toggle>span:before,
+    .shipping-data .accordion-toggle:before,
+    .payment-data .accordion-toggle>span:not(.payment-edit-link):before {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 11px;
+    }
+
+    .orderform-template-holder .step {
+        padding: 20px;
+    }
+
+    /*Text de envío a punto pickup */
+    .vtex-omnishipping-1-x-leanShippingTextLabelSingle:before {
+        font-size: 13px;
+    }
+
+    /* Botón de los steps */
+    .shipping-container #btn-go-to-payment,
+    .orderform-template-holder .step .submit.btn.btn-success {
+        min-width: 80%;
+        padding: 0.9rem;
+        font-size: 0;
+        margin-top: 4rem;
+        color: #fff !important;
+        border-radius: 0px;
+    }
+
+    /*Prefijo de teléfono */
+    span.client-phone-suffix,
+    span.client-phone-prefix {
+        display: none;
+    }
+
+    /*Input de número de teléfono */
+    input#client-phone3 {
+        width: 68% !important;
+    }
+
+    /*Checkbox de movil  */
+    .client-phone-mobile label.checkbox {
+        width: 15%;
+        display: flex;
+    }
+
+    /*Logo header */
+    #header-casablanca .logoheader {
+        width: 125px;
+    }
+
+    footer.footer-checkout img {
+        width: 65px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .orderform-template .payment-confirmation-wrap .payment-submit-wrap {
+        position: relative;
+    }
+
+    .orderform-template .payment-confirmation-wrap .payment-submit-wrap button {
+        border-radius: 0px !important;
+    }
+
+    .payment-data .payment-group a span {
+        width: 97%;
+    }
+
+    .orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item-cards {
+        display: none !important;
+    }
+}
+
+.payment-billing-address-number {
+    order: 1 !important;
+    margin-right: 0 !important;
+}
+
+.orderform-template .cart-template.mini-cart .summary-totalizers tfoot tr td {
+    padding: 15px 0 0 0 !important;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+/********************************************** FIN DE CHECKOUT STEP 3  PAGO*******************************************/
+
+
+/******************************************** CHECKOUT COMPRA REALIZADA CON ÉXITO*****************************************/
+/* Título */
+.confirmationTitle {
+    color: #000;
+    font-weight: 700;
+}
+
+/* Mensaje */
+.confirmationMessage {
+    width: min(600px, 100%);
+    margin: 1rem auto;
+    color: #000;
+    font-weight: 500;
+}
+
+/* Botón de imprimir */
+.confirmationButtons button {
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid;
+    border-radius: 0px;
+    padding: 0 1rem;
+    background: #000;
+}
+
+/* Textos aclarativo sobre el pedido */
+.noticesList.list {
+    background-color: #fbfbfb;
+    width: min(898px, 100%);
+    margin: auto;
+    text-align: start;
+    color: #000;
+    font-weight: 500;
+}
+
+.noticeListItem {
+    padding: 1rem 0;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+/*cambio de texto del último item  de los textos aclarativos */
+.noticeListItem:last-child:before {
+    content: "Se enviará un código de seguimiento a su correo para rastrear su pedido.";
+    font-size: 1rem;
+}
+
+/* Conjunto de botones de ORDEN DE CONFIRMACIÓN Y MIS ÓRDENES */
+.updateOrderButton button {
+    color: #000;
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: 0px;
+}
+
+/* Nombre de medio de pago */
+.paymentGroup.c-on-base {
+    font-weight: 600;
+    margin: 1rem 0 0.3rem 0;
+}
+
+/*Recogida */
+packageDeliveryTitle {
+    font-size: 0;
+}
+
+.packageDeliveryTitle:before {
+    content: "Recogida";
+    color: #000;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+
+.cancelOrderButton {
+    display: none !important;
+}
+
+.orderform-template .payment-confirmation-wrap .payment-submit-wrap #payment-data-submit {
+    padding: 0;
+}
+/******************************************** FIN DE CHECKOUT COMPRA REALIZADA CON ÉXITO*****************************************/
+
+.card-flag {
+    display: none;
+}
+
+
+.brandCustom {
+    display: block !important;
+}
+
+
+/******************************************** TEXTOS CUSTOM CHECKOUT*****************************************/
+
+/*
+
+.orderform-template .cart-template.mini-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.divCustom {
+    position: relative;
+    background: #FFF;
+    padding: 17px 20px;
+    text-align: left;
+    box-sizing: border-box;
+    border: 1px solid #DADADA !important;
+    border-radius: 0px !important;
+    margin-top: 20px;
+}
+
+.parrafoCustomOne {
+       width: 80%;
+      display: block;
+      margin: auto;
+      margin-bottom: 15px;
+    position: relative;
+   color: #000;
+    font-weight: 700;
+}
+
+ .parrafoCustomTwo {
+       width: 80%;
+      display: block;
+      margin: auto;
+     position: relative;
+   color: #000;
+    font-weight: 700;
+}
+
+.parrafoCustomOne::before {
+      content: "";
+      background-image: url(/arquivos/logo-porcentaje-checkout.png);
+       display: inline-block;
+       width: 20px;
+       height: 20px;
+       background-size: cover;
+       position: absolute;
+       left: -30px;
+       top: 10px;
+}
+
+.parrafoCustomTwo::before {
+      content: "";
+      background-image: url(/arquivos/logo-hoja-checkout.png);
+      display: inline-block;
+       width: 20px;
+       height: 20px;
+       background-size: cover;
+       position: absolute;
+       left: -30px;
+       top: 10px;
+}
+
+*/
+
+
+/* OCULTA MEDIO DE PAGO BOLETA BANCARIA */
+
+a#payment-group-bankInvoicePaymentGroup {
+    display: none !important;
+}
+
+
+/* ORDEN DE INPUTS DE DIRECCIONES*/
+.payment-billing-address-neighborhood,
+.payment-billing-address-state {
+    order: -1 !important;
+}
+
+.vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingTextLabelSingle:before {
+    content: "Despacho a domicilio";
+    color: #333;
+    margin-right: 5px;
+}
+
+.shipping-date {
+    display: none;
+}
+
+.shp-option-text-package {
+    display: none;
+}
+
+.vtex-omnishipping-1-x-leanShippingTextLabel {
+    font-weight: 600 !important;
+
+}
+
+.vtex-omnishipping-1-x-leanShippingTextLabelSingle {
+    font-weight: 600 !important;
+    font-size: 14px;
+}
+
+
+
+
+
+#is-corporate-client,
+.corporate-info-box .client-company-ie label {
+}
+
+.corporate-info-box .client-company-ie label {
+    display: flex !important;
+    align-items: center;
+}
+
+
+
+
+/* VALIDACIÓN DE INPUT DE TELÉFONO */
+
+.orderform-template-holder .step.client-profile-data .client-phone:first-child::before {
+    content: '';
+    display: var(--display);
+    width: 12px;
+    height: 10px;
+    position: absolute;
+    background-color: #fff;
+    right: 5px;
+    top: 43px;
+    z-index: 12;
+}
+
+.orderform-template-holder .step.client-profile-data .client-phone:first-child::after {
+    content: 'Recuerde iniciar con 9 para que sea válido';
+    display: var(--errorDisplay);
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 80px;
+    color: $c-principal;
+    z-index: 10;
+    font-size: 10px;
+    height: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+#client-phone:focus {
+    z-index: 11;
+}
+
+
+#go-to-shipping[disabled],
+#go-to-payment[disabled] {
+    background-color: $c-principal;
+}
+
+.cart-more-options {
+    display: flex !important;
+}
+
+@media (max-width: 767px) {
+    .cart-more-options {
+        display: flex !important;
+        width: 100% !important;
+    }
+    .orderform-template-holder .step.client-profile-data .client-phone:first-child label::after {
+        left: 11px;
+        top: 41%;
+    }
+}
+
+@media (max-width: 690px) {
+    .cart-more-options #shipping-preview-container {
+        display: block !important;
+    }
+
+    .labelCustom {
+        width: 100% !important;
+        position: unset !important;
+        margin-top: 0.5rem !important;
+    }
+
+    label.labelCustom::after {
+        top: 398px !important;
+    }
+
+    .inputCustom {
+        position: unset !important;
+        margin-top: 0.6rem;
+    }
+
+    #client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p.client-company-ie.input.text.required>label::after,
+    #client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p:nth-child(4)>label::after {
+        top: 18px !important;
+    }
+}
+
+/*
+p.client-company-ie.input.text{
+     display: none;
+}
+*/
+div.state-inscription-box {
+    display: none;
+}
+
+.corporate-info-box {
+    position: relative;
+}
+
+.labelCustom {
+    display: block;
+    margin-bottom: 0.5rem;
+    width: 30%;
+    position: absolute;
+    top: 205px;
+    /*177*/
+    right: 101px;
+    color: #999999;
+}
+
+.inputCustom {
+    position: absolute;
+    top: 244px;
+    /*202*/
+    right: 85px;
+    height: 38px;
+    line-height: 40px;
+    max-height: initial;
+    display: inline-block;
+    padding: 0px 10px;
+    border-radius: 4px;
+    border: 1px solid #CBCBCB
+}
+
+/* 
+p.client-company-ie.input.text.required span.help.error{
+    font-size: 0;
+} */
+
+p.client-company-ie.input.text.required span.help.error:after {
+    content: 'Si No Conoce el Código Ingrese 000';
+    font-size: 11px;
+    color: #dd4b39;
+}
+
+.keep-open {
+    display: block !important;
+}
+
+.corporate-title.visible {
+    display: block !important;
+}
+
+
+
+#client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p.client-company-name.input.text.required>label,
+#client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p.client-company-nickname.input.text.required>label>div,
+#client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p.client-company-ie.input.text.required>label,
+#client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p:nth-child(4)>label {
+    margin-bottom: 1.2rem;
+}
+
+/* 
+.client-company-name label::after,
+.client-company-nickname label::after,
+.client-company-ie label::after,
+.client-company-document label::after,
+.labelCustom::after {
+    content: '(Obligatorio)';
+    font-size: 11px;
+    position: absolute;
+    top: 28px;
+    left: 0;
+}
+ */
+
+ .client-company-document>label{
+    margin-top: 24px !important;
+}
+
+#client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p.client-company-name.input.text.required>label::after {
+    content: '(Obligatorio)';
+    font-size: 11px;
+    position: absolute;
+    top: 18px;
+    left: 0;
+}
+
+#client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p.client-company-nickname.input.text.required>label>div::after {
+    content: '(Obligatorio)';
+    font-size: 11px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+}
+
+
+#client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p.client-company-ie.input.text.required>label::after {
+    content: '(Obligatorio)';
+    font-size: 11px;
+    position: absolute;
+    top: 28px;
+    left: 0;
+}
+
+
+#client-profile-data>div>div.accordion-body.collapse.in>div>div>form>div>div>fieldset.box-client-info-pj>div>p:nth-child(4)>label::after {
+    content: '(Obligatorio)';
+    font-size: 11px;
+    position: absolute;
+    top: 28px;
+    left: 0;
+}
+
+label.labelCustom::after {
+    content: '(Obligatorio)';
+    font-size: 11px;
+    position: absolute;
+    top: 19px;
+    left: 0;
+}
+
+#payment-group-webpayPaymentGroup span.payment-group-item-text:after {
+  /* tbk*/
+   /*
+    content: "";
+    background-image: url(/arquivos/webpay.png);
+    background-size: 25px;
+    width: 25px;
+    height: 20px;
+    background-repeat: no-repeat;
+    */
+
+    content: "";
+    background-image: url(https://gaseicl.vtexassets.com/assets/vtex.file-manager-graphql/images/dd97acad-81ff-4ef1-91f1-0a652fe913b0___9675094….png);
+    width: 60%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+
+}
+
+.whataspp{
+display: none !important;
+}
+
+.terms-cond > input {
+  margin: 0 10px 0 0;
+}
+
+.terms-cond {
+  display: block !important;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+.terms-cond a {
+  color: #08c;
+  text-decoration: underline;
+}
+
+input#terms_conds {
+  margin: 0px 10px 0 0;
+}
+
+.not-checked {
+  color: #dc1d1d;
+  text-align: center;
+}
+
+
+//////greenti///////
+.orderform-template-holder .step.client-profile-data .client-phone {
+     height: auto;
+     max-height: none;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj {
+     padding: 15px 0;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .client-profile-data h5.visible {
+     display: none !important;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link {
+     display: flex;
+     justify-content: center;
+     width: 100%;
+     flex-direction: row-reverse;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a {
+     width: 200px;
+     float: left;
+     font-size: 0;
+     display: block !important;
+     border-radius:  0px;
+     background-size: 35px;
+     background-repeat: no-repeat;
+     background-position: center left 34px;
+     box-sizing: border-box;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a.active:after {
+     background-color: $c-secundario;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a:after {
+     background-color: #fff;
+     border: 1px solid #ccc;
+     content: '';
+     color: white;
+     display: block;
+     border-radius: 100%;
+     width: 15px;
+     height: 15px;
+     margin-left: 10px;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a:before {
+     font-size: 15px;
+     float: left;
+     width: 100%;
+     text-align: left;
+     line-height: 60px;
+     font-weight: bold;
+     color: $c-principal;
+     padding-left: 80px;
+     box-sizing: border-box;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a {
+    background-color: #F1F1F1;
+}  
+.orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a.active {
+    border: 1px solid $c-secundario;
+} 
+.orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a#is-corporate-client {
+     background-image: url(/arquivos/factura-checkout.png);
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a#is-corporate-client:before {
+     content: "Factura";
+     color: $c-secundario;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a#not-corporate-client {
+     background-image: url(/arquivos/boleta-checkout.png);
+     margin-right: 20px;
+}
+.orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a#is-corporate-client.active {
+     pointer-events: none;
+}
+.orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a#not-corporate-client.active {
+    pointer-events: none;
+}
+ .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a#not-corporate-client:before {
+     content: "Boleta";
+     color: $c-secundario;
+}
+ 
+.summary-template-holder p.terms-cond {
+    color: #000;
+}
+.summary-template-holder span.btn-place-order-wrapper.disable {
+    opacity: 0.5;
+    cursor: none;
+    pointer-events: none;
+}
+.summary-template-holder span.btn-place-order-wrapper.active {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a {
+        width: 50%;
+    }
+    .orderform-template-holder .step .form-step .box-client-info .box-client-info-pj ul {
+        margin: 0;
+        width: 100%;
+    }
+
+}
+
+a#cart-to-orderform.noCheckout {
+    pointer-events: none;
+    opacity: 0.25;
+}
+
+.mensajeLimiteCompra {
+    background-color: #ff671d;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 0px;
+}
+
+#payment-group-custom201PaymentGroupPaymentGroup{
+display: none;
+}
+
+
+
+/* Steps pasos compra */
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
+  position: relative;
+}
+
+.progress-bar .step {
+  position: relative;
+  bottom: 30px;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 500px){
+  .icono-datos-personales {
+    margin-top: -70px!important;
+  }
+  .step_2 {
+    margin-top: -70px!important;
+  }
+  .step_final {
+    margin-top: -70px!important;
+  }
+  .step_2 {
+    margin-right: -29px !important;
+  }
+
+
+}
+
+.progress-bar .step.active {
+  background-color: $c-secundario;
+    border-color: $c-secundario;
+}
+
+
+.progress-bar .line {
+  height: 0px;
+  background-color: $c-principal;
+  flex: 1;
+  margin: 5px 0px 0px 0px;
+  position: relative;
+  z-index: 0;
+}
+
+.progress-bar .line:before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ccc;
+  z-index: -1;
+}
+.progress-bar .line.active:before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: $c-principal;
+  z-index: -1;
+}
+
+.progress-bar .line.active {
+  height: 0px;
+  background-color: $c-principal;
+  flex: 1;
+  margin: 5px 0px 0px 0px;
+  position: relative;
+  z-index: 0;
+}
+.progress-bar .line {
+  height: 0px;
+  background-color: #666666;
+  flex: 1;
+  margin: 5px 0px 0px 0px;
+  position: relative;
+  z-index: 0;
+}
+
+.progress-bar .step:first-child:before,
+.progress-bar .step:last-child:before {
+  display: none;
+}
+
+.progress-bar .step p {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+
+.progress-bar .step.active span {
+  display: none;
+}
+.step, .cart, .totalizers {
+  border: none;
+
+}
+.stepName2{
+  margin-top: 60px;
+  color: #000;
+  font-size: 12px;
+    line-height: 12px;
+  text-align: center;
+  padding-left: 5px;
+}
+.stepName{
+  margin-top: 60px;
+  color: #000;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.step-image-1{
+  background-image: url(https://icbatunegocio.vteximg.com.br/arquivos/datos-white.svg);
+  background-color: unset !important;
+  background-repeat: no-repeat;
+  border-radius: unset !important;
+  background-position: center;
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: -30px;
+  background-size: 30px;
+}
+
+.step-image-2{
+  background-image: url(https://icbatunegocio.vteximg.com.br/arquivos/home-white.png);
+  background-color: unset !important;
+  background-repeat: no-repeat;
+  border-radius: unset !important;
+  background-position: center;
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: -30px;
+  background-size: 30px;
+  margin-left: -5px;
+}
+
+.step-image-4{
+  background-image: url(https://icbatunegocio.myvtex.com/arquivos/check-white.png);
+  background-color: unset !important;
+  background-repeat: no-repeat;
+  border-radius: unset !important;
+  background-position: center;
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: -30px;
+  background-size: 30px;
+  margin-left: -5px;
+}
+
+#step1 {
+  /* background-image: url(https://icbatunegocio.vteximg.com.br/arquivos/datos-white.svg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-right: -30px;
+  background-size: 28px;
+  margin-left: 5px;
+}
+#step2 {
+  /* background-image: url(https://icbatunegocio.vteximg.com.br/arquivos/home-white.png); */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-right: -28px;
+  background-size: 24px;
+}
+#step3 {
+  background-image: url(https://mimbralb2c.myvtex.com/arquivos/credit-card-white.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-right: -27px;
+  background-size: 28px;
+}
+#step4 {
+  /* background-image: url(https://icbatunegocio.myvtex.com/arquivos/check-white); */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-right: -27px;
+  background-size: 28px;
+}
+.complete-step{
+  filter: invert(50%);
+}
+.step.step-image-4.active{
+  filter: invert(50%);
+}
+
+.corporate-info-box .client-company-ie label {
+    font-size: 0 !important;
+}
+.corporate-info-box .client-company-ie label::before {
+    content: "Giro";
+    font-size: 16px;
+}

@@ -1,0 +1,106 @@
+{
+    "store.custom#politica-de-envio": {
+        "blocks": [
+            "responsive-layout.desktop#politica-de-envio",
+            "responsive-layout.mobile#politica-envios"
+        ]
+    },
+    "responsive-layout.desktop#politica-de-envio": {
+        "children": [
+            "image#image__banner",
+            "flex-layout.row#main__landing__politica"
+        ]
+    },
+      
+    
+    "flex-layout.row#main__landing__politica": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#main__landing__politica"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#main__landing__politica": {
+        "title": "main landing",
+        "children": [
+            "flex-layout.col#menu__landing__politica",
+            "flex-layout.col#contenido__landing__politica"
+        ],
+        "props": {
+            "blockClass": "main__landing"
+        }
+    },
+    "flex-layout.col#menu__landing__politica": {
+        "title": "Contenedor Menu",
+        "children": [
+            "rich-text#titulo__menu__landing",
+            "rich-text#texto__menu__landing",
+            "link#terminos__link",
+            "link#cambios__link",
+            "link#pagos__link",
+            "link#politicas__link__active",
+            "link#historia__link"
+        ],
+        "props": {
+            "blockClass": "menu__landing"
+        }
+    },
+    "link#politicas__link__active": {
+        "title": "Link Política de envío",
+        "props": {
+            "label": "Política de envío",
+            "href": "/politica-de-envio",
+            "blockClass": [
+                "menu__item__link__landing",
+                "menu__item__link__active"
+            ]
+        }
+    },
+
+    "flex-layout.col#contenido__landing__politica": {
+        "title": "Contenedor contenido__landing",
+        "children": [
+            "rich-text#parrafo__1__landing__politica" ,
+            "rich-text#parrafo__2__landing__politica",
+            "rich-text#parrafo__3__landing__politica",
+            "rich-text#parrafo__4__landing__politica",
+            "rich-text#parrafo__5__landing__politica"
+        ],
+        "props": {
+            "blockClass": "contenido__landing"
+        }
+    },
+    "rich-text#parrafo__1__landing__politica": {
+        "props": {
+    "text": "**Política de Envío** Los productos serán entregados mediante despacho propio en la Región del Maule o a través de Blue Express en el resto del país, con un plazo máximo de entrega de 5 a 7 días hábiles, abarcando toda la cobertura nacional. En ocasiones especiales, este plazo podrá extenderse hasta un máximo de 15 días hábiles. \n\nEn condiciones normales, el horario de entrega de los productos es entre las 09:00 y las 18:30 horas, salvo excepciones que serán debidamente informadas en nuestro sitio web www.dimaco.cl. Al recibir el pedido, es requisito indispensable que el cliente o la persona encargada de recibirlo inspeccione detalladamente el producto. Una vez conforme con la entrega, deberá firmar la guía de despacho que lo acompaña. \n\nCon la firma de la guía de despacho, el cliente confirma la recepción del producto en perfectas condiciones. Por lo tanto, Ferretería Dimaco considera que el o los productos han sido recibidos de acuerdo con la conformidad del cliente. Además, todos los productos enviados incluyen su respectiva boleta o factura adjunta al pedido. \n\nEl recepcionista del producto debe ser mayor de edad y presentar su cédula de identidad. En caso de no estar conforme con la entrega del producto, el cliente deberá acudir a cualquiera de nuestras tiendas para gestionar el cambio del producto correspondiente. \n\nBlue Express no ofrece el servicio de llamada telefónica para confirmar la entrega a domicilio. Por lo tanto, se recomienda consultar el estado del pedido a través del sitio web www.blue.cl. El número de seguimiento de su pedido será enviado al correo electrónico proporcionado durante el proceso de compra, una vez que el pedido haya sido entregado a Blue Express para su despacho.    ",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__2__landing__politica": {
+        "props": {
+            "text": "<span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Devoluciones por problemas de dirección: </span> En caso de que la dirección de entrega sea incorrecta o si no se logra encontrar a un receptor, el pedido será devuelto a nuestro centro de distribución. En este caso, un ejecutivo se pondrá en contacto con el cliente vía email o teléfono para resolver la situación.",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    /* <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'></span> */
+    "rich-text#parrafo__3__landing__politica": {
+        "props": {
+            "text": " **Costos y condiciones del despacho** \n\n  <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>¿Cómo se calcula el costo de despacho? </span> \n\n El costo de despacho se calcula en base a diversas variables: región, localidad de destino y tamaño del producto (pequeño, mediano, grande, especial), de acuerdo con lo indicado en su compra. \n\n  <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Tipos de despacho a domicilio:</span> \n - <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Despacho normal en regiones:</span>  La entrega se realiza según la disponibilidad de órdenes, excluyendo sábados, domingos y festivos. Este servicio es válido para todo Chile. La empresa utilizada es Blue Express, por lo que Ferretería Dimaco no se hace responsable por posibles demoras causadas por la manipulación de terceros. \n -  <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Despacho en la Región del Maule para productos de más de 30 kg: </span> Ferretería Dimaco se encargará del despacho, excluyendo sábados, domingos y festivos. \n - <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Retiro en tienda: </span> El retiro podrá realizarse en el horario de atención de la tienda (sujeto a temporada y condiciones externas; consultar horarios en nuestra página web o redes sociales). Los retiros deben realizarse dentro de un plazo determinado, el cual será indicado en cada opción ofrecida. El producto estará disponible para retiro 24 horas después de la compra. Si el cliente no se presenta dentro de un plazo de 72 horas hábiles, podrá extender el plazo por un máximo de 48 horas adicionales contactándose por WhatsApp al número +56 9 8700 7691. Si no se cumple con ninguna de estas condiciones, se procederá a la devolución del pago. \n - <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'>Ventas a pedido: </span> Este tipo de despacho corresponde a productos vendidos a pedido y traídos directamente desde el proveedor.", /* <span class='vtex-rich-text-0-x-paragraph--parrafo__landing__bold__span'></span> */
+            "blockClass": "parrafo__landing"
+        }
+    }, 
+    "rich-text#parrafo__4__landing__politica": {
+        "props": {
+            "text": "**Condiciones de despacho** El servicio de despacho no incluye el armado ni la instalación de los productos, los cuales deberán ser solicitados y pagados de forma independiente. \n - El personal de despacho no está autorizado para ingresar al domicilio más allá de dos a tres metros desde la puerta de entrada. Si el ingreso más allá de esa distancia se realiza por autorización del cliente, será bajo su propia responsabilidad. ",
+            "blockClass": "parrafo__landing"
+        }
+    },
+    "rich-text#parrafo__5__landing__politica": {
+        "props": {
+            "text": "**Envíos no entregados** Si el envío no pudiere ser entregado, porque las indicaciones del consignatario indicadas en la guía de transporte fueren insuficientes o incorrectas o porque el consignatario se rehusare a recibirlo o porque el consignatario no ha podido ubicarse o está ausente por un tiempo largo, el envío será devuelto al lugar de origen, siendo de responsabilidad del CLIENTE su correspondiente rastreo según las herramientas entregadas por BLUE EXPRESS y FERRETERÍA DIMACO, como lo es el seguimiento web (https://www.blue.cl/seguimiento/), información enviada por email o vía telfónica. \n\n En todos estos casos, el CLIENTE deberá pagar el porte total del envío. ",
+            "blockClass": "parrafo__landing"
+        }
+    }
+}

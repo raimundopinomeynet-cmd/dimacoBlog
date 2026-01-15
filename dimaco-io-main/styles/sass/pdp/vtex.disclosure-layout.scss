@@ -1,0 +1,47 @@
+@import "../variables";
+
+.trigger--details__pdp_trigger{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E9E9E9;
+    cursor: pointer;
+    :global(.vtex-rich-text-0-x-paragraph--title_disclosure){
+        color: var(--Secondary-Green-Dark, #090F05);
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19.2px; /* 19.2px */
+        margin: 20px 0;
+    }
+}
+
+.trigger--details__pdp_trigger--visible{
+    :global(.vtex-rich-text-0-x-paragraph--title_disclosure){
+        color: $primary;
+    }
+}
+
+
+.content--details__pdp_content{
+    :global(.vtex-store-components-3-x-productDescriptionContainer){
+        margin-top: 16px;
+        :global(.vtex-store-components-3-x-productDescriptionTitle){
+            display: none;
+        }
+        :global(.vtex-store-components-3-x-content){
+            color: #000;
+            font-family: "Montserrat";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19.2px; /* 19.2px */
+        }
+    }
+}
+
+.content--details__pdp_content--hidden{
+    display: block !important;
+}
+

@@ -1,0 +1,127 @@
+@import "../variables.scss";
+
+.sliderLeftArrow--sliderTop__images{ 
+    left: 10% !important; 
+    @include mobile__460{
+        left: 0 !important;
+    }
+}
+.sliderRightArrow--sliderTop__images{ 
+    right: 10% !important; 
+    @include mobile__460{
+        right: 0 !important;
+    }
+}
+.sliderLeftArrow--sliderTop__images,
+.sliderRightArrow--sliderTop__images{
+    border-radius: 8px;
+    background-color: #FFFFFF50 !important;
+    padding: 6px 4px;
+    height: 32px;
+    width: 32px;
+    .caretIcon{
+        height: 20px !important;
+        width: 20px !important;
+    }
+}
+
+.sliderTrackContainer--sliderTop__images__marcas {
+    max-width: 1176px;
+    margin: auto;
+    @include mobile__430 {
+        max-width: 310px;
+
+        .sliderTrack--sliderTop__images__marcas {
+            width: 585% !important;
+        }
+    }
+}
+
+.caretIcon--sliderTop__images__marcas {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+.slide--sliderTop__images__marcas {
+    @include mobile__430 {
+        width: 130px !important;
+    }
+}
+
+.sliderLayoutContainer--productos__semanales__desktop {
+    max-width: 1260px;
+    padding: 0 35px !important;
+    margin: auto;
+    @media (width<=520px) {
+        padding: 0 20px !important;
+    }
+    .slideChildrenContainer--productos__semanales__desktop {
+        height: 450px !important;
+        @include mobile__460{
+            height: 385px !important;
+        }
+
+        :global(.vtex-flex-layout-0-x-flexRow--btn__home__products) {
+            visibility: hidden;
+            @media (width <= 1024px) {
+                visibility: visible;
+            }
+        }
+
+        &:hover {
+            :global(.vtex-flex-layout-0-x-flexRow--btn__home__products) {
+                visibility: visible;
+            }
+        }
+    }
+
+}
+.sliderLeftArrow--banner__products__mobile{
+    @include mobile__460{
+        left: -7px !important; 
+    }
+}
+.sliderRightArrow--banner__products__mobile{
+    @include mobile__460{
+        right: -3px !important;
+    }
+}
+.sliderLayoutContainer--banner__products__mobile{
+    @include mobile__460{
+        padding: 0 10px !important;
+    }
+}
+.paginationDotsContainer{
+    bottom: -25px !important;
+    .paginationDot {
+        width: 8px !important;
+        height: 8px !important;
+        background: #C2C3C1;
+        border-radius: 0;
+        border-radius: 50%;
+    }
+    .paginationDot--isActive {
+        width: 8px !important;
+        background: #39B54A;
+        border-radius: 50%;
+
+    }   
+}
+
+.paginationDotsContainer--sliderTop__images{
+    bottom: 10px !important;
+}
+
+.sliderLeftArrow--productos__semanales__desktop,
+.sliderRightArrow--productos__semanales__desktop{
+    .caretIcon--productos__semanales__desktop{
+        width: 16px !important; 
+        height: 16px !important;
+    }
+}
+
+.slideChildrenContainer--sliderTop__images__marcas{
+    padding: 10px;
+}

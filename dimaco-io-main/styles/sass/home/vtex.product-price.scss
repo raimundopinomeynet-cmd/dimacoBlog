@@ -1,0 +1,54 @@
+@import "../variables";
+
+/* PRECIO */
+.sellingPrice--price__home__products{
+    .currencyContainer--price__home__products{
+        color: $greenDark;
+        font-family: "Anton";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28.8px; /* 28.8px */
+        @include mobile__460{
+            font-size: 20px;
+        }
+    }
+}
+
+.currencyContainer--listPrice__home__products{
+    color: $grayDark;
+    font-family: $font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px; /* 19.2px */
+    @include mobile__460{
+        font-size: 14px;
+    }
+}
+
+.listPrice--listPrice__home__products{
+    display: flex;
+    justify-content: start;
+}
+
+.savings--savings__percentage{
+    border-radius: 4px;
+    background-color: #EE321140;
+    padding: 4px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    .savingsPercentage--savings__percentage{
+        color: $discountValue;
+        font-family: $font;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16.8px; /* 16.8px */
+        @include mobile__460{
+            font-size: 8px;
+        }
+    }
+}

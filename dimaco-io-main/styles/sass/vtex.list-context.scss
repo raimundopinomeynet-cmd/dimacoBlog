@@ -1,0 +1,90 @@
+@import "variables";
+
+.list--rendererWishlist {
+   float: left;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   margin-bottom: 50px;
+    flex-wrap: wrap;
+   .item--rendererWishlist {
+        flex-basis: 500px;
+        flex: 0 0 25%;
+        float: left;
+        padding: 10px;
+        display: block;
+        @media screen and (max-width: 767px) {
+            flex-basis: 50%;
+            flex: 0 0 50%;
+        }
+        :global(.vtex-flex-layout-0-x-flexRow--listPrice__home__products),
+        :global(.vtex-flex-layout-0-x-flexRow--price__home__products__promociones){
+            :global(.vtex-store-components-3-x-container){
+                padding: 0;
+           }
+        }
+        :global(.vtex-flex-layout-0-x-flexRow--btn__home__products){
+			margin-top: 8px;
+            :global(.vtex-store-components-3-x-container){
+                 padding: 0;
+            }
+			:global(.vtex-button){
+				background-color: #000 !important;
+				border-color: transparent;
+				&:hover{ background-color: #007934 !important;}
+				:global(.vtex-button__label){
+					@media (width <= 1160px) {
+						padding-left: 0.75rem;
+						padding-right: 0.75rem;
+					}
+					@include mobile__460{
+						padding-left: 0.45rem;
+						padding-right: 0.5rem;
+					}
+				}
+				:global(.vtex-add-to-cart-button-0-x-buttonText){
+					text-transform: none;
+					font-size: 14px;
+					color: white;
+					font-family: $font;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 16.8px; /* 16.8px */
+					display: flex;
+					align-items: center;
+					@media ((width >= 1024px) and (width <= 1070px)) {
+						font-size: 12px;
+					}
+					@media ((width >= 640px) and (width <= 690px)) {
+						font-size: 12px;
+					}
+					@include mobile__460{
+						font-size: 0;
+						&::after{
+							content: "Agregar";
+							font-size: 12px;
+							color: white;
+							font-family: $font;
+							font-style: normal;
+							font-weight: 700;
+							line-height: 16.8px;
+							
+						}
+					}
+					&::before{
+						@include mobile__460{
+							margin-right: 5px;
+							height: 20px;
+							top: 1px;
+						}
+						position: relative;
+						top: 2px;
+						margin-right: 6px;
+						content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMi44MTU5MSAyLjgzMzMzTDIuOTUxNDMgMy4xMTkwNUw1Ljk1MTQzIDkuNDQ0MDVMNi4wNjEzOSA5LjY3NTg4TDUuOTM3MTggOS45MDAzOUw0LjgxMzc1IDExLjkzMDlDNC44MTM1MSAxMS45MzEzIDQuODEzMjcgMTEuOTMxNyA0LjgxMzA0IDExLjkzMjJDNC4zODUzIDEyLjcxOTUgNC45NTA5MyAxMy42NjY3IDUuODMzMDEgMTMuNjY2N0gxNC45OTk3QzE1LjE4MTkgMTMuNjY2NyAxNS4zMzMgMTMuNTE1NSAxNS4zMzMgMTMuMzMzM0MxNS4zMzMgMTMuMTUxMSAxNS4xODE5IDEzIDE0Ljk5OTcgMTNINS44MzMwMUg0Ljk4NzM3TDUuMzk0OSAxMi4yNTlMNi4zMTE1NyAxMC41OTI0TDYuNDU0MDQgMTAuMzMzM0g2Ljc0OTY3SDEyLjk1OEMxMy4zOTc0IDEwLjMzMzMgMTMuNzgwOSAxMC4wOTM5IDEzLjk3NzkgOS43MzQ1OEwxMy45Nzg1IDkuNzMzNDlMMTYuOTYxOSA0LjMyNTE2TDE2Ljk2MjcgNC4zMjM2OUMxNi45OTA2IDQuMjczNDcgMTcuMDA0OSA0LjIxNjgzIDE3LjAwNDIgNC4xNTkzN0MxNy4wMDM1IDQuMTAxOTEgMTYuOTg3OSA0LjA0NTYzIDE2Ljk1ODcgMy45OTYxQzE2LjkyOTYgMy45NDY1NiAxNi44ODgxIDMuOTA1NDggMTYuODM4MiAzLjg3Njk0QzE2Ljc4ODQgMy44NDg0MyAxNi43MzIxIDMuODMzNCAxNi42NzQ3IDMuODMzMzNDMTYuNjc0NiAzLjgzMzMzIDE2LjY3NDUgMy44MzMzMyAxNi42NzQ0IDMuODMzMzNNMi44MTU5MSAyLjgzMzMzTDE2LjY3NDcgMy4zMzMzM0wxNi42NzQ0IDMuODMzMzNNMi44MTU5MSAyLjgzMzMzSDIuNDk5NjdIMS42NjYzNEMxLjQ4NDE1IDIuODMzMzMgMS4zMzMwMSAyLjY4MjE5IDEuMzMzMDEgMi40OTk5OUMxLjMzMzAxIDIuMzE3OCAxLjQ4NDE1IDIuMTY2NjYgMS42NjYzNCAyLjE2NjY2TDMuMDMzMDEgMi4xNjY2NkwzLjAzNDc4IDIuMTY2NjZDMy4wOTY3NCAyLjE2NjQ0IDMuMTU3NDcgMi4xODM5NCAzLjIwOTgyIDIuMjE3MDlDMy4yNjIxNyAyLjI1MDI0IDMuMzAzOTUgMi4yOTc2NyAzLjMzMDIzIDIuMzUzNzhMMy4zMzAyNCAyLjM1MzhMMy44ODg1NyAzLjU0NTQ2TDQuMDIzNDUgMy44MzMzM0g0LjM0MTM0TDE2LjY3NDQgMy44MzMzM00yLjgxNTkxIDIuODMzMzNMMTYuNjc0NCAzLjgzMzMzTTQuNjc0NjcgMTYuNjY2N0M0LjY3NDY3IDE2LjAyMjkgNS4xOTU3NCAxNS41IDUuODMzMDEgMTUuNUM2LjQ3MzUzIDE1LjUgNi45OTk2NyAxNi4wMjYxIDYuOTk5NjcgMTYuNjY2N0M2Ljk5OTY3IDE3LjMwNzIgNi40NzM1MyAxNy44MzMzIDUuODMzMDEgMTcuODMzM0M1LjE5NTc0IDE3LjgzMzMgNC42NzQ2NyAxNy4zMTA1IDQuNjc0NjcgMTYuNjY2N1pNMTMuMDA4IDE2LjY2NjdDMTMuMDA4IDE2LjAyMjkgMTMuNTI5MSAxNS41IDE0LjE2NjMgMTUuNUMxNC44MDY5IDE1LjUgMTUuMzMzIDE2LjAyNjEgMTUuMzMzIDE2LjY2NjdDMTUuMzMzIDE3LjMwNzIgMTQuODA2OSAxNy44MzMzIDE0LjE2NjMgMTcuODMzM0MxMy41MjkxIDE3LjgzMzMgMTMuMDA4IDE3LjMxMDUgMTMuMDA4IDE2LjY2NjdaIiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNmZmZmZmYiLz4KPC9zdmc+');
+					}
+				}
+			}
+		}
+   }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <meta http-equiv="Content-Type"content="text/html;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible"content="IE=edge"/>
+	<meta name="viewport"content="width=device-width,initial-scale=1.0"/>
+	<title>{{_accountInfo.TradingName}}</title>
+	<style>
+		a[x-apple-data-detectors]{
+		color:inherit!important;
+		text-decoration:none!important;
+		font-size:inherit!important;
+		font-family:inherit!important;
+		font-weight:inherit!important;
+		line-height:inherit!important;
+		}
+	</style>
+	<style>
+		@media(max-width:600px){
+			img{
+			max-width:100%!important;
+			height:auto!important;
+			}
+		}
+	</style>
+	<style>
+		@mediascreenand(min-width:30em){
+
+			.w-50-ns{
+			width:50%!important;
+			}
+
+			.pr4-ns{
+			padding-right:2rem!important;
+			}
+
+			.ph4-ns{
+			padding-left:2rem!important;
+			padding-right:2rem!important;
+			}
+
+			.mv1-ns{
+			margin-top:.25rem!important;
+			margin-bottom:.25rem!important;
+			}
+
+			.mv4-ns{
+			margin-top:2rem!important;
+			margin-bottom:2rem!important;
+			}
+		}
+	</style>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="text-align: center;">
+    <table id="Table_01" width="550"  border="0" cellpadding="0" cellspacing="0" style="text-align: center;margin: 0 auto;">
+		<tr>
+			<td colspan="5">
+				<div style="box-sizing: border-box; width: 100%; padding-bottom: 1rem; padding-top: 1rem; border-bottom: 8px solid #3A4BAE; background: #FFFFFF;margin-bottom: 20px;text-align: center;">
+				    <a href="https://www.tomy.com.ar/" target="_blank" style="box-sizing: border-box !important;">
+				        <img alt="" border="0" width="120px" src="https://gaseicl.vteximg.com.br/arquivos/logo-blanco.png" style="vertical-align: top; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; border: none; width: 170px; max-height: none !important;">
+				      </img>
+				    </a>
+				</div>
+			</td>
+		</tr>
+		
+			
+			<tr>
+				<td align="center"valign="top" style="font-size:14px;line-height:20px;box-sizing:border-box;border-collapse:collapse;text-align:left!important;font-family: Helvetica,Arial,sans-serif;">
+					<table class="mv4-ns"width="100%"align="center"border="0"cellpadding="0"cellspacing="0" style="box-sizing:border-box;max-width:40rem;width:100%;background-color:#fff;border-collapse:collapse;border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt!important;font-family: Helvetica,Arial,sans-serif;" bgcolor="#fff">
+
+						<tr style="box-sizing:border-box!important;">
+							<td class="ph4-ns" style="font-size:14px;line-height:20px;box-sizing:border-box;border-collapse:collapse;border-bottom-style:solid;border-bottom-width:1px;border-color:#eee;width:100%;padding-bottom:1rem;text-align:center!important;font-family:Helvetica,Arial,sans-serif;" align="center">								
+								<h3 style="color: #394cae;font-weight: 300; margin:0 0 15px 0;font-size:25px;line-height:30px;box-sizing:border-box!important;">¡No te quedes con las ganas!<br><strong>Comprá eso que tanto te gustó</strong></h3>																
+							</td>
+						</tr>
+
+						<tr style="box-sizing:border-box!important;">
+							<td class="ph4-ns" style="font-size:14px;line-height:20px;box-sizing:border-box;border-collapse:collapse;text-align:center;width:100%;padding-top:2rem;padding-bottom:2rem!important;font-family: Helvetica,Arial,sans-serif;" align="center">
+								<div style="box-sizing:border-box;clear:both;float:none;padding-top:1rem!important;">
+
+									<table width="100%"border="0"cellpadding="0"cellspacing="0" style="width: auto; margin: 0 auto;box-sizing:border-box;border-collapse:collapse;border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt!important;font-family: Helvetica,Arial,sans-serif;">
+										<thead>
+										</thead>
+										<tbody style="">
+											{{#each items}}
+											<tr style="box-sizing:border-box!important;">
+												<td style="font-size:14px;line-height:20px;box-sizing:border-box;border-collapse:collapse;text-align:left;width:100px;max-width: 100px;padding-right:.5rem;padding-top:.5rem;padding-bottom:.5rem;vertical-align:top;font-family: Helvetica,Arial,sans-serif;"
+													align="left"valign="top"><img alt=""src="{{image}}"
+													style="vertical-align:top;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-width:100%!important;"/>
+												</td>
+												<td style="font-size:14px;line-height:20px;box-sizing:border-box;border-collapse:collapse;text-align:left;padding-top:.5rem;padding-bottom:.5rem;vertical-align:top!important; font-family: Helvetica,Arial,sans-serif;"
+													align="left"valign="top">
+													<div class="mv1-ns" style="box-sizing:border-box;line-height:1.25;font-size:1rem!important;width:300px;">{{productName}}</div>
+													
+													<div style="box-sizing:border-box;color:#777!important;">
+														{{quantity}} Un.
+															{{#if sellingPrice}}
+															S/ {{sellingPrice}}
+															{{else}}
+															Grátis
+														{{/if}}
+													</div>
+												</td>
+											</tr>
+											{{/each}}
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+                        
+                        <tr style="box-sizing:border-box!important;">
+    						<td class="ph4-ns" style="font-size:14px;line-height:20px;box-sizing:border-box;border-collapse:collapse;border-top-style:solid;border-top-width:1px;border-color:#eee;width:100%;padding-top:1rem;text-align:center!important;font-family:Helvetica,Arial,sans-serif;" align="center">
+								
+								<h3 style="color: #394cae;font-weight: 700; margin:0 0 15px 0;font-size:25px;line-height:30px;box-sizing:border-box!important;"><strong>¡Finaliza tu compra!</strong></h3>	
+                                <h3 style="color: #394cae;font-weight: 300; margin:0 0 15px 0;font-size:25px;line-height:30px;box-sizing:border-box!important;">Te regalamos un 5% OFF aplicando el cupón:<br>OPORTUNIDADTOMY</h3>    							
+							</td>
+						</tr>
+
+						<tr style="box-sizing:border-box!important;">
+							<td class="ph4-ns" style="box-sizing:border-box; border-collapse:collapse; text-align:center; width:100%; margin: 0 auto; padding-top:2rem; padding-bottom:2rem!important;font-family:Helvetica,Arial,sans-serif;" align="center">
+
+									<a style="font-size:20px; text-transform: uppercase; font-weight: 300; color:  white; display:block; width:220px; line-height:40px; height:40px; background-color:#394bae; border-radius: 30px; text-decoration:none; margin: 0 auto;"  href="https://www.tomy.com.ar/checkout/cart/{{addToCartURL}}">Comprá ahora</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+
+		<tr style="box-sizing: border-box !important;">
+		    <td class="ph4-ns" style="font-size: 16px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: center; border-top-style: solid; border-top-width:8px; border-color: #eee; padding-top: 2rem; padding-left: 10px; padding-bottom: 2rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background: #f4f4f4;color: #424242;" align="center">
+		                                		       
+				<p style="box-sizing: border-box !important;  margin-top: 0px;">
+		  			<strong style="">Tomy</strong> © Copyright 2022
+				</p>
+		    </td>
+		</tr>
+	</table>
+</body>
+</html>

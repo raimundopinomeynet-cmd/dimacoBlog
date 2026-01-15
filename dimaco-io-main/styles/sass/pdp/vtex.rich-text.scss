@@ -1,0 +1,45 @@
+@import "../variables";
+
+.wrapper--no__stock,
+.wrapper--hay__stock{
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    height: 29px;
+    .paragraph--no__stock,
+    .paragraph--hay__stock{
+        margin: 0;
+        font-family: "Gotham";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height:  16.8px;
+    }
+}
+
+.wrapper--hay__stock{
+    background: rgba(57, 181, 74, 0.12);
+    .paragraph--hay__stock{ color: #007934; }
+}
+
+.wrapper--no__stock{
+    background: rgba(238,50,17,0.2509803922);
+    .paragraph--no__stock{ color:  #EE3211; }
+}
+
+
+.paragraph--cotizacion__envios__pdp{
+    margin: 0;
+    color: #706E78;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px; /* 19.2px */
+    margin-bottom: 12px;
+    @include mobile__640  {
+        line-height: 16.8px; /* 19.2px */
+        font-size: 12px;
+    }
+}

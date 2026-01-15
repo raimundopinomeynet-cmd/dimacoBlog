@@ -1,0 +1,29 @@
+@import "../variables";
+
+
+.newsletterForm--footer__form {
+	display: flex;
+	flex-direction: column;
+	.emailInputContainer{
+		margin: 0.75rem 0;
+		min-width: 280px;
+	}
+	.formSubmitContainer{
+		@include mobile__640{
+			margin: auto;
+		}
+		:global(.vtex-button){
+			max-width: 127px;
+			border-radius: 4px;
+			:global(.vtex-button__label ){
+				font-family: $font;
+				color: white;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 19.2px;
+				text-transform: capitalize;
+			}
+		}
+	}
+}

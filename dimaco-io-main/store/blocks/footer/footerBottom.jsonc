@@ -1,0 +1,61 @@
+{
+    "flex-layout.row#footer__bottom": {
+		"children": [
+			"flex-layout.col#footer__bottom" 
+		],
+		"props": {
+			"blockClass": "footer__bottom"
+		}
+	},
+	"flex-layout.col#footer__bottom": {
+		"children": [
+            "flex-layout.col#empresa__asociada",
+             "flex-layout.col#metodos__pago"
+        ],
+		"props": {
+			"blockClass": "footer__bottom"
+		}
+	},
+    "flex-layout.col#empresa__asociada": {
+        "props": {
+            "blockClass": "empresa__asociada"
+        },
+        "children": [
+            "rich-text#empresa__asociada",
+            "image#empresa__asociada"
+        ]
+    },
+    "rich-text#empresa__asociada": {
+        "props": {
+            "text": "Empresa asociada",
+            "blockClass": "empresa__asociada"
+        }
+    },
+    "image#empresa__asociada": {
+        "props": {
+            "src": "/arquivos/chilemat.svg",
+            "blockClass": "empresa__asociada"
+        }
+    },
+    "flex-layout.col#metodos__pago": {
+        "children": [ 
+            "rich-text#pagoss",
+            "image#web__pay"
+        ],
+        "props": {
+            "blockClass": "metodos__pago"
+        }
+    },
+    "rich-text#pagoss": {
+        "props": {
+            "text": "Métodos de pago",
+            "blockClass": "empresa__asociada"
+        }
+    },
+    "image#web__pay": {
+        "props": {
+            "src": "/arquivos/webpaysvg.svg",
+            "blockClass": "web__pay"
+        }
+    }
+}

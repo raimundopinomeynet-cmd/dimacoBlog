@@ -1,0 +1,392 @@
+@import "../variables";
+
+
+:global(.vtex-sticky-layout-0-x-wrapper--sticky-searchinfomobile--stuck):global(.vtex-sticky-layout-0-x-container--sticky-searchinfomobile) {
+	top: 86px !important;
+	background: #f5fafe;
+	padding: 10px;
+}
+
+.searchResultContainer {
+	padding: 0;
+}
+
+//bloque ordenarPor
+.orderBy--layout {
+	.orderByDropdown {
+		z-index: 7;
+	}
+
+	.orderByButton {
+		padding: 0;
+		border: 0;
+		line-height: 40px;
+		background: transparent;
+
+		.filterPopupTitle {
+			text-transform: none;
+			font-size: 16px;
+			color: #007934;
+			font-family: $font;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 19.2px;
+			@include mobile__460 {
+				font-size: 13px;
+			}
+			.orderByText {
+				color: $c-principal;
+
+				@media(max-width:991px) {
+					display: none;
+				}
+			}
+		}
+
+		.filterPopupArrowIcon {
+			padding: 0 0 0 10px;
+
+			.caretIcon {
+				width: 18px;
+				height: 10px;
+				margin: 0;
+				color: $primary;
+			}
+		}
+	}
+
+	.orderByOptionsContainer {
+		top: 40px;
+		box-shadow: none;
+		border: 0;
+		.orderByOptionItem {
+			min-width: 180px;
+			padding: 0 10px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 30px;
+		}
+	}
+}
+
+
+.gallery {
+	padding-left:0;
+
+	@media(max-width:991px) {
+		padding: 0;
+		padding-top: 8px;
+	}
+
+	.galleryItem--grid {
+		padding: 5px;
+		padding-bottom: 12px;
+		@media(max-width:991px) {
+			padding: 5px;
+			padding-bottom: 2.5rem;
+		}
+	}
+}
+
+.galleryTitle--layout {
+	font-size: 24px;
+	font-weight: 700;
+	color: $c-principal;
+	margin: 0;
+	padding-left: 20px;
+
+	@media(max-width:991px) {
+		padding: 20px 0 0 0;
+	}
+}
+
+.galleryItem--list {
+	border-bottom: 1px #E7E9EE solid;
+}
+
+.container--layout {
+	margin-bottom: 60px;
+	:global(.vtex-breadcrumb-1-x-container) {
+		margin: 10px 0;
+		padding: 0;
+	}
+}
+
+.filters--layout {
+	.filtersWrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.filter__container--title,
+	.filter__container--selectedFilters {
+		display: none;
+	}
+
+	.filter__container {
+		border: 0;
+
+		.filterAvailable {
+			margin: 8px 0;
+			padding: 8px 0;
+		}
+	}
+
+	.filter__container--priceRange {
+		border: none;
+
+		.filterAvailable {
+			.filterTitleSpan {
+				font-size: 0 !important;
+			}
+
+			.filterTemplateOverflow {
+				margin-left: 7px;
+				margin-right: 40px;
+			}
+		}
+
+		.filterTemplateOverflow {
+			width: 95%;
+			margin: auto;
+			:global(.vtex-slider__selector),
+			:global(.vtex-slider__base-internal) {
+				background-color: #EE8411;
+			}
+			:global(.vtex-slider__values-container){
+				justify-content: space-between !important;
+				margin-top: 6px;
+				:global(.vtex-slider__right-value),
+				:global(.vtex-slider__left-value){
+					color: #7A7D78;
+					font-family: "Montserrat";
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 16.8px;
+				}
+				:global(.vtex-slider__dash){
+					display: none;
+				}
+			}
+		}
+	}
+
+	.filter {
+		.filterTitle {
+			.filterIcon {
+				color: $c-principal;
+				padding: 0;
+			}
+		}
+		.caretIcon {
+			width: 18px;
+			height: 10px;
+		}
+
+	}
+	.filterTemplateOverflow {
+		max-height: none !important;
+		padding-bottom: 0;
+	}
+}
+
+
+.sidebar {
+	width: 87%;
+	.closeIconButton {
+		padding: 12px 15px;
+	}
+	.filterBreadcrumbsItemName{
+		font-family: $font;
+		font-size: 16px;
+		font-weight: 600;
+		color: #000;
+	}
+	.filterAccordionBreadcrumbs {
+		border: none;
+
+		.filterBreadcrumbsContent {
+			padding: 0 24px;
+
+			.filterBreadcrumbsText {
+				font-size: 16px;
+				font-weight: 600;
+			}
+		}
+	}
+
+	.filterAccordionItemBox {
+		min-height: 30px;
+		border: none;
+
+		&:hover {
+			:global(.vtex-checkbox__label) {
+				font-weight: 600;
+				color: $c-principal;
+			}
+
+			:global(.vtex-checkbox__inner-container) {
+				border-color: $c-principal;
+			}
+		}
+
+		:global(.vtex-tag) {
+			padding: 2px 12px;
+			top: -1px;
+			position: relative;
+			margin-bottom: -1px;
+			background: #979797;
+			font-weight: 600;
+		}
+	}
+
+	.accordionFilterContainer {
+		padding-left: 20px;
+		margin-top: 0;
+
+		.filterAccordionItemBox {
+			min-height: 30px;
+
+			.accordionFilterContent {
+				padding: 0;
+
+				.accordionFilterItemTitle {
+					font-size: 16px;
+					font-weight: 600;
+				}
+
+				.accordionFilterItemIcon {
+					.caretIcon {
+						width: 18px;
+						height: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.accordionFilterItemOptions {
+		padding: 20px;
+		padding-top: 0;
+	}
+
+	.filter__container--priceRange {
+		margin-left: 7px;
+		margin-right: 40px;
+		border: none;
+
+		.filterAvailable {
+			display: none;
+		}
+	}
+}
+
+.totalProducts--layout {
+	padding: 0;
+	color: #7A7D78 !important;
+	font-family: "Montserrat";
+	font-size: 12px !important;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16.8px;
+
+	/* 16.8px */
+	.totalProductsMessage {
+		font-size: 0;
+
+		&::before {
+			content: " Resultados";
+			text-transform: none;
+			color: #7A7D78 !important;
+			font-family: "Montserrat";
+			font-size: 12px !important;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 16.8px;
+			/* 16.8px */
+		}
+	}
+}
+
+
+/*page not found*/
+
+:global(.vtex-rich-text-0-x-container--page-not-found) {
+	min-height: 300px;
+	padding: 50px 0;
+}
+
+.buttonShowMore--layout {
+	.buttonShowMore {
+		:global(.vtex-button) {
+			margin: 30px 0;
+			padding:8px 20px;
+			background: transparent;
+			border-radius: 4px;
+			border: 1px solid var(--Primary-Green, #007934);
+			&:hover {
+				background: #007934;
+				:global(.vtex-button__label){
+					&::before{
+						color: #F5F5F5;
+					}
+				}
+			}
+			:global(.vtex-button__label){
+				font-size: 0;
+				&::before{
+					content: "Cargar más";
+					color: #007934;
+					font-family: "Montserrat";
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 19.2px; /* 19.2px */
+					text-transform: none;
+				}
+			}
+		}
+	}
+}
+
+.searchNotFound {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 50px 0;
+	height: auto;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	.searchNotFoundOops {
+		font-size: 0;
+		&::before {
+			content: "¡Vaya! No encontramos ningún resultado para su búsqueda";
+			text-transform: none;
+			font-size: 26px;
+			color: #000;
+			float: left;
+			width: 100%;
+			margin-bottom: 40px;
+			@include mobile__1024{
+				text-align: center;
+			}
+		}
+	}
+
+	.searchNotFoundInfo {
+		text-align: center;
+		.searchNotFoundWhatToDoDotsContainer {
+			padding: 0;
+			.searchNotFoundWhatToDoDots {
+				display: block;
+				margin-bottom: 19px;
+				float: left;
+				width: 100%;
+			}
+		}
+	}
+}

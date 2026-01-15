@@ -1,0 +1,225 @@
+@import "../variables";
+.biggy-autocomplete-wrapper {
+    //width: 100% !important;
+    //max-width: 100%;
+    width: 50vw;
+    background-color: $c-blanco;
+    height: 100%;   
+    @media (max-width: 1025px) {
+        width: 90vw;
+    } 
+    .biggy-autocomplete {
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        //height: 600px;        
+        flex-direction: row!important;        
+        transition: top .3s; 
+        margin: 0 auto;
+        box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.12);  
+        padding: 0;
+        @media (max-width: 1025px) {
+            flex-direction: column !important;   
+            max-height: 85vh;   
+        }
+        .itemList {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;                      
+            padding: 30px;     
+            @media (max-width: 1025px) {
+              width: 100%;              
+            }               
+            .itemListPrefix,
+            .itemListLinkTitle {
+                color: #000;
+                font-size: .875rem;
+                line-height: 1.25rem;
+                text-align: left;
+            } 
+            .itemListList {
+                width: 100%;
+                text-align: center;
+                .itemListItem {
+                    .itemListLink {
+                        width: 100%;
+                    }
+                } 
+            }             
+        }
+        .itemListTitle,
+        .tileListTitle {
+            text-transform: none;
+            margin-bottom: 1.125rem;
+            color: $c-negro;
+            font-weight: 600;
+            font-size: .875rem;
+            line-height: 1.25rem;
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .tileList {
+            border-left: none;
+            width: 75%;
+            padding: 30px;  
+            @media (max-width: 1025px) {
+              width: 100%;
+            }                         
+            .tileListList {
+                flex-direction: column !important;
+                margin-top: 0;
+                @media (max-width: 1025px) {
+                    width: 100%;
+                    display: block;
+                    align-items: center;
+                    overflow-x: auto;
+                    position: relative;
+                    flex-flow: row nowrap;
+                    list-style: none;
+                    margin-top: 0;
+                }
+
+                .tileListItem {
+                    display: flex;
+                    flex: 1;
+                    width: 100%;
+                    max-width: 100%;
+                    padding: 10px;    
+                    box-shadow: 0 4px 5px rgba(0, 0, 0, .1);
+                    margin-bottom: 10px;          
+                    @media (max-width: 1025px) {
+                      width: 100%;
+                      max-width: 100%;
+                      flex: 0 0 230px;
+                      padding: 5px;
+                      text-align: center;
+                    } 
+                    :global(.vtex-product-summary-2-x-element) {
+                        padding: 0;
+                    }                    
+                    :global(.vtex-flex-layout-0-x-flexRowContent--contentProduct){
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+                            width: auto !important;
+                        }
+                        :global(.vtex-flex-layout-0-x-flexCol--imageProd){
+                            margin: 0 10px 0 0;
+                            :global(.vtex-product-summary-2-x-image) {
+                                width: 70px;
+                            }
+                        }
+                        :global(.vtex-product-summary-2-x-productBrandName) {
+                            text-align: left;
+                            margin-bottom: 10px;
+                        }
+                        :global(.vtex-product-summary-2-x-nameContainer--product-name) {
+                            text-align: left;
+                            justify-content: flex-start;
+                            margin-bottom: 0;
+                            :global(.vtex-product-summary-2-x-brandName) {
+                                text-align: left;
+                                font-size: 14px;
+                                line-height: 20px;
+                                max-height: none;
+                                min-height: auto;
+                            }
+                        }
+                        :global(.vtex-flex-layout-0-x-flexRowContent--summary) {
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: row;
+                            align-items: flex-start;
+                            margin-bottom: 0;
+                            min-height: auto;
+                            :global(.vtex-product-price-1-x-sellingPrice),
+                            :global(.vtex-product-price-1-x-sellingPriceValue--summary) {
+                                text-align: left;
+                                font-size: 16px;
+                                line-height: 20px;
+                                max-height: none;
+                                min-height: auto;
+                            }
+                        }
+                    } 
+                }
+
+            } 
+            .tileListFooter {
+                padding-bottom: 30px;
+            }
+            .tileListSeeMore {
+                display: block;
+                height: 30px;
+                line-height: 30px;
+                font-size: 12px;
+                padding: 0 10px;
+                color: #fff;
+                text-align: center;
+                background: #000;
+                width: 200px;
+                margin: 0 auto;
+                border-radius: 0px;
+                text-decoration: none;
+            }
+        }
+
+        .close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            outline: none;
+            background: #000;
+            border-radius: 100%;
+            padding: 10px 10px;
+            color: #fff;
+            :global(.vtex__icon-close) {               
+                float: left;
+            }
+        }
+    }    
+}
+
+.suggestionListWrapper {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;    
+    .suggestionsListPrefix {
+        font-size: 14px;
+    }
+    .suggestionsList {
+        flex-wrap: wrap;      
+        .suggestionsListItem {
+            &::before {
+                display: none;
+            }
+        }  
+        .suggestionsListLink {
+            font-size: 14px;       
+            color: black;
+            margin-right: 10px;
+            line-height:20px;
+        }
+    }
+}
+
+.didYouMeanPrefix {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;    
+}
+.didYouMeanTerm {
+    font-size: 14px;       
+    color: black;
+    margin-right: 10px;
+    line-height:20px;
+}

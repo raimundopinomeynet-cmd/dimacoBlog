@@ -1,0 +1,96 @@
+{
+    "flex-layout.row#banner__products": {
+        "children": [ "flex-layout.col#banner__products"],
+		"title": "banner y productos",
+        "props": {
+            "blockClass": "banner__products"
+        }
+    },
+    "flex-layout.col#banner__products": {
+		"title": "banner y productos",
+        "children": [
+             "responsive-layout.mobile#image",
+			 "responsive-layout.desktop#image",
+             "flex-layout.col#banner__products__"
+        ],
+        "props": {
+            "blockClass": "banner__products"
+        }
+    },
+	 "responsive-layout.mobile#image": { 
+		"children": ["image#banner__products__mobile"]
+	},
+	 "responsive-layout.desktop#image": {
+		"children": ["image#banner__products"],
+		"props": {
+			"blockClass": "layout__d_banner__products"
+		}
+	},
+    "image#banner__products": {
+		"title": "Card izquierdo",
+        "props": {
+            "src": "/arquivos/Img.jpg",
+            "blockClass": "banner__products__desk"
+        }
+    },
+	"image#banner__products__mobile": {
+		"title": "Card izquierdo",
+        "props": {
+            "src": "/arquivos/Img__mobile.jpg",
+            "blockClass": "banner__products__mobile"
+        }
+    },
+
+     /* ######################################## */
+     "flex-layout.col#banner__products__": {
+		"title": "Productos",
+		"children": [
+			"list-context.product-list#banner__products"
+		],
+		"props": {
+			"width": "100%",
+            "blockClass": "productos__semanales"
+		}
+	},
+	"list-context.product-list#banner__products": {
+		"blocks": [
+            "product-summary.shelf#products__home__v2"
+		],
+		"children": [
+			"slider-layout#banner__products"
+		],
+		"props": {
+			
+            "blockClass": "productos__semanales"
+            
+		}
+	},
+	"slider-layout#banner__products": {
+		"props": {
+			"itemsPerPage": {
+				"desktop": 3,
+				"tablet": 2,
+				"phone": 2
+			},
+			"autoplay": {
+				"timeout": 5000,
+				"stopOnHover": true
+			}, 
+            "centerMode": {
+				"desktop": "to-the-left",
+				"tablet": "disabled",
+				"mobile": "disabled"
+			},
+			"centerModeSlidesGap": 10,
+			"infinite": true,
+			"fullWidth": false,
+			"showNavigationArrows": "always",
+			"showPaginationDots": "never", 
+			"blockClass": [
+				"productos__semanales__desktop",
+				"productos__semanales__mobile",
+				"banner__products__mobile"
+			]
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@import "../variables";
+
+.freigthScaleContainer {
+  width: 100%;
+  padding: 10px 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  text-align: center;
+  .text1 {
+    color: black;
+    margin: 15px 0;  
+  }
+  .text2 {
+    color: black;
+    font-weight: bold;
+  } 
+  .sliderContainer {
+    background-color: #ffffff;
+    border: 1px solid #e2d6d1;
+    border-radius: 5px;
+    height: 10px;
+    margin: 10px 0;
+    .barContainer {
+      border-radius: 5px;
+      background: #94368E;
+      height: 10px;
+      transition: width 1s;
+    }
+  }
+
+  .sliderText {
+    text-align: center;
+    font-size: 14px;
+    margin: 15px 0;
+    .text3 {
+      color: black; 
+    } 
+  }
+}

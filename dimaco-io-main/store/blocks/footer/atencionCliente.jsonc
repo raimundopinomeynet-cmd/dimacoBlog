@@ -1,0 +1,106 @@
+{
+    "flex-layout.col#footer__menu__antencion": {
+        "children": [
+            "rich-text#title__footer__menu__empresa",
+             "vtex.menu@2.x:menu#newEmpresa",
+            "rich-text#title__footer__menu__atencion",
+            "vtex.menu@2.x:menu#antencioCliente",
+			"rich-text#title__footer__menu__numeros",
+			"rich-text#title__footer__menu__numeros__1",
+			"rich-text#title__footer__menu__numeros__2"/* ,
+			"rich-text#title__footer__menu__numeros__3",
+			"rich-text#title__footer__menu__numeros__4" */
+        ],
+        "props": {
+            "blockClass": ["footer__menu__servicios","footer__menu__servicios__middle"]
+        }
+    },
+    "rich-text#title__footer__menu__atencion": {
+        "props": {
+            "text": "Atención al Cliente",
+            "blockClass": "title__footer__menu__"
+        }
+    },
+    "rich-text#title__footer__menu__empresa": {
+        "props": {
+            "text": "Nuestra Empresa",
+            "blockClass": "title__footer__menu__"
+        }
+    },
+    "vtex.menu@2.x:menu#newEmpresa": {
+		"props": {
+			"orientation": "vertical"
+		},
+		"children": [
+			"menu-item#newEmpresa"
+		]
+	},
+	"menu-item#newEmpresa": {
+		"props": {
+			"id": "menu-item-cont",
+			"type": "custom",
+			"highlight": false,
+            "blockClass": ["footer__link__terminos"],
+			"itemProps": {
+				"type": "internal",
+				"href": "/nuestra-historia",
+				"noFollow": false,
+				"tagTitle": "Sobre nosotros",
+				"text": "Sobre nosotros"
+			}
+		}
+	},
+	"vtex.menu@2.x:menu#antencioCliente": {
+		"props": {
+			"orientation": "vertical"
+		},
+		"children": [
+			"menu-item#contacto"
+		]
+	},
+	"menu-item#contacto": {
+		"props": {
+			"id": "menu-item-cont",
+			"type": "custom",
+			"highlight": false,
+            "blockClass": ["footer__link__terminos"],
+			"itemProps": {
+				"type": "internal",
+				"href": "/contacto",
+				"noFollow": false,
+				"tagTitle": "Contacto",
+				"text": "Contacto"
+			}
+		}
+	},
+	"rich-text#title__footer__menu__numeros": {
+        "props": {
+            "text": "Números de contacto",
+            "blockClass": "title__footer__menu__numeros"
+        }
+    },
+	"rich-text#title__footer__menu__numeros__1": {
+        "props": {
+            "text": "[(71) 267-1261](tel:+712671261)",
+            "blockClass": "title__footer__menu__numero"
+        }
+    },
+	"rich-text#title__footer__menu__numeros__2": {
+        "props": {
+            "text": "[(71) 267-2555](tel:+712672555)",
+            "blockClass": "title__footer__menu__numero"
+        }
+    },
+	"rich-text#title__footer__menu__numeros__3": {
+        "props": {
+            "text": "[(71) 274-4321](tel:+712744321)",
+            "blockClass": "title__footer__menu__numero"
+        }
+    },
+	"rich-text#title__footer__menu__numeros__4": {
+        "props": {
+            "text": "[(71) 274-4320](tel:+712744320)",
+            "blockClass": "title__footer__menu__numero"
+        }
+    }
+}

@@ -1,0 +1,272 @@
+{
+	"vtex.menu@2.x:menu#linksRight": {
+		"children": [
+			"menu-item#right-uno",
+			"menu-item#right-dos"
+		],
+		"props": {
+			"blockClass": "top-header-linksRight"
+		}
+	},
+	"menu-item#right-uno": {
+		"props": {
+			"id": "menu-item-vtex-website",
+			"type": "custom",
+			"highlight": false,
+			"blockClass": ["texto__preheader__item"],
+			"itemProps": {
+				"href": "/#",
+				"noFollow": false,
+				"tagTitle": "Tiendas",
+				"text": "Tiendas"
+			}
+		},
+		"children": [
+			"flex-layout.row#tiendas___"
+		]
+	},
+	"menu-item#right-dos": {
+		"props": {
+			"id": "menu-item-vtex-website",
+			"type": "custom",
+			"highlight": false,
+			"blockClass": ["texto__preheader__item"],
+			"itemProps": {
+				"href": "https://blogdimaco.wordpress.com/",
+				"noFollow": false,
+				"tagTitle": "Blog",
+				"text": "Blog"
+			}
+		}
+	},
+	"flex-layout.row#tiendas___": {
+		"children": [
+			"flex-layout.col#tiendas__"
+		],
+		"props": {
+			"blockClass": "tiendas___"
+		}
+	},
+	"flex-layout.col#tiendas__": {
+		"children": [
+			"flex-layout.col#tienda__1",
+			"flex-layout.col#tienda__2",
+			"flex-layout.col#tienda__3",
+			"flex-layout.col#tienda__4"
+		],
+		"props": {
+			"blockClass": "tiendas___"
+		}
+	},
+
+	/* TIENDA 1 */
+	"flex-layout.col#tienda__1":{
+		"children": [
+			"rich-text#sucursal__de",
+			"rich-text#sucursal__1__titulo",
+			"flex-layout.col#sucursal__numeros",
+			"rich-text#sucursal__1__dias"
+		],"props": {
+			"blockClass": ["tienda__","border__true"]
+		}
+	},
+	"rich-text#sucursal__de": {
+		"props": {
+			"text": "Sucursal de",
+			"blockClass": "sucursal__de"
+		}
+	},
+	"rich-text#sucursal__1__titulo": {
+		"props": {
+			"text": "O`higgins 916, Constitución",
+			"blockClass": "sucursal__titulo"
+		}
+	},
+	"flex-layout.col#sucursal__numeros": {
+		"children": [
+			"rich-text#sucursal__1__numero",
+			"rich-text#sucursal__2__numero"
+		],
+		"props": {
+			"blockClass": "sucursal__numeros"
+		}
+	},
+	"rich-text#sucursal__1__numero": {
+		"props": {
+			"text": "(71) 267 1261",
+			"blockClass": "sucursal__numero"
+		}
+	},
+	"rich-text#sucursal__2__numero": {
+		"props": {
+			"text": "(71) 267 2555",
+			"blockClass": "sucursal__numero"
+		}
+	},
+	"rich-text#sucursal__1__dias": {
+		"props": {
+			"text": "Lunes a Sábado 09:00 - 13:30 y 15:00 - 18:30",
+			"blockClass": "sucursal__dias"
+		}
+	},
+
+	/* TIENDA 2 */
+	"flex-layout.col#tienda__2":{
+		"children": [
+			"rich-text#sucursal__de",
+			"rich-text#sucursal__2__titulo",
+			"flex-layout.col#sucursal__numeros__2",
+			"rich-text#sucursal__2__dias"
+		],"props": {
+			"blockClass": ["tienda__","border__true"]
+		}
+	},
+	"rich-text#sucursal__2__titulo": {
+		"props": {
+			"text": "Av. Santa María 286, Constitución",
+			"blockClass": "sucursal__titulo"
+		}
+	},
+	"flex-layout.col#sucursal__numeros__2": {
+		"children": [ 
+			"rich-text#sucursal__3__numero",
+			"rich-text#sucursal__4__numero"
+		],
+		"props": {
+			"blockClass": "sucursal__numeros"
+		}
+	},
+	"rich-text#sucursal__3__numero": {
+		"props": {
+			"text": "(71) 267 1261",
+			"blockClass": "sucursal__numero"
+		}
+	},
+	"rich-text#sucursal__4__numero": {
+		"props": {
+			"text": "(71) 267 2555",
+			"blockClass": "sucursal__numero"
+		}
+	},
+	"rich-text#sucursal__2__dias": {
+		"props": {
+			"text": "Lunes a Viernes 09:00 - 13:30 y 15:00 - 18:30 Sábado 08:30 - 13:30",
+			"blockClass": "sucursal__dias"
+		}
+	},
+
+	/* TIENDA 3 */
+	"flex-layout.col#tienda__3":{
+		"children": [
+			"rich-text#sucursal__de",
+			"rich-text#sucursal__3__titulo",
+			"flex-layout.col#sucursal__numeros__3",
+			"rich-text#sucursal__3__dias"
+		],"props": {
+			"blockClass": ["tienda__","border__true"]
+		}
+	},
+	"rich-text#sucursal__3__titulo": {
+		"props": {
+			"text": "Tocornal 368, Constitución",
+			"blockClass": "sucursal__titulo"
+		}
+	},
+	"flex-layout.col#sucursal__numeros__3": {
+		"children": [ 
+			"rich-text#sucursal__5__numero",
+			"rich-text#sucursal__6__numero"
+		],
+		"props": {
+			"blockClass": "sucursal__numeros"
+		}
+	},
+	"rich-text#sucursal__5__numero": {
+		"props": {
+			"text": "(71) 267 1261",
+			"blockClass": "sucursal__numero"
+		}
+	},
+	"rich-text#sucursal__6__numero": {
+		"props": {
+			"text": "(71) 267 2555",
+			"blockClass": "sucursal__numero"
+		}
+	},
+	"rich-text#sucursal__3__dias": {
+		"props": {
+			"text": "Lunes a Sábado 09:00 - 13:30 y 15:00 - 18:30",
+			"blockClass": "sucursal__dias"
+		}
+	},
+
+	/* TIENDA 4 */
+	"flex-layout.col#tienda__4":{
+		"children": [
+			"rich-text#sucursal__de",
+			"rich-text#sucursal__4__titulo",
+			"flex-layout.col#sucursal__numeros__4",
+			"rich-text#sucursal__4__dias"
+		],"props": {
+			"blockClass": ["tienda__"]
+		}
+	},
+	"rich-text#sucursal__4__titulo": {
+		"props": {
+			"text": "San Martin 240, esquina Villalobos, Cauquenes",
+			"blockClass": "sucursal__titulo"
+		}
+	},
+	"flex-layout.col#sucursal__numeros__4": {
+		"children": [ 
+			"rich-text#sucursal__7__numero"/* ,
+			"rich-text#sucursal__8__numero" */
+		],
+		"props": {
+			"blockClass": "sucursal__numeros"
+		}
+	},
+	"rich-text#sucursal__7__numero": {
+		"props": {
+			"text": "(71) 267 1261",
+			"blockClass": "sucursal__numero"
+		}
+	},
+	"rich-text#sucursal__8__numero": {
+		"props": {
+			"text": "(71) 267 2555",
+			"blockClass": "sucursal__numero"
+		}
+	},
+	"rich-text#sucursal__4__dias": {
+		"props": {
+			"text": "Lunes a Viernes 09:00 - 13:30 y 15:00 - 18:30 Sábado 08:30 - 13:30",
+			"blockClass": "sucursal__dias"
+		}
+	},
+
+
+
+	"vtex.menu@2.x:menu#linksLeft": {
+		"children": [
+			"menu-item#left-uno"
+		],
+		"props": {
+			"blockClass": "top-header-linksRight"
+		}
+	},
+	"menu-item#left-uno": {
+		"props": {
+			"id": "menu-item-vtex-website",
+			"type": "custom",
+			"highlight": false,
+			"blockClass": ["texto__preheader__item","texto__preheader__item__cotiza"],
+			"itemProps": {
+				"href": "/cotiza-con-nosotros",
+				"noFollow": false,
+				"tagTitle": "Cotiza con nosotros",
+				"text": "Cotiza con nosotros"
+			}
+		}
+	}
+}

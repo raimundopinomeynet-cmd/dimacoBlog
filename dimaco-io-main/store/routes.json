@@ -1,0 +1,41 @@
+{
+  "store.custom#terminos-condiciones": {
+    "path": "/terminos-y-condiciones"
+  },
+  "store.custom#cambios-devoluciones": {
+    "path": "/cambios-y-devoluciones"
+  },
+  "store.custom#medios-de-pago": {
+    "path": "/medios-de-pago"
+  },
+  "store.custom#politica-de-envio": {
+    "path": "/politica-de-envio"
+  },
+  "store.custom#nuestra-historia": {
+    "path": "/nuestra-historia"
+  },
+  "store.custom#contacto": {
+    "path": "/contacto"
+  },
+  "store.custom#cotiza": {
+    "path": "/cotiza-con-nosotros"
+  },
+  "store.custom#cyber": {
+    "path": "/cyber"
+  },
+  "store.custom#black": {
+    "path": "/black-friday"
+  },
+  "store.custom#blog": {
+    "path": "/blog"
+  },
+  "store.custom#blog-herramientas": {
+    "path": "/blog/articulo/como-elegir-herramientas"
+  },
+  "store.custom#blog-construccion": {
+    "path": "/blog/articulo/consejos-construccion-hogar"
+  },
+  "store.custom#blog-tendencias": {
+    "path": "/blog/articulo/tendencias-2026"
+  }
+}

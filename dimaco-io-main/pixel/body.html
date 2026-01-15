@@ -1,0 +1,99 @@
+<script>
+    const observer = new MutationObserver(() => {
+        const trigger = document.querySelector(`.vtex-rich-text-0-x-container--tiendas__mobile`);
+        const menu = document.querySelector('.dimacocl-custom-mega-menu-2-x-menuContainerNavVertical');
+        const secondChild = document.querySelector(".vtex-flex-layout-0-x-flexColChild--more__mobile:nth-child(2)");
+
+        try {
+            if (trigger && !trigger.dataset.eventAdded) {
+                trigger.dataset.eventAdded = "true";
+                trigger.addEventListener("click", () => {
+                    if (menu && secondChild) {
+                        console.log("Menu display:", menu.style.display);
+                        console.log("SecondChild display:", secondChild.style.display);
+                        if (menu.style.display === "none") {
+                            menu.style.display = "block";
+                            secondChild.style.display = "none";
+                        } else {
+                            menu.style.display = "none";
+                            secondChild.style.display = "block";
+                        }
+                    }
+                });
+            }
+        } catch (error) {
+            console.error("Error en el observer:", error);
+        }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+
+</script>
+
+<script>
+    (function () {
+        function handleRouteChange() {
+            setTimeout(() => {
+                const routes = {
+                    "/terminos-y-condiciones": "vtex-disclosure-layout-1-x-trigger--terminos__condiciones",
+                    "/cambios-y-devoluciones": "vtex-disclosure-layout-1-x-trigger--cambios__devoluciones",
+                    "/medios-de-pago": "vtex-disclosure-layout-1-x-trigger--medios__de__pago",
+                    "/politica-de-envio": "vtex-disclosure-layout-1-x-trigger--politica__landing",
+                    "/nuestra-historia": "vtex-disclosure-layout-1-x-trigger--historia__landing"
+                };
+
+                const path = window.location.pathname;
+                const selector = routes[path];
+
+                if (selector) {
+                    const element = document.querySelector(`span.${selector}`);
+                    if (element && !element.classList.contains(`${selector}--visible`)) { 
+                        element.click();
+                    }
+                }
+            }, 1000);
+        }
+        window.addEventListener("load", handleRouteChange);
+        window.addEventListener("popstate", handleRouteChange);
+        const originalPushState = history.pushState;
+        history.pushState = function (...args) {
+            originalPushState.apply(this, args);
+            window.dispatchEvent(new Event("pushState"));
+        };
+        const originalReplaceState = history.replaceState;
+        history.replaceState = function (...args) {
+            originalReplaceState.apply(this, args);
+            window.dispatchEvent(new Event("replaceState"));
+        };
+        window.addEventListener("pushState", handleRouteChange);
+        window.addEventListener("replaceState", handleRouteChange);
+    })();
+</script>
+
+
+<script>
+    const updateTextContent = () => {
+        document.querySelectorAll(
+            ".myo-progress-bar .myo-progress-bar span.myo-progress-bar__text, .myo-progress-bar__mobile-text div span"
+        ).forEach(span => {
+            const textMap = {
+                "Enviar al punto de recogida": "Enviado al punto de recogida",
+                "Recoger": "Listo para ser recogido"
+            };
+            const trimmedText = span.textContent.trim();
+            if (textMap[trimmedText]) {
+                span.textContent = textMap[trimmedText];
+            }
+        });
+    };
+
+    window.addEventListener("hashchange", updateTextContent);
+    window.addEventListener("load",()=>{
+        let count = 0;
+        const textContent = setInterval(() => {
+            if(count > 8) clearInterval(textContent);
+
+            updateTextContent()
+            count++;
+        }, 750);
+    });
+</script>

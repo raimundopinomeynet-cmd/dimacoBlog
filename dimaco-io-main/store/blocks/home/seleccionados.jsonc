@@ -1,0 +1,136 @@
+{
+    "flex-layout.row#selecionados__home": {
+        "title": "selecionados__home",
+        "children": [
+            "flex-layout.col#selecionados__home"
+        ],
+        "props": {
+            "blockClass": "selecionados__home"
+        }
+    },
+    "flex-layout.col#selecionados__home": {
+        "children": [
+            "rich-text#selecionados__home__title",
+            "rich-text#selecionados__home__texto",
+            "flex-layout.row#container__seleccionados",
+            "flex-layout.row#container__seleccionados__2"
+        ],
+        "props": {
+             "blockClass": "selecionados__home"
+        }
+    },
+    "rich-text#selecionados__home__title": {
+        "title": "selecionados titulo",
+        "props": {
+            "text": "# Seleccionados para ti",
+            "blockClass": "title__mejores__ofertas"
+        }
+    },
+    "rich-text#selecionados__home__texto": {
+        "title": "selecionados texto",
+        "props": {
+            "text": "## Productos exclusivos seleccionados para ti",
+            "blockClass": ["text__mejores__ofertas","selecionados__home__texto"]
+        }
+    },
+    "flex-layout.row#container__seleccionados": {
+        "title": "container seleccionados",
+        "children": [
+             "flex-layout.col#container__seleccionados"
+        ],
+        "props": {
+            "blockClass": "container__seleccionados"
+        }
+    },
+    "flex-layout.col#container__seleccionados": {
+        "title": "container seleccionados 1",
+        "children": [
+            "image#seleccionados__image__1",
+            "image#seleccionados__image__2",
+            "image#seleccionados__image__3",
+            "image#seleccionados__image__4"
+        ],
+        "props": {
+            "blockClass": "container__seleccionados"
+        }
+    },
+    "image#seleccionados__image__1": {
+        "title": "seleccionados__image__1",
+        "props": {
+            "src": "/arquivos/selecc__1.jpg",
+            "blockClass": ["seleccionados__image","seleccionados__image__full"]
+        }
+    },
+    "image#seleccionados__image__2": {
+        "title": "seleccionados__image__2",
+        "props": {
+            "src": "/arquivos/selecc__2.jpg",
+            "blockClass": ["seleccionados__image","seleccionados__image__mobile","seleccionados__image__mobile__margin"]
+        }
+    },
+    "image#seleccionados__image__3": {
+        "title": "seleccionados__image__3",
+        "props": {
+            "src": "/arquivos/selecc__3.jpg",
+            "blockClass": ["seleccionados__image","seleccionados__image__mobile"]
+        }
+    },
+    "image#seleccionados__image__4": {
+        "title": "seleccionados__image__4",
+        "props": {
+            "src": "/arquivos/selecc__4.jpg",
+            "blockClass":["seleccionados__image","seleccionados__image__full"]
+        }
+    },
+
+
+    "flex-layout.row#container__seleccionados__2": {
+        "title": "container seleccionados 2",
+        "children": [
+             "flex-layout.col#container__seleccionados__2"
+        ],
+        "props": {
+            "blockClass": ["container__seleccionados","container__seleccionados__2"]
+        }
+    },
+    "flex-layout.col#container__seleccionados__2": {
+        "title": "container seleccionados 2",
+        "children": [
+            "image#seleccionados__image__5",
+            "image#seleccionados__image__6",
+            "image#seleccionados__image__7",
+            "image#seleccionados__image__8"
+        ],
+        "props": {
+            "blockClass": "container__seleccionados"
+        }
+    },
+    "image#seleccionados__image__5": {
+        "title": "seleccionados__image__5",
+        "props": {
+            "src": "/arquivos/selecc__5.jpg",
+            "blockClass": ["seleccionados__image","seleccionados__image__full"]
+        }
+    },
+    "image#seleccionados__image__6": {
+        "title": "seleccionados__image__6",
+        "props": {
+            "src": "/arquivos/selecc__6.jpg",
+            "blockClass": ["seleccionados__image","seleccionados__image__mobile","seleccionados__image__mobile__margin"]
+        }
+    },
+    "image#seleccionados__image__7": {
+        "title": "seleccionados__image__7",
+        "props": {
+            "src": "/arquivos/selecc__7.jpg",
+            "blockClass": ["seleccionados__image","seleccionados__image__mobile"]
+        }
+    },
+    "image#seleccionados__image__8": {
+        "title": "seleccionados__image__8",
+        "props": {
+            "src": "/arquivos/selecc__8.jpg",
+            "blockClass":["seleccionados__image","seleccionados__image__full"]
+        }
+    }
+}

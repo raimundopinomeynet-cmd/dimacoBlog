@@ -1,0 +1,359 @@
+{
+    "store.custom#contacto": {
+        "blocks": [
+            "flex-layout.row#static-Banners-cto",
+            "flex-layout.row#cto-main",
+            "flex-layout.row#cto-more-info"
+        ]
+    },
+    "flex-layout.row#static-Banners-cto": {
+        "children": [
+            "flex-layout.col#static-Banners-cto"
+        ],
+        "props": {
+            "blockClass": "static-Banners",
+            "fullWidth": true
+        }
+    },
+    "flex-layout.col#static-Banners-cto": {
+        "props": {
+            "width": "100%",
+            "preventVerticalStretch": true,
+            "blockClass": "static-Banners"
+        },
+        "children": [
+            "responsive-layout.desktop#static-Banners-cto",
+            "responsive-layout.mobile#static-Banners-cto"
+        ]
+    },
+    "responsive-layout.desktop#static-Banners-cto": {
+        "title": "static-Banners-cto Desktop",
+        "children": [
+            "image#staticFullBannerDesktop-cto"
+        ]
+    },
+    "responsive-layout.mobile#static-Banners-cto": {
+        "title": "static-Banners-cto Mobile",
+        "children": [
+            "image#staticFullBannerMobile-cto"
+        ]
+    },
+    "image#staticFullBannerDesktop-cto": {
+        "title": "GridFullBanner-Desktop",
+        "props": {
+            "preserveLayoutOnMobile": true,
+            "id": "ContactFullBanner",
+            "blockClass": "full-banner",
+            "src": "/arquivos/Bannr__contacto.svg",
+            "fullWidth": false
+        }
+    },
+    "image#staticFullBannerMobile-cto": {
+        "title": "GridFullBanner-Desktop",
+        "props": {
+            "preserveLayoutOnMobile": true,
+            "id": "ContactFullBanner",
+            "blockClass": "full-banner",
+            "src": "/arquivos/Bannr__contacto__mobile.svg",
+            "fullWidth": false
+        }
+    },
+    "flex-layout.row#cto-main": {
+        "children": [
+            "flex-layout.col#cto-left",
+            "flex-layout.col#cto-right"
+        ],
+        "props": {
+            "blockClass": "cto-twoColumn",
+            "preventVerticalStretch": true,
+            "horizontalAlign": "center",
+            "width": "100%"
+        }
+    },
+    "flex-layout.col#cto-left": {
+        "children": [
+            "rich-text#cto-textA",
+            "rich-text#cto-textB",
+            "rich-text#cto__textC",
+            "rich-text#cto__textD"
+        ],
+        "props": {
+            "blockClass": "colLeft",
+            "preventVerticalStretch": true,
+            "width": "50%"
+        }
+    },
+    "rich-text#cto__textC": {
+        "props": {
+            "text": "Nuestros horarios de atención",
+            "blockClass": "cto__textC"
+        }
+    },
+    "rich-text#cto__textD": {
+        "props": {
+            "text": "Lunes a Viernes de 7:00 a 16:30",
+            "blockClass": "cto__textD"
+        }
+    },
+    "flex-layout.col#cto-right": {
+        "children": [
+            "form-contact"
+        ],
+        "props": {
+            "blockClass": "colRight",
+            "preventVerticalStretch": true
+        }
+    },
+    "rich-text#cto-textA": {
+        "props": {
+            "text": "Contactanos",
+            "blockClass": "static-title",
+            "textAlignment": "left",
+            "textPosition": "left"
+        }
+    },
+    "rich-text#cto-textB": {
+        "props": {
+            "text": "Si desea mayor información, sobre cualquiera de nuestros productos y/o servicios, complete el siguiente formulario y a la brevedad nos pondremos en contacto con Usted.",
+            "blockClass": [
+                "static-text",
+                "phone"
+            ]
+        }
+    },
+    "form#cto": {
+        "props": {
+            "entity": "contacto",
+            "schema": "contacto"
+        },
+        "children": [
+            "flex-layout.row#formcontainer"
+        ],
+        "blocks": [
+            "form-success"
+        ]
+    },
+    "flex-layout.row#formcontainer": {
+        "props": {
+            "blockClass": "formstyle"
+        },
+        "children": [
+            "flex-layout.col#formcontainer"
+        ]
+    },
+    "flex-layout.col#formcontainer": {
+        "children": [
+            "flex-layout.row#input__email",
+            "flex-layout.row#r1",
+            "flex-layout.row#input__telefono",
+            "flex-layout.row#input__mensaje",
+            "flex-layout.row#acepto",
+            /* "flex-layout.row#r3",
+            "flex-layout.row#r4",
+            "flex-layout.row#r5", */
+            "flex-layout.row#r6"
+        ]
+    },
+    "flex-layout.row#r1": {
+        "props": {
+            "blockClass": "form_r1"
+        },
+        "children": [
+            "form-input.text#nombre",
+            "form-input.text#apellido"
+        ]
+    },
+    "flex-layout.row#input__email": {
+        "children": [
+            "form-input.text#email"
+        ],
+        "props": {
+            "blockClass": "form_r1"
+        }
+    },
+    "flex-layout.row#input__telefono": {
+        "children": [
+            "form-input.text#direccion",
+            "form-input.text#telefono"
+        ],
+        "props": {
+            "blockClass": "form_r1"
+        }
+    },
+    "flex-layout.row#input__mensaje": {
+        "children": [
+            "form-input.text#mensaje"
+        ],
+        "props": {
+            "blockClass": "form_r1"
+        }
+    },
+    "flex-layout.row#acepto": {
+        "children": [
+            "form-input.checkbox#aceptop"
+        ],
+        "props": {
+            "blockClass": "form_r1"
+        }
+    },
+    "flex-layout.row#r6": {
+        "props": {
+            "blockClass": "form_r5"
+        },
+        "children": [
+            "form-submit"
+        ]
+    },
+    "form-success": {
+        "props": {
+            "blockClass": "form_success"
+        },
+        "children": [
+            "rich-text#successSubmit"
+        ]
+    },
+    "rich-text#successSubmit": {
+        "props": {
+            "blockClass": "successSubmit",
+            "text": "Información enviada con éxito",
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER"
+        }
+    },
+    "form-input.text#nombre": {
+        "props": {
+            "pointer": "#/properties/nombre",
+            "placeholder": "Nombre"
+        }
+    },
+    "form-input.text#email": {
+        "props": {
+            "pointer": "#/properties/email",
+            "placeholder": "Email"
+        }
+    },
+    "form-input.text#apellido": {
+        "props": {
+            "pointer": "#/properties/apeliido",
+            "placeholder": "Apellido"
+        }
+    },
+    "form-input.text#telefono": {
+        "props": {
+            "pointer": "#/properties/telefono",
+            "placeholder": "Teléfono"
+        }
+    },
+    "form-input.text#direccion": {
+        "props": {
+            "pointer": "#/properties/direccion",
+            "placeholder": "Dirección"
+        }
+    },
+    "form-input.text#mensaje": {
+        "props": {
+            "pointer": "#/properties/mensaje",
+            "placeholder": "Cuentanos más"
+        }
+    },
+    "form-input.checkbox#aceptop": {
+        "props": {
+            "pointer": "#/properties/agreement",
+            "placeholder": "Acepto los términos y condiciones del servicio"
+        }
+    },
+    "form-submit": {
+        "props": {
+            "label": "Enviar formulario de contacto"
+        }
+    },
+    "flex-layout.row#cto-more-info": {
+        "children": [
+            "flex-layout.col#cto-more-info-title",
+            "flex-layout.col#cto-more-info"
+        ],
+        "props": {
+            "blockClass": "cto-more-info",
+            "preventVerticalStretch": true,
+            "horizontalAlign": "center",
+            "width": "100%"
+        }
+    },
+    "flex-layout.col#cto-more-info-title": {
+        "children": [
+            "rich-text#cto-more-info-title"
+        ],
+        "props": {
+            "width": "100%",
+            "blockClass": "cto-more-info-title",
+            "preventVerticalStretch": true
+        }
+    },
+    "rich-text#cto-more-info-title": {
+        "props": {
+            "text": "**Otros medios de contacto**\nEstamos atentos para aclarar tus dudas",
+            "blockClass": "static-title",
+            "textAlignment": "center",
+            "textPosition": "center"
+        }
+    },
+    "flex-layout.col#cto-more-info": {
+        "children": [
+            "rich-text#cto-more-info3",
+            "rich-text#cto-more-info2",
+            "rich-text#cto-more-info1",
+            "rich-text#cto-more-info4"
+        ],
+        "props": {
+            "width": "100%",
+            "blockClass": "cto-more-info",
+            "preventVerticalStretch": true
+        }
+    },
+    "rich-text#cto-more-info1": {
+        "props": {
+            "text": "Síguenos en instagram<br><a class='vtex-rich-text-0-x-italic--static-info' href='https://www.instagram.com/dimacochilemat/' target='_blank' rel='noopener noreferrer'>Ir a instagram</a>",
+            "blockClass": [
+                "static-info",
+                "instagram"
+            ],
+            "textAlignment": "center",
+            "textPosition": "center"
+        }
+    },
+    "rich-text#cto-more-info2": { 
+        "props": {
+            "text": "Síguenos en facebook<br><a class='vtex-rich-text-0-x-italic--static-info' href='https://www.facebook.com/dimaco.chilemat' target='_blank' rel='noopener noreferrer'>Ir a Facebook</a>",
+            "blockClass": [
+                "static-info",
+                "facebook"
+            ],
+            "textAlignment": "center",
+            "textPosition": "center"
+        }
+    },
+
+    "rich-text#cto-more-info3": {
+        "props": {
+           /*  "text": "[Escríbenos a nuestro whatsapp\n*Ir a Whatsapp*](https://api.whatsapp.com/send?phone=56987007691)", */
+            "text": "Escríbenos a nuestro whatsapp<br><a class='vtex-rich-text-0-x-italic--static-info' href='https://api.whatsapp.com/send?phone=56987007691' target='_blank' rel='noopener noreferrer'>Ir a Whatsapp</a>",
+            "blockClass": [
+                "static-info",
+                "whatsapp"
+            ],
+            "textAlignment": "center",
+            "textPosition": "center"
+        }
+    },
+    "rich-text#cto-more-info4": {
+        "props": {
+            "text": "[Siguenos en X\n*Ir a X*](/#)",
+            "blockClass": [
+                "static-info",
+                "twitter"
+            ],
+            "textAlignment": "center",
+            "textPosition": "center"
+        }
+    }
+}

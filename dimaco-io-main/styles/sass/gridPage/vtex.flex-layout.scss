@@ -1,0 +1,54 @@
+@import "../variables";
+
+
+.flexCol--productRating {
+  margin-bottom: 3rem;
+}
+
+.flexRow--SearchResultsGridMobile {
+  :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
+}
+
+.flexRow--searchinfomobile {
+  .flexRowContent--searchinfomobile {
+    align-items: center;
+  }
+}
+
+.flexCol--productsCol {
+  min-height: 500px;
+  .flexCol--searchtitle-productCount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    .flexColChild--searchtitle-productCount {
+      height: auto !important;
+    }
+  }
+}
+.flexRow--not-found-row {
+  padding: 40px 0;
+  :global(.vtex-rich-text-0-x-paragraph--not-found-heading) {
+    font-size: 26px;
+    @media screen and (max-width: 990px) {
+      font-size: 18px;
+    }
+  }
+  :global(.vtex-store-link-0-x-link--not-found-btn) {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: $c-blanco;
+    background: $c-secundario;
+    width: 220px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 40px;
+    border-radius: 0;
+  }
+}

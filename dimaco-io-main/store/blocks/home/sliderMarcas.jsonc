@@ -1,0 +1,104 @@
+{
+	"flex-layout.row#Slider__marcas": {
+		"title": "Slider marcas",
+		"props": {
+			"blockClass": "slider__marcas__home",
+			"verticalAlign": "center",
+			"horizontalAlign": "center",
+			"fullWidth": true
+		},
+		"children": [
+			"flex-layout.col#marcas__slider__principal"
+		]
+	},
+	"flex-layout.col#marcas__slider__principal": {
+		"props": {
+			"blockClass": "marcas__slider__principal",
+			"verticalAlign": "center",
+			"width": "100%"
+		},
+		"children": [
+			"list-context.image-list#sliderMarcasHome"
+		]
+	},
+	"list-context.image-list#sliderMarcasHome": {
+		"children": [
+			"slider-layout#sliderTop-images-marcas"
+		],
+		"title": "slider Marcas",
+		"props": {
+			"images": [
+				{
+					"image": "/arquivos/marcas__1.jpg",
+					"link": {
+						"url": ""
+					},
+					"blockClass": "marcas__1",
+					"props": {
+						"blockClass": "marcas__1"
+					}
+				},
+				{
+					"image": "/arquivos/marcas__2.jpg",
+					"link": {
+						"url": "" 
+					}
+				},
+				{
+					"image": "/arquivos/marcas__3.jpg",
+					"link": {
+						"url": ""
+					}
+				},
+				{
+					"image": "/arquivos/marcas__4.jpg",
+					"link": {
+						"url": ""
+					}
+				},
+				{
+					"image": "/arquivos/marcas__5.jpg",
+					"link": {
+						"url": ""
+					}
+				},
+				{
+					"image": "/arquivos/marcas__6.jpg",
+					"link": {
+						"url": ""
+					}
+				},
+				{
+					"image": "/arquivos/marcas__7.jpg",
+					"link": {
+						"url": ""
+					}
+				},
+				{
+					"image": "/arquivos/marcas__4.jpg",
+					"link": {
+						"url": ""
+					}
+				}
+			]
+		}
+	},
+	"slider-layout#sliderTop-images-marcas": {
+		"props": {
+			"fullWidth": true,
+			"itemsPerPage": {
+				"desktop": 7,
+				"tablet": 4,
+				"phone": 3
+			},
+			"autoplay": {
+				"timeout": 3500,
+				"stopOnHover": true
+			},
+			"infinite": true,
+			"showNavigationArrows": "always",
+			"showPaginationDots": "never",
+			"blockClass": "sliderTop__images__marcas"
+		}
+	}
+} 
