@@ -104,3 +104,131 @@
     padding-top: 30px;
   }
 }
+
+/* Blog Styles */
+.flexRow--blog__banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 20px;
+  margin-bottom: 50px;
+}
+
+.flexCol--blog__banner__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flexRow--main__blog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flexCol--main__blog__content {
+  width: 100%;
+}
+
+.flexCol--blog__categories {
+  margin-bottom: 40px;
+}
+
+.flexRow--blog__categories__list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.flexCol--blog__articles {
+  margin-bottom: 60px;
+}
+
+.flexRow--blog__articles__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.flexCol--blog__article__card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+}
+
+.flexRow--article__header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  margin-bottom: 50px;
+}
+
+.flexCol--article__header__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flexRow--article__content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 60px 20px;
+}
+
+.flexCol--article__main {
+  width: 100%;
+}
+
+.flexRow--article__cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.flexCol--article__cta__content {
+  align-items: center;
+}
+
+.flexRow--article__content__construccion__mobile,
+.flexRow--article__content__herramientas__mobile,
+.flexRow--article__content__tendencias__mobile,
+.flexRow--main__blog__mobile {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flexCol--main__blog__content__mobile {
+  width: 100%;
+}
+
+.flexCol--blog__articles__mobile {
+  margin-bottom: 60px;
+}
+
+.flexCol--blog__articles__grid__mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .flexRow--blog__articles__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flexRow--article__cta {
+    padding: 30px 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .flexRow--blog__articles__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
