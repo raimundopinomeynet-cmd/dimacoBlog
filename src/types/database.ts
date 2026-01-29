@@ -34,6 +34,7 @@ export interface Database {
           created_at?: string;
           updated_at?: string;
         };
+        Relationships: [];
       };
       projects: {
         Row: {
@@ -57,7 +58,7 @@ export interface Database {
           industry: string;
           service: string;
           country: string;
-          prompts: string[];
+          prompts?: string[];
           is_active?: boolean;
           created_at?: string;
           updated_at?: string;
@@ -75,29 +76,34 @@ export interface Database {
           created_at?: string;
           updated_at?: string;
         };
+        Relationships: [];
       };
       executions: {
         Row: {
           id: string;
           project_id: string;
           executed_at: string;
-          status: 'pending' | 'running' | 'completed' | 'failed';
+          status: string;
+          error_message: string | null;
           created_at: string;
         };
         Insert: {
           id?: string;
           project_id: string;
           executed_at?: string;
-          status?: 'pending' | 'running' | 'completed' | 'failed';
+          status?: string;
+          error_message?: string | null;
           created_at?: string;
         };
         Update: {
           id?: string;
           project_id?: string;
           executed_at?: string;
-          status?: 'pending' | 'running' | 'completed' | 'failed';
+          status?: string;
+          error_message?: string | null;
           created_at?: string;
         };
+        Relationships: [];
       };
       responses: {
         Row: {
@@ -106,7 +112,7 @@ export interface Database {
           project_id: string;
           prompt_index: number;
           prompt_text: string;
-          llm_provider: 'openai' | 'gemini';
+          llm_provider: string;
           llm_model: string;
           response_text: string;
           response_time_ms: number;
@@ -118,7 +124,7 @@ export interface Database {
           project_id: string;
           prompt_index: number;
           prompt_text: string;
-          llm_provider: 'openai' | 'gemini';
+          llm_provider: string;
           llm_model: string;
           response_text: string;
           response_time_ms: number;
@@ -130,12 +136,13 @@ export interface Database {
           project_id?: string;
           prompt_index?: number;
           prompt_text?: string;
-          llm_provider?: 'openai' | 'gemini';
+          llm_provider?: string;
           llm_model?: string;
           response_text?: string;
           response_time_ms?: number;
           created_at?: string;
         };
+        Relationships: [];
       };
       analysis_results: {
         Row: {
@@ -146,7 +153,7 @@ export interface Database {
           brand_mentioned: boolean;
           mention_count: number;
           sentiment_score: number;
-          sentiment_label: 'positive' | 'neutral' | 'negative';
+          sentiment_label: string;
           prominence_score: number;
           warmth_score: number;
           analysis_details: Json;
@@ -160,7 +167,7 @@ export interface Database {
           brand_mentioned: boolean;
           mention_count: number;
           sentiment_score: number;
-          sentiment_label: 'positive' | 'neutral' | 'negative';
+          sentiment_label: string;
           prominence_score: number;
           warmth_score: number;
           analysis_details?: Json;
@@ -174,13 +181,26 @@ export interface Database {
           brand_mentioned?: boolean;
           mention_count?: number;
           sentiment_score?: number;
-          sentiment_label?: 'positive' | 'neutral' | 'negative';
+          sentiment_label?: string;
           prominence_score?: number;
           warmth_score?: number;
           analysis_details?: Json;
           created_at?: string;
         };
+        Relationships: [];
       };
+    };
+    Views: {
+      [_ in never]: never;
+    };
+    Functions: {
+      [_ in never]: never;
+    };
+    Enums: {
+      [_ in never]: never;
+    };
+    CompositeTypes: {
+      [_ in never]: never;
     };
   };
 }

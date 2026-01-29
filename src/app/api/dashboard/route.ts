@@ -54,33 +54,50 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // Get weekly metrics
-    const { data: weeklyMetrics, error: weeklyError } = await supabase
+    // Get analysis results
+    const { data: analysisResults, error: analysisError } = await supabase
       .from('analysis_results')
-      .select(`
-        created_at,
-        brand_mentioned,
-        mention_count,
-        sentiment_score,
-        prominence_score,
-        warmth_score,
-        responses!inner (
-          llm_provider
-        )
-      `)
+      .select('*')
       .in('project_id', projectIds)
       .order('created_at', { ascending: false });
 
-    if (weeklyError) {
-      console.error('Error fetching metrics:', weeklyError);
+    if (analysisError) {
+      console.error('Error fetching analysis:', analysisError);
       return NextResponse.json({ error: 'Error fetching metrics' }, { status: 500 });
     }
 
+    // Get responses to get the llm_provider
+    const responseIds = analysisResults?.map((a) => a.response_id) || [];
+
+    let responsesMap = new Map<string, string>();
+
+    if (responseIds.length > 0) {
+      const { data: responses } = await supabase
+        .from('responses')
+        .select('id, llm_provider')
+        .in('id', responseIds);
+
+      responses?.forEach((r) => {
+        responsesMap.set(r.id, r.llm_provider);
+      });
+    }
+
+    // Combine data
+    const metricsData: MetricRow[] = (analysisResults || []).map((row) => ({
+      created_at: row.created_at,
+      brand_mentioned: row.brand_mentioned,
+      mention_count: row.mention_count,
+      sentiment_score: row.sentiment_score,
+      prominence_score: row.prominence_score,
+      warmth_score: row.warmth_score,
+      llm_provider: responsesMap.get(row.response_id) || 'unknown',
+    }));
+
     // Process weekly metrics
-    const processedWeeklyMetrics = processWeeklyMetrics(weeklyMetrics || []);
+    const processedWeeklyMetrics = processWeeklyMetrics(metricsData);
 
     // Calculate summary
-    const summary = calculateSummary(weeklyMetrics || []);
+    const summary = calculateSummary(metricsData);
 
     return NextResponse.json({
       weeklyMetrics: processedWeeklyMetrics,
@@ -99,9 +116,7 @@ interface MetricRow {
   sentiment_score: number;
   prominence_score: number;
   warmth_score: number;
-  responses: {
-    llm_provider: string;
-  };
+  llm_provider: string;
 }
 
 function processWeeklyMetrics(data: MetricRow[]) {
@@ -129,7 +144,7 @@ function processWeeklyMetrics(data: MetricRow[]) {
     weekStart.setHours(0, 0, 0, 0);
     const weekKey = weekStart.toISOString().split('T')[0];
 
-    const provider = row.responses?.llm_provider || 'unknown';
+    const provider = row.llm_provider || 'unknown';
 
     if (!weekMap.has(weekKey)) {
       weekMap.set(weekKey, new Map());
@@ -195,7 +210,7 @@ function calculateSummary(data: MetricRow[]) {
   );
 
   const calculateProviderStats = (subset: MetricRow[], provider: string) => {
-    const filtered = subset.filter((d) => d.responses?.llm_provider === provider);
+    const filtered = subset.filter((d) => d.llm_provider === provider);
     if (filtered.length === 0) {
       return { appearance: 0, sentiment: 0, prominence: 0, warmth: 0 };
     }

@@ -4,7 +4,7 @@ import { decrypt } from '@/lib/encryption';
 import { executeOpenAIPrompt, analyzeWithOpenAI } from '@/lib/llm/openai';
 import { executeGeminiPrompt } from '@/lib/llm/gemini';
 import { getSentimentLabel } from '@/lib/utils';
-import type { LLMProvider } from '@/types';
+import type { LLMProvider, Project } from '@/types';
 
 // Verify the request is from Vercel Cron
 function verifyCronRequest(request: NextRequest): boolean {
@@ -30,10 +30,10 @@ export async function GET(request: NextRequest) {
   try {
     const supabase = createServiceRoleClient();
 
-    // Get all active projects with their user's API settings
+    // Get all active projects
     const { data: projects, error: projectsError } = await supabase
       .from('projects')
-      .select('*, api_settings!inner(openai_key_encrypted, gemini_key_encrypted)')
+      .select('*')
       .eq('is_active', true);
 
     if (projectsError) {
@@ -52,7 +52,12 @@ export async function GET(request: NextRequest) {
 
     for (const project of projects) {
       try {
-        const settings = (project as unknown as { api_settings: { openai_key_encrypted: string | null; gemini_key_encrypted: string | null } }).api_settings;
+        // Get API settings for this project's user
+        const { data: settings } = await supabase
+          .from('api_settings')
+          .select('openai_key_encrypted, gemini_key_encrypted')
+          .eq('user_id', project.user_id)
+          .single();
 
         const openaiKey = settings?.openai_key_encrypted
           ? decrypt(settings.openai_key_encrypted)
@@ -127,11 +132,7 @@ export async function GET(request: NextRequest) {
 async function executeProjectPrompts(
   supabase: ReturnType<typeof createServiceRoleClient>,
   executionId: string,
-  project: {
-    id: string;
-    brand_name: string;
-    prompts: string[];
-  },
+  project: Project,
   openaiKey: string | null,
   geminiKey: string | null
 ) {

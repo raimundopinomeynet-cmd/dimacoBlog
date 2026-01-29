@@ -1,4 +1,5 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr';
+import { createClient } from '@supabase/supabase-js';
 import { cookies } from 'next/headers';
 import type { Database } from '@/types/database';
 
@@ -16,14 +17,14 @@ export async function createServerSupabaseClient() {
         set(name: string, value: string, options: CookieOptions) {
           try {
             cookieStore.set({ name, value, ...options });
-          } catch (error) {
+          } catch {
             // Handle cookies in read-only context (middleware)
           }
         },
         remove(name: string, options: CookieOptions) {
           try {
             cookieStore.set({ name, value: '', ...options });
-          } catch (error) {
+          } catch {
             // Handle cookies in read-only context
           }
         },
@@ -32,17 +33,16 @@ export async function createServerSupabaseClient() {
   );
 }
 
+// Service role client for API routes and cron jobs
+// Uses regular createClient since it doesn't need cookies
 export function createServiceRoleClient() {
-  return createServerClient<Database>(
+  return createClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.SUPABASE_SERVICE_ROLE_KEY!,
     {
-      cookies: {
-        get() {
-          return undefined;
-        },
-        set() {},
-        remove() {},
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false,
       },
     }
   );
